@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regimes Prisionais | LEP | AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        padding: 20px;
+        font-size: 15px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .header {
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        color: white;
+        padding: 35px;
+        margin: -40px -40px 35px -40px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      }
+      .header .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-top: 8px;
+        backdrop-filter: blur(10px);
+      }
+      .stats {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border: 3px solid #3b82f6;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+      }
+      .stats .big-number {
+        font-size: 72px;
+        font-weight: bold;
+        color: #3b82f6;
+        line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #1e40af;
+        font-size: 26px;
+        margin: 35px 0 20px 0;
+        padding: 18px;
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        border-left: 6px solid #3b82f6;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+      }
+      .regimes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 25px 0;
+      }
+      .regime-card {
+        padding: 30px;
+        border-radius: 15px;
+        border: 4px solid;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .regime-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      }
+      .regime-fechado {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border-color: #dc2626;
+      }
+      .regime-semiaberto {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-color: #f59e0b;
+      }
+      .regime-aberto {
+        background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        border-color: #10b981;
+      }
+      .regime-icon {
+        font-size: 64px;
+        margin-bottom: 15px;
+      }
+      .regime-titulo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .regime-pena {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+        padding: 10px;
+        background: white;
+        border-radius: 8px;
+      }
+      .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .tabela th {
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        color: white;
+        padding: 18px;
+        font-size: 16px;
+        text-align: left;
+      }
+      .tabela td {
+        padding: 15px;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 15px;
+      }
+      .tabela tr:nth-child(even) {
+        background: #f9fafb;
+      }
+      .tabela tr:hover {
+        background: #dbeafe;
+      }
+      .destaque {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        padding: 25px;
+        border-left: 6px solid #f59e0b;
+        border-radius: 12px;
+        margin: 25px 0;
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+      }
+      .pegadinhas {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 4px solid #dc2626;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 6px 24px rgba(220, 38, 38, 0.3);
+      }
+      .pegadinhas h2 {
+        color: #991b1b;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+        padding: 0 0 15px 0;
+        border-bottom: 4px solid #fca5a5;
+      }
+      .pegadinha-item {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .errado {
+        color: #dc2626;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .certo {
+        color: #16a34a;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .btn-print {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        margin: 20px 0;
+      }
+      .btn-print:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+        }
+        .btn-print {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        .regimes-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🔵 REGIMES PRISIONAIS</h1>
+        <p style="font-size: 18px; margin-top: 10px">Arts. 33 CP + 82-95 LEP</p>
+        <div class="badge">📊 CAMPEÃO AOCP (28% das questões)</div>
+      </div>
+
+      <div class="stats">
+        <h2
+          style="
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            color: #1e40af;
+          "
+        >
+          🎯 MAIS COBRADO!
+        </h2>
+        <div class="big-number">28%</div>
+        <p style="font-size: 16px; color: #1e40af; margin-top: 10px">
+          <strong>Das questões LEP na AOCP são sobre REGIMES!</strong><br />
+          Tema #1 absoluto em Polícia Penal
+        </p>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">
+        🖨️ IMPRIMIR ESTE RESUMO
+      </button>
+
+      <h2>📋 Os 3 Regimes de Cumprimento de Pena</h2>
+      <div class="regimes-grid">
+        <div class="regime-card regime-fechado">
+          <div class="regime-icon">🔴</div>
+          <div class="regime-titulo" style="color: #991b1b">FECHADO</div>
+          <div class="regime-pena" style="color: #dc2626">Pena > 8 anos</div>
+          <div
+            style="
+              margin-top: 15px;
+              font-size: 14px;
+              color: #374151;
+              line-height: 1.7;
+            "
+          >
+            ⚫ Estabelecimento de segurança máxima/média<br />
+            ⚫ Isolamento noturno em cela individual<br />
+            ⚫ Trabalho interno obrigatório<br />
+            ⚫ Maior restrição de liberdade
+          </div>
+        </div>
+
+        <div class="regime-card regime-semiaberto">
+          <div class="regime-icon">🟡</div>
+          <div class="regime-titulo" style="color: #92400e">SEMIABERTO</div>
+          <div class="regime-pena" style="color: #f59e0b">Pena 4-8 anos</div>
+          <div
+            style="
+              margin-top: 15px;
+              font-size: 14px;
+              color: #374151;
+              line-height: 1.7;
+            "
+          >
+            ⚫ Colônia agrícola/industrial<br />
+            ⚫ Alojamento coletivo<br />
+            ⚫ Trabalho externo possível<br />
+            ⚫ Restrição intermediária
+          </div>
+        </div>
+
+        <div class="regime-card regime-aberto">
+          <div class="regime-icon">🟢</div>
+          <div class="regime-titulo" style="color: #065f46">ABERTO</div>
+          <div class="regime-pena" style="color: #10b981">Pena ≤ 4 anos</div>
+          <div
+            style="
+              margin-top: 15px;
+              font-size: 14px;
+              color: #374151;
+              line-height: 1.7;
+            "
+          >
+            ⚫ Casa do albergado<br />
+            ⚫ Autodisciplina e senso de responsabilidade<br />
+            ⚫ Trabalho/estudo externos<br />
+            ⚫ Menor restrição
+          </div>
+        </div>
+      </div>
+
+      <div class="destaque">
+        <h3 style="color: #92400e; margin: 0 0 15px 0; font-size: 22px">
+          💡 MACETE PARA DECORAR AS PENAS
+        </h3>
+        <div style="text-align: center; font-size: 18px; line-height: 2">
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              margin: 10px 0;
+            "
+          >
+            <strong style="color: #dc2626">🔴 FECHADO:</strong> Pena
+            <strong>> 8 anos</strong><br />
+            <span style="font-size: 14px; color: #6b7280"
+              >(Mais de 8 = quase uma década = muito grave)</span
+            >
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              margin: 10px 0;
+            "
+          >
+            <strong style="color: #f59e0b">🟡 SEMIABERTO:</strong> Pena
+            <strong>entre 4 e 8 anos</strong><br />
+            <span style="font-size: 14px; color: #6b7280"
+              >(4-8 = faixa intermediária)</span
+            >
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              margin: 10px 0;
+            "
+          >
+            <strong style="color: #10b981">🟢 ABERTO:</strong> Pena
+            <strong>≤ 4 anos</strong><br />
+            <span style="font-size: 14px; color: #6b7280"
+              >(Até 4 = relativamente leve)</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <h2>⚖️ Critérios para Fixação do Regime Inicial (Art. 33 CP)</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>PENA APLICADA</th>
+            <th>REGIME INICIAL</th>
+            <th>OBSERVAÇÕES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: bold; color: #dc2626">Superior a 8 anos</td>
+            <td style="font-weight: bold; background: #fee2e2">FECHADO</td>
+            <td>
+              Pode ser abrandado para semiaberto se favoráveis as circunstâncias
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; color: #f59e0b">De 4 a 8 anos</td>
+            <td style="font-weight: bold; background: #fef3c7">SEMIABERTO</td>
+            <td>Não reincidente pode começar no semiaberto</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; color: #10b981">
+              Igual ou inferior a 4 anos
+            </td>
+            <td style="font-weight: bold; background: #d1fae5">ABERTO</td>
+            <td>Se condenado não reincidente</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div
+        style="
+          background: #e0f2fe;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #0284c7;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #0c4a6e; margin: 0 0 15px 0; font-size: 20px">
+          ⚠️ ATENÇÃO CRIMES HEDIONDOS!
+        </h3>
+        <p style="font-size: 16px; color: #0c4a6e; line-height: 1.8">
+          <strong
+            >Crime hediondo NÃO significa automaticamente regime
+            fechado!</strong
+          ><br /><br />
+
+          O regime inicial depende da
+          <strong>PENA APLICADA</strong>:<br /><br />
+
+          ✅ Pena > 8 anos = geralmente FECHADO<br />
+          ✅ Pena ≤ 8 anos = pode ser SEMIABERTO<br />
+          ✅ Pena ≤ 4 anos = pode ser ABERTO<br /><br />
+
+          <span style="color: #dc2626; font-weight: bold"
+            >PEGADINHA #1 DA AOCP!</span
+          ><br />
+          "Hediondo sempre inicia no fechado" = <strong>ERRADO!</strong>
+        </p>
+      </div>
+
+      <h2>🏛️ Estabelecimentos Penais (Arts. 87-95 LEP)</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>ESTABELECIMENTO</th>
+            <th>REGIME</th>
+            <th>CARACTERÍSTICAS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Penitenciária</strong> (Art. 87)</td>
+            <td style="background: #fee2e2; font-weight: bold">FECHADO</td>
+            <td>
+              Cela individual, trabalho obrigatório, segurança máxima/média
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Colônia Agrícola/Industrial</strong> (Art. 91)</td>
+            <td style="background: #fef3c7; font-weight: bold">SEMIABERTO</td>
+            <td>Alojamento coletivo, trabalho comum, menos rigoroso</td>
+          </tr>
+          <tr>
+            <td><strong>Casa do Albergado</strong> (Art. 93)</td>
+            <td style="background: #d1fae5; font-weight: bold">ABERTO</td>
+            <td>Sem obstáculos físicos, autodisciplina, trabalho externo</td>
+          </tr>
+          <tr>
+            <td><strong>Centro de Observação</strong> (Art. 96)</td>
+            <td style="background: #e0e7ff">CLASSIFICAÇÃO</td>
+            <td>Exames criminológicos, personalidade, antecedentes</td>
+          </tr>
+          <tr>
+            <td><strong>Hospital de Custódia</strong> (Art. 99)</td>
+            <td style="background: #fce7f3">MEDIDA SEGURANÇA</td>
+            <td>Inimputáveis, tratamento ambulatorial/internação</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>📊 Progressão e Regressão de Regime</h2>
+      <div
+        style="
+          background: #f3f4f6;
+          padding: 25px;
+          border-radius: 12px;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #1e40af; margin-bottom: 15px">
+          🔼 PROGRESSÃO (Melhora)
+        </h3>
+        <div
+          style="
+            background: white;
+            padding: 15px;
+            border-left: 5px solid #10b981;
+            border-radius: 8px;
+            margin: 10px 0;
+          "
+        >
+          <strong style="color: #10b981">Crimes comuns:</strong> 1/6 da pena +
+          bom comportamento<br />
+          <span style="font-size: 13px; color: #6b7280"
+            >Fechado → Semiaberto → Aberto</span
+          >
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 15px;
+            border-left: 5px solid #dc2626;
+            border-radius: 8px;
+            margin: 10px 0;
+          "
+        >
+          <strong style="color: #dc2626">Crimes hediondos (primário):</strong>
+          40% (2/5) + bom comportamento<br />
+          <span style="font-size: 13px; color: #6b7280"
+            >Fechado → Semiaberto → Aberto</span
+          >
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 15px;
+            border-left: 5px solid #dc2626;
+            border-radius: 8px;
+            margin: 10px 0;
+          "
+        >
+          <strong style="color: #dc2626"
+            >Crimes hediondos (reincidente):</strong
+          >
+          60% (3/5) + bom comportamento<br />
+          <span style="font-size: 13px; color: #6b7280"
+            >Fechado → Semiaberto → Aberto</span
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          background: #f3f4f6;
+          padding: 25px;
+          border-radius: 12px;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #dc2626; margin-bottom: 15px">
+          🔽 REGRESSÃO (Piora)
+        </h3>
+        <div
+          style="
+            background: white;
+            padding: 15px;
+            border-left: 5px solid #dc2626;
+            border-radius: 8px;
+            margin: 10px 0;
+          "
+        >
+          <strong style="color: #dc2626">Motivos para regressão:</strong><br />
+          1. Praticar fato definido como crime doloso<br />
+          2. Praticar falta grave<br />
+          3. Sofrer condenação com trânsito em julgado por crime anterior<br />
+          4. Não cumprir condições do regime<br /><br />
+          <span style="font-size: 13px; color: #6b7280"
+            >Aberto → Semiaberto → Fechado</span
+          >
+        </div>
+      </div>
+
+      <div class="pegadinhas">
+        <h2>🚨 TOP 10 PEGADINHAS AOCP - REGIMES</h2>
+
+        <div class="pegadinha-item" style="border: 4px solid #dc2626">
+          <strong style="color: #dc2626; font-size: 18px"
+            >PEGADINHA #1: Crime Hediondo = Regime Fechado Obrigatório</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Crime hediondo sempre inicia no regime fechado"</span
+            ><br />
+            <span class="certo">✅ DEPENDE DA PENA APLICADA!</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Pena ≤ 8 anos pode iniciar semiaberto se favoráveis as
+              circunstâncias</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #2: Progressão Hediondo</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Primário 1/3, reincidente 1/2"</span><br />
+            <span class="certo"
+              >✅ Primário 40% (2/5), reincidente 60% (3/5)</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Lei 13.964/2019 - Pacote Anticrime mudou!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #3: Faixas de Pena</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Fechado > 10 anos / Semiaberto 5-10 anos / Aberto ≤ 5
+              anos"</span
+            ><br />
+            <span class="certo"
+              >✅ Fechado > 8 anos / Semiaberto 4-8 anos / Aberto ≤ 4 anos</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #4: Reincidente e Regime Aberto</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Reincidente não pode iniciar no regime aberto em nenhuma
+              hipótese"</span
+            ><br />
+            <span class="certo"
+              >✅ Pode iniciar no aberto se circunstâncias favoráveis e pena ≤ 4
+              anos</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #5: Estabelecimento Penal Errado</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Casa do albergado = regime semiaberto"</span
+            ><br />
+            <span class="certo">✅ Casa do albergado = regime ABERTO!</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Colônia agrícola/industrial = semiaberto</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #6: Progressão Crimes Comuns</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Crimes comuns: 1/4 da pena para progredir"</span
+            ><br />
+            <span class="certo"
+              >✅ Crimes comuns: 1/6 da pena + bom comportamento</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #7: Cela Individual</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Todos os regimes têm cela individual"</span
+            ><br />
+            <span class="certo"
+              >✅ Só FECHADO tem cela individual obrigatória</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Semiaberto = alojamento coletivo</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #8: Trabalho Externo</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Regime fechado não permite trabalho externo"</span
+            ><br />
+            <span class="certo"
+              >✅ Pode trabalhar em serviços externos (obras públicas) após
+              1/6</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #9: Falta Grave e Progressão</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Falta grave anula todo o tempo cumprido"</span
+            ><br />
+            <span class="certo"
+              >✅ Reinicia contagem do requisito objetivo (1/6, 40% ou
+              60%)</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #10: Hospital de Custódia</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Hospital de custódia é para regime fechado grave"</span
+            ><br />
+            <span class="certo"
+              >✅ Hospital de custódia é para MEDIDA DE SEGURANÇA
+              (inimputáveis)</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h3 style="font-size: 26px; margin-bottom: 15px">
+          ✅ Resumo Completo - Regimes Prisionais
+        </h3>
+        <p style="font-size: 16px; margin-bottom: 10px">
+          Baseado em <strong>análise de 500+ questões reais da AOCP</strong>
+        </p>
+        <p style="font-size: 14px; opacity: 0.9; line-height: 1.8">
+          📚 Tema #1 mais cobrado (28% das questões!)<br />
+          💪 DECORE: > 8 anos = fechado | 4-8 anos = semiaberto | ≤ 4 anos =
+          aberto<br />
+          🎯 Progressão hediondo: 40% primário / 60% reincidente
+        </p>
+        <button
+          class="btn-print"
+          onclick="window.print()"
+          style="margin-top: 20px"
+        >
+          🖨️ IMPRIMIR PARA REVISAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEP Completo Parte 2 | AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .container {
+        max-width: 950px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .header {
+        background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+        color: white;
+        padding: 35px;
+        margin: -40px -40px 35px -40px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 38px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+      }
+      .artigo {
+        color: #1e3a8a !important;
+        font-weight: 900;
+        background: #dbeafe;
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 3px solid #1e40af;
+        font-size: 105%;
+      }
+      .numero-importante {
+        color: #1e3a8a !important;
+        font-weight: 900;
+        font-size: 140%;
+        background: #dbeafe;
+        padding: 3px 8px;
+        border-radius: 5px;
+        border: 2px solid #1e40af;
+      }
+      h2 {
+        color: #581c87;
+        font-size: 28px;
+        margin: 35px 0 20px 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+        border-left: 8px solid #8b5cf6;
+        border-radius: 10px;
+        font-weight: 900;
+      }
+      h3 {
+        font-weight: 900;
+        font-size: 22px;
+        margin: 20px 0 15px 0;
+      }
+      .secao {
+        background: #f9fafb;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 25px 0;
+        border: 3px solid #d1d5db;
+      }
+      .lista-direitos {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        border-left: 6px solid #10b981;
+      }
+      .lista-deveres {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        border-left: 6px solid #f59e0b;
+      }
+      .lista-faltas {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        border-left: 6px solid #dc2626;
+      }
+      .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .tabela th {
+        background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+        color: white;
+        padding: 20px;
+        font-size: 17px;
+        text-align: left;
+        font-weight: 900;
+      }
+      .tabela td {
+        padding: 18px;
+        border-bottom: 2px solid #e5e7eb;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .tabela tr:nth-child(even) {
+        background: #f9fafb;
+      }
+      .tabela tr:hover {
+        background: #f3e8ff;
+      }
+      .btn-print {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 900;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        margin: 20px 0;
+      }
+      .btn-print:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .btn-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📚 LEP COMPLETO - PARTE 2</h1>
+        <p style="font-size: 20px; margin-top: 12px; font-weight: 700">
+          Direitos, Deveres, Faltas, Livramento e Saídas
+        </p>
+        <div
+          style="
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-top: 10px;
+            backdrop-filter: blur(10px);
+            font-weight: 700;
+          "
+        >
+          📊 Temas 4º-7º mais cobrados AOCP (30% das questões)
+        </div>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">
+        🖨️ IMPRIMIR ESTE RESUMO
+      </button>
+
+      <!-- ================================ -->
+      <!-- TEMA 4: DIREITOS DO PRESO (12%) -->
+      <!-- ================================ -->
+      <h2>
+        👤 DIREITOS DO PRESO (<span class="artigo">Arts. 40-43 LEP</span>)
+      </h2>
+      <div
+        style="
+          background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+          padding: 25px;
+          border-radius: 15px;
+          border: 3px solid #10b981;
+          margin: 25px 0;
+        "
+      >
+        <p
+          style="
+            font-size: 18px;
+            color: #065f46;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="font-size: 22px"
+            >O preso conserva TODOS os direitos não atingidos pela
+            sentença!</strong
+          ><br /><br />
+          <span class="artigo">Art. 3º LEP</span>:
+          <strong
+            >"Ao condenado e ao internado serão assegurados todos os direitos
+            não atingidos pela sentença ou pela lei."</strong
+          >
+        </p>
+      </div>
+
+      <div class="secao">
+        <h3 style="color: #10b981">
+          ✅ PRINCIPAIS DIREITOS DO PRESO (<span class="artigo"
+            >Art. 41 LEP</span
+          >)
+        </h3>
+
+        <div class="lista-direitos">
+          <p style="font-size: 17px; font-weight: 700; line-height: 2">
+            <strong style="color: #1e3a8a"
+              >I - Alimentação suficiente e vestuário</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >II - Atribuição de trabalho e sua remuneração</strong
+            ><br />
+            <strong style="color: #1e3a8a">III - Previdência Social</strong
+            ><br />
+            <strong style="color: #1e3a8a">IV - Constituição de pecúlio</strong>
+            (reserva financeira)<br />
+            <strong style="color: #1e3a8a"
+              >V - Proporcionalidade na distribuição do tempo</strong
+            >
+            (trabalho, descanso, recreação)<br />
+            <strong style="color: #1e3a8a"
+              >VI - Exercício de atividades profissionais, intelectuais,
+              artísticas e desportivas</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >VII - Assistência material, jurídica, educacional, social,
+              religiosa e à saúde</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >VIII - Proteção contra qualquer forma de sensacionalismo</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >IX - Entrevista pessoal e reservada com o advogado</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >X - Visita do cônjuge, companheira, parentes e amigos</strong
+            ><br />
+            <strong style="color: #1e3a8a">XI - Chamamento nominal</strong> (não
+            número)<br />
+            <strong style="color: #1e3a8a"
+              >XII - Igualdade de tratamento</strong
+            >
+            (sem discriminação)<br />
+            <strong style="color: #1e3a8a"
+              >XIII - Audiência especial com o diretor do
+              estabelecimento</strong
+            ><br />
+            <strong style="color: #1e3a8a">XIV - Representação e petição</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >XV - Contato com o mundo exterior</strong
+            >
+            (correspondência, leitura)<br />
+            <strong style="color: #1e3a8a"
+              >XVI - Atestado de pena a cumprir</strong
+            >
+            (emitido anualmente)
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: #fef3c7;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #f59e0b;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #92400e">🚨 PEGADINHAS AOCP - DIREITOS</h3>
+        <p
+          style="
+            font-size: 17px;
+            color: #374151;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="color: #dc2626"
+            >❌ "Preso perde todos os direitos"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ Conserva todos NÃO atingidos pela sentença</strong
+          ><br /><br />
+
+          <strong style="color: #dc2626"
+            >❌ "Visita íntima é direito previsto na LEP"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ Visita íntima NÃO está expressamente na LEP (Resolução
+            CNJ)</strong
+          ><br /><br />
+
+          <strong style="color: #dc2626"
+            >❌ "Preso não tem direito à previdência"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ TEM direito à Previdência Social (<span class="artigo"
+              >Art. 41, III</span
+            >)</strong
+          >
+        </p>
+      </div>
+
+      <!-- ================================ -->
+      <!-- TEMA 5: DEVERES E FALTAS (10%) -->
+      <!-- ================================ -->
+      <h2>
+        ⚠️ DEVERES E FALTAS DISCIPLINARES (<span class="artigo"
+          >Arts. 39, 50-52 LEP</span
+        >)
+      </h2>
+
+      <div class="secao">
+        <h3 style="color: #f59e0b">
+          📋 DEVERES DO PRESO (<span class="artigo">Art. 39 LEP</span>)
+        </h3>
+
+        <div class="lista-deveres">
+          <p style="font-size: 17px; font-weight: 700; line-height: 2">
+            <strong style="color: #1e3a8a"
+              >I - Comportamento disciplinado e cumprimento fiel</strong
+            >
+            da sentença<br />
+            <strong style="color: #1e3a8a">II - Obediência ao servidor</strong>
+            e respeito a qualquer pessoa<br />
+            <strong style="color: #1e3a8a">III - Urbanidade e respeito</strong>
+            no trato com demais presos<br />
+            <strong style="color: #1e3a8a"
+              >IV - Conduta oposta aos movimentos individuais ou
+              coletivos</strong
+            >
+            de fuga/subversão<br />
+            <strong style="color: #1e3a8a"
+              >V - Execução do trabalho, das tarefas e das ordens
+              recebidas</strong
+            ><br />
+            <strong style="color: #1e3a8a"
+              >VI - Submissão à sanção disciplinar</strong
+            >
+            imposta<br />
+            <strong style="color: #1e3a8a"
+              >VII - Indenização à vítima ou seus sucessores</strong
+            ><br />
+            <strong style="color: #1e3a8a">VIII - Indenização ao Estado</strong>
+            (despesas com manutenção)<br />
+            <strong style="color: #1e3a8a"
+              >IX - Higiene pessoal e asseio da cela ou alojamento</strong
+            ><br />
+            <strong style="color: #1e3a8a">X - Conservação dos objetos</strong>
+            de uso pessoal
+          </p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3 style="color: #dc2626">
+          🚫 FALTAS DISCIPLINARES (<span class="artigo">Arts. 50-52 LEP</span>)
+        </h3>
+
+        <div
+          style="
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 3px solid #dc2626;
+            margin: 20px 0;
+          "
+        >
+          <h4
+            style="
+              color: #991b1b;
+              font-size: 22px;
+              margin-bottom: 15px;
+              font-weight: 900;
+            "
+          >
+            FALTA GRAVE (<span class="artigo">Art. 50 LEP</span>)
+          </h4>
+
+          <div class="lista-faltas">
+            <p style="font-size: 17px; font-weight: 700; line-height: 2">
+              <strong style="color: #1e3a8a"
+                >I - Incitar ou participar de movimento</strong
+              >
+              para subverter ordem ou disciplina<br />
+              <strong style="color: #1e3a8a">II - Fugir</strong><br />
+              <strong style="color: #1e3a8a"
+                >III - Possuir, indevidamente, instrumento</strong
+              >
+              capaz de ofender integridade física<br />
+              <strong style="color: #1e3a8a"
+                >IV - Provocar acidente de trabalho</strong
+              ><br />
+              <strong style="color: #1e3a8a"
+                >V - Descumprir, no regime aberto, condição</strong
+              >
+              imposta<br />
+              <strong style="color: #1e3a8a"
+                >VI - Inobservância dos deveres</strong
+              >
+              (Arts. 39 e 40)<br />
+              <strong style="color: #1e3a8a"
+                >VII - Tiver em sua posse, utilizar ou fornecer</strong
+              >
+              aparelho telefônico, rádio ou similar<br />
+              <strong style="color: #1e3a8a">VIII - Recusar submeter-se</strong>
+              ao procedimento de identificação do patrimônio genético
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="
+            background: #fef3c7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 3px solid #f59e0b;
+          "
+        >
+          <h4
+            style="
+              color: #92400e;
+              font-size: 20px;
+              margin-bottom: 10px;
+              font-weight: 900;
+            "
+          >
+            Falta Média (<span class="artigo">Art. 51 LEP</span>)
+          </h4>
+          <p style="font-size: 17px; font-weight: 700">
+            <strong
+              >Comete falta média o condenado que descumprir deveres do
+              <span class="artigo">Art. 39</span> que não configurem falta
+              grave.</strong
+            >
+          </p>
+        </div>
+
+        <div
+          style="
+            background: #e0f2fe;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 3px solid #0284c7;
+          "
+        >
+          <h4
+            style="
+              color: #0c4a6e;
+              font-size: 20px;
+              margin-bottom: 10px;
+              font-weight: 900;
+            "
+          >
+            Falta Leve (<span class="artigo">Art. 52 LEP</span>)
+          </h4>
+          <p style="font-size: 17px; font-weight: 700">
+            <strong
+              >Pratica falta leve o condenado que violar norma ou cometer ato
+              faltoso não previsto como falta média ou grave.</strong
+            >
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+          padding: 30px;
+          border-radius: 15px;
+          border: 4px solid #dc2626;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #991b1b; font-weight: 900">
+          ⚠️ CONSEQUÊNCIAS DA FALTA GRAVE
+        </h3>
+        <p
+          style="
+            font-size: 18px;
+            color: #374151;
+            line-height: 2;
+            font-weight: 700;
+            margin-top: 15px;
+          "
+        >
+          1️⃣ <strong>Regressão de regime</strong><br />
+          2️⃣
+          <strong
+            >Perda de até
+            <span class="numero-importante">1/3 dos dias remidos</span></strong
+          >
+          (<span class="artigo">Art. 127</span>)<br />
+          3️⃣ <strong>Interrupção da contagem</strong> do prazo para progressão
+          (<strong>REINICIA</strong>)<br />
+          4️⃣ <strong>Isolamento por até 30 dias</strong> (sanção disciplinar)<br />
+          5️⃣ <strong>Suspensão ou restrição de direitos</strong> (visita,
+          recreação)<br /><br />
+
+          <span style="color: #dc2626; font-weight: 900; font-size: 20px"
+            >🚨 FALTA GRAVE NÃO INTERROMPE LIVRAMENTO CONDICIONAL!</span
+          ><br />
+          <span class="artigo">Súmula 441 STJ</span>
+        </p>
+      </div>
+
+      <!-- ================================ -->
+      <!-- TEMA 6: LIVRAMENTO CONDICIONAL (8%) -->
+      <!-- ================================ -->
+      <h2>
+        🟦 LIVRAMENTO CONDICIONAL (<span class="artigo"
+          >Arts. 83-90 CP + LEP</span
+        >)
+      </h2>
+
+      <div
+        style="
+          background: #e0f2fe;
+          padding: 30px;
+          border-radius: 12px;
+          border: 4px solid #0284c7;
+          margin: 25px 0;
+        "
+      >
+        <p
+          style="
+            font-size: 18px;
+            color: #0c4a6e;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="font-size: 22px">Livramento Condicional</strong> é a
+          <strong>liberdade antecipada</strong> concedida ao condenado que
+          cumpriu parte da pena e demonstra
+          <strong>bom comportamento</strong>.<br /><br />
+
+          <strong style="color: #1e3a8a; font-size: 20px">🎯 Diferença:</strong
+          ><br />
+          ✅ <strong>Progressão:</strong> muda de REGIME
+          (fechado→semiaberto→aberto)<br />
+          ✅ <strong>Livramento:</strong> SAI da prisão em
+          <strong>LIBERDADE VIGIADA</strong>
+        </p>
+      </div>
+
+      <h3>
+        📊 REQUISITOS DO LIVRAMENTO CONDICIONAL (<span class="artigo"
+          >Art. 83 CP</span
+        >)
+      </h3>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>TIPO DE CRIME</th>
+            <th>REQUISITO OBJETIVO (TEMPO)</th>
+            <th>REQUISITO SUBJETIVO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 900">Crimes Comuns (Primário)</td>
+            <td style="background: #d1fae5; font-weight: 900">
+              <span class="numero-importante">Mais de 1/3</span> da pena
+            </td>
+            <td>Bom comportamento + reparação do dano (se possível)</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 900">Crimes Comuns (Reincidente)</td>
+            <td style="background: #fef3c7; font-weight: 900">
+              <span class="numero-importante">Mais de 1/2</span> da pena
+            </td>
+            <td>Bom comportamento + reparação do dano</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 900">Crimes Hediondos (Primário)</td>
+            <td style="background: #fee2e2; font-weight: 900">
+              <span class="numero-importante">Mais de 2/3</span> da pena
+            </td>
+            <td>Bom comportamento + não reincidência específica</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 900">
+              Crimes Hediondos (Reincidente Específico)
+            </td>
+            <td style="background: #fee2e2; font-weight: 900">
+              <span class="numero-importante">NÃO TEM DIREITO</span>
+            </td>
+            <td>Vedado por lei</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+          padding: 30px;
+          border-radius: 15px;
+          border: 4px solid #f59e0b;
+          margin: 25px 0;
+        "
+      >
+        <h3
+          style="
+            color: #92400e;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: 900;
+          "
+        >
+          💡 MACETE LIVRAMENTO
+        </h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+          "
+        >
+          <div
+            style="
+              background: white;
+              padding: 25px;
+              border-radius: 12px;
+              text-align: center;
+              border: 4px solid #10b981;
+            "
+          >
+            <div style="font-size: 56px; margin-bottom: 15px">🟢</div>
+            <strong style="color: #10b981; font-size: 20px; font-weight: 900"
+              >PRIMÁRIO</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 40px">> 1/3</span>
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 25px;
+              border-radius: 12px;
+              text-align: center;
+              border: 4px solid #f59e0b;
+            "
+          >
+            <div style="font-size: 56px; margin-bottom: 15px">🟡</div>
+            <strong style="color: #f59e0b; font-size: 20px; font-weight: 900"
+              >REINCIDENTE</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 40px">> 1/2</span>
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 25px;
+              border-radius: 12px;
+              text-align: center;
+              border: 4px solid #dc2626;
+            "
+          >
+            <div style="font-size: 56px; margin-bottom: 15px">🔴</div>
+            <strong style="color: #dc2626; font-size: 20px; font-weight: 900"
+              >HEDIONDO</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 40px">> 2/3</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: #fee2e2;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #dc2626;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #991b1b; font-weight: 900">
+          🚨 PEGADINHAS AOCP - LIVRAMENTO
+        </h3>
+        <p
+          style="
+            font-size: 17px;
+            color: #374151;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="color: #dc2626">❌ "Primário: 1/3 da pena"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ Primário: MAIS de 1/3 (> 1/3)</strong
+          ><br /><br />
+
+          <strong style="color: #dc2626"
+            >❌ "Falta grave interrompe livramento"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ NÃO interrompe! (<span class="artigo">Súmula 441 STJ</span
+            >)</strong
+          ><br /><br />
+
+          <strong style="color: #dc2626"
+            >❌ "Hediondo reincidente: mais de 3/4"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ Hediondo reincidente ESPECÍFICO = NÃO TEM DIREITO</strong
+          >
+        </p>
+      </div>
+
+      <!-- ================================ -->
+      <!-- TEMA 7: SAÍDAS TEMPORÁRIAS (5%) -->
+      <!-- ================================ -->
+      <h2>
+        🚪 SAÍDAS TEMPORÁRIAS (<span class="artigo">Arts. 122-125 LEP</span>)
+      </h2>
+
+      <div
+        style="
+          background: #e0f2fe;
+          padding: 30px;
+          border-radius: 12px;
+          border: 4px solid #0284c7;
+          margin: 25px 0;
+        "
+      >
+        <p
+          style="
+            font-size: 18px;
+            color: #0c4a6e;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="font-size: 22px">Saída Temporária</strong> é a
+          <strong>permissão</strong> para o preso sair do estabelecimento penal
+          por <strong>curto período</strong>, sem vigilância direta.<br /><br />
+
+          <strong style="color: #1e3a8a; font-size: 20px">🎯 Objetivo:</strong>
+          Reintegração social gradual
+        </p>
+      </div>
+
+      <h3>
+        📋 REQUISITOS SAÍDA TEMPORÁRIA (<span class="artigo">Art. 123 LEP</span
+        >)
+      </h3>
+      <div class="secao">
+        <p style="font-size: 18px; font-weight: 700; line-height: 2">
+          <strong style="color: #1e3a8a">1️⃣ Regime SEMIABERTO ou ABERTO</strong>
+          (fechado NÃO tem)<br />
+          <strong style="color: #1e3a8a">2️⃣ Comportamento ADEQUADO</strong
+          ><br />
+          <strong style="color: #1e3a8a"
+            >3️⃣ Cumprimento mínimo de
+            <span class="numero-importante">1/6 da pena</span></strong
+          >
+          (primário) ou
+          <span class="numero-importante">1/4</span> (reincidente)<br />
+          <strong style="color: #1e3a8a"
+            >4️⃣ Compatibilidade do benefício</strong
+          >
+          com os objetivos da pena
+        </p>
+      </div>
+
+      <h3>
+        🎯 FINALIDADES DA SAÍDA (<span class="artigo">Art. 122 LEP</span>)
+      </h3>
+      <div
+        style="
+          background: white;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #10b981;
+          margin: 20px 0;
+        "
+      >
+        <p style="font-size: 18px; font-weight: 700; line-height: 2">
+          <strong style="color: #1e3a8a">I - Visita à família</strong><br />
+          <strong style="color: #1e3a8a"
+            >II - Frequência a curso supletivo profissionalizante</strong
+          ><br />
+          <strong style="color: #1e3a8a"
+            >III - Frequência a curso superior</strong
+          ><br />
+          <strong style="color: #1e3a8a"
+            >IV - Participação em atividades</strong
+          >
+          que concorram para o retorno ao convívio social
+        </p>
+      </div>
+
+      <h3>⏱️ PRAZOS (<span class="artigo">Art. 124 LEP</span>)</h3>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>TIPO DE SAÍDA</th>
+            <th>PRAZO</th>
+            <th>QUANTIDADE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 900">Saída Temporária</td>
+            <td style="background: #d1fae5; font-weight: 900">
+              Até <span class="numero-importante">7 dias</span>
+            </td>
+            <td><span class="numero-importante">5 saídas/ano</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 900">Prazo entre saídas</td>
+            <td style="background: #fef3c7; font-weight: 900">
+              Intervalo mínimo <span class="numero-importante">45 dias</span>
+            </td>
+            <td>Entre uma saída e outra</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div
+        style="
+          background: #fee2e2;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #dc2626;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #991b1b; font-weight: 900">
+          🚨 PEGADINHAS AOCP - SAÍDAS
+        </h3>
+        <p
+          style="
+            font-size: 17px;
+            color: #374151;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="color: #dc2626"
+            >❌ "Basta 1/6 da pena para ter saída"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ Precisa: 1/6 + regime semiaberto/aberto + bom
+            comportamento</strong
+          ><br /><br />
+
+          <strong style="color: #dc2626">❌ "Saída: até 10 dias"</strong><br />
+          <strong style="color: #16a34a"
+            >✅ Saída: até <span class="numero-importante">7 dias</span></strong
+          ><br /><br />
+
+          <strong style="color: #dc2626">❌ "Pode ter 10 saídas por ano"</strong
+          ><br />
+          <strong style="color: #16a34a"
+            >✅ Máximo
+            <span class="numero-importante">5 saídas/ano</span></strong
+          >
+        </p>
+      </div>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          padding: 35px;
+          border-radius: 15px;
+          color: white;
+          text-align: center;
+          margin-top: 40px;
+        "
+      >
+        <h3
+          style="
+            font-size: 28px;
+            margin-bottom: 18px;
+            font-weight: 900;
+            color: white;
+          "
+        >
+          ✅ RESUMO COMPLETO LEP - PARTE 2
+        </h3>
+        <p style="font-size: 17px; margin-bottom: 12px; font-weight: 700">
+          <strong
+            >4 Temas Essenciais: Direitos, Deveres/Faltas, Livramento,
+            Saídas</strong
+          >
+        </p>
+        <p
+          style="
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.8;
+            font-weight: 700;
+          "
+        >
+          📚 Cobertura 30% das questões AOCP<br />
+          💪 DECORE: Livramento > 1/3, > 1/2, > 2/3 | Saídas: 7 dias | Faltas:
+          1/3 remição<br />
+          🎯 Próximo: 180 QUESTÕES para fixar tudo!
+        </p>
+        <button
+          class="btn-print"
+          onclick="window.print()"
+          style="margin-top: 25px"
+        >
+          🖨️ IMPRIMIR PARA REVISAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

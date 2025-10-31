@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progressão de Regime | LEP | AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        padding: 20px;
+        font-size: 15px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .header {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 35px;
+        margin: -40px -40px 35px -40px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      }
+      /* CLASSE ESPECIAL PARA ARTIGOS - AZUL ESCURO */
+      .artigo {
+        color: #1e3a8a !important;
+        font-weight: bold;
+        background: #dbeafe;
+        padding: 3px 8px;
+        border-radius: 5px;
+        border: 2px solid #1e40af;
+      }
+      /* CLASSE PARA NÚMEROS IMPORTANTES - AZUL ESCURO */
+      .numero-importante {
+        color: #1e3a8a !important;
+        font-weight: bold;
+        font-size: 120%;
+        background: #dbeafe;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .stats {
+        background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border: 3px solid #10b981;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2);
+      }
+      .stats .big-number {
+        font-size: 72px;
+        font-weight: bold;
+        color: #10b981;
+        line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #065f46;
+        font-size: 26px;
+        margin: 35px 0 20px 0;
+        padding: 18px;
+        background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        border-left: 6px solid #10b981;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+      }
+      .requisitos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 25px 0;
+      }
+      .requisito-card {
+        padding: 25px;
+        border-radius: 15px;
+        border: 4px solid;
+        transition: all 0.3s;
+      }
+      .requisito-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      }
+      .requisito-objetivo {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        border-color: #3b82f6;
+      }
+      .requisito-subjetivo {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-color: #f59e0b;
+      }
+      .percentuais-box {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 5px solid #dc2626;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 25px 0;
+        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.3);
+      }
+      .percentual-item {
+        background: white;
+        padding: 25px;
+        margin: 15px 0;
+        border-radius: 12px;
+        border-left: 8px solid;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .percentual-comum {
+        border-left-color: #10b981;
+      }
+      .percentual-hediondo {
+        border-left-color: #dc2626;
+      }
+      .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .tabela th {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 18px;
+        font-size: 16px;
+        text-align: left;
+      }
+      .tabela td {
+        padding: 15px;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 15px;
+      }
+      .tabela tr:nth-child(even) {
+        background: #f9fafb;
+      }
+      .tabela tr:hover {
+        background: #d1fae5;
+      }
+      .pegadinhas {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 4px solid #dc2626;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 6px 24px rgba(220, 38, 38, 0.3);
+      }
+      .pegadinhas h2 {
+        color: #991b1b;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+        padding: 0 0 15px 0;
+        border-bottom: 4px solid #fca5a5;
+      }
+      .pegadinha-item {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .errado {
+        color: #dc2626;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .certo {
+        color: #16a34a;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .btn-print {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        margin: 20px 0;
+      }
+      .btn-print:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+        }
+        .btn-print {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        .requisitos-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🟢 PROGRESSÃO DE REGIME</h1>
+        <p style="font-size: 18px; margin-top: 10px">
+          <span class="artigo">Arts. 112-118 LEP</span>
+        </p>
+        <div
+          style="
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 8px;
+            backdrop-filter: blur(10px);
+          "
+        >
+          📊 2º MAIS COBRADO AOCP (22% das questões)
+        </div>
+      </div>
+
+      <div class="stats">
+        <h2
+          style="
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            color: #065f46;
+          "
+        >
+          🥈 VICE-CAMPEÃO!
+        </h2>
+        <div class="big-number">22%</div>
+        <p style="font-size: 16px; color: #065f46; margin-top: 10px">
+          <strong>Das questões LEP na AOCP são sobre PROGRESSÃO!</strong><br />
+          AOCP AMA perguntar os percentuais!
+        </p>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">
+        🖨️ IMPRIMIR ESTE RESUMO
+      </button>
+
+      <h2>
+        📋 O que é Progressão de Regime? (<span class="artigo"
+          >Art. 112 LEP</span
+        >)
+      </h2>
+      <div
+        style="
+          background: #e0f2fe;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #0284c7;
+          margin: 25px 0;
+        "
+      >
+        <p style="font-size: 17px; color: #0c4a6e; line-height: 2">
+          <strong>Progressão de regime</strong> é a transferência do condenado
+          para regime <strong>MENOS rigoroso</strong>.<br /><br />
+
+          🔽 Ordem da progressão:<br />
+          <span style="font-size: 20px; font-weight: bold; color: #1e3a8a">
+            FECHADO → SEMIABERTO → ABERTO
+          </span>
+        </p>
+      </div>
+
+      <h2>
+        ⚖️ Os 2 Requisitos Obrigatórios (<span class="artigo">Art. 112 LEP</span
+        >)
+      </h2>
+      <div class="requisitos-grid">
+        <div class="requisito-card requisito-objetivo">
+          <div style="font-size: 64px; text-align: center; margin-bottom: 15px">
+            📊
+          </div>
+          <h3
+            style="
+              color: #1e40af;
+              font-size: 22px;
+              text-align: center;
+              margin-bottom: 15px;
+            "
+          >
+            REQUISITO OBJETIVO
+          </h3>
+          <div style="text-align: center; margin: 20px 0">
+            <div
+              style="
+                font-size: 48px;
+                font-weight: bold;
+                color: #1e3a8a;
+                line-height: 1;
+              "
+            >
+              TEMPO
+            </div>
+          </div>
+          <p
+            style="
+              font-size: 15px;
+              color: #374151;
+              line-height: 1.8;
+              text-align: center;
+            "
+          >
+            Cumprir fração da pena:<br /><br />
+            <strong class="numero-importante">1/6</strong> - Crimes comuns<br />
+            <strong class="numero-importante">40%</strong> - Hediondo
+            primário<br />
+            <strong class="numero-importante">60%</strong> - Hediondo
+            reincidente
+          </p>
+        </div>
+
+        <div class="requisito-card requisito-subjetivo">
+          <div style="font-size: 64px; text-align: center; margin-bottom: 15px">
+            ⭐
+          </div>
+          <h3
+            style="
+              color: #92400e;
+              font-size: 22px;
+              text-align: center;
+              margin-bottom: 15px;
+            "
+          >
+            REQUISITO SUBJETIVO
+          </h3>
+          <div style="text-align: center; margin: 20px 0">
+            <div
+              style="
+                font-size: 48px;
+                font-weight: bold;
+                color: #f59e0b;
+                line-height: 1;
+              "
+            >
+              BOM COMPORTAMENTO
+            </div>
+          </div>
+          <p
+            style="
+              font-size: 15px;
+              color: #374151;
+              line-height: 1.8;
+              text-align: center;
+            "
+          >
+            Atestado pelo diretor do estabelecimento<br /><br />
+            <strong style="color: #f59e0b">Ausência de faltas graves</strong
+            ><br />
+            Adaptação ao regime<br />
+            Aptidão para o convívio social
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: #fef3c7;
+          padding: 25px;
+          border-radius: 12px;
+          border-left: 6px solid #f59e0b;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #92400e; margin: 0 0 15px 0; font-size: 22px">
+          ⚠️ ATENÇÃO AOCP!
+        </h3>
+        <p style="font-size: 17px; color: #374151; line-height: 2">
+          <strong>PRECISA DOS 2 REQUISITOS!</strong><br /><br />
+
+          ❌ Só tempo = <strong>NÃO</strong> progride<br />
+          ❌ Só bom comportamento = <strong>NÃO</strong> progride<br />
+          ✅ Tempo + Bom comportamento = <strong>PROGRIDE!</strong>
+        </p>
+      </div>
+
+      <h2>
+        📊 Percentuais de Progressão (<span class="artigo"
+          >Arts. 112 e 113 LEP</span
+        >)
+      </h2>
+      <div class="percentuais-box">
+        <h3
+          style="
+            text-align: center;
+            color: #991b1b;
+            font-size: 28px;
+            margin-bottom: 25px;
+          "
+        >
+          🔥 DECORE ESTES NÚMEROS!
+        </h3>
+
+        <div class="percentual-item percentual-comum">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 100px 1fr;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: center">
+              <div style="font-size: 56px; font-weight: bold; color: #10b981">
+                1/6
+              </div>
+            </div>
+            <div>
+              <h4 style="color: #10b981; font-size: 20px; margin-bottom: 10px">
+                CRIMES COMUNS
+              </h4>
+              <p style="color: #374151; font-size: 16px; line-height: 1.7">
+                <span class="artigo">Art. 112 LEP</span><br />
+                <strong class="numero-importante">1/6 da pena</strong> (16,67%)
+                + bom comportamento<br />
+                Regra geral para crimes não hediondos
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="percentual-item percentual-hediondo">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 100px 1fr;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: center">
+              <div style="font-size: 56px; font-weight: bold; color: #dc2626">
+                40%
+              </div>
+            </div>
+            <div>
+              <h4 style="color: #dc2626; font-size: 20px; margin-bottom: 10px">
+                HEDIONDO - PRIMÁRIO
+              </h4>
+              <p style="color: #374151; font-size: 16px; line-height: 1.7">
+                <span class="artigo">Art. 112, §3º LEP</span><br />
+                <strong class="numero-importante">40% da pena</strong> (2/5) +
+                bom comportamento<br />
+                Para condenado primário
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="percentual-item percentual-hediondo">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 100px 1fr;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: center">
+              <div style="font-size: 56px; font-weight: bold; color: #991b1b">
+                60%
+              </div>
+            </div>
+            <div>
+              <h4 style="color: #991b1b; font-size: 20px; margin-bottom: 10px">
+                HEDIONDO - REINCIDENTE
+              </h4>
+              <p style="color: #374151; font-size: 16px; line-height: 1.7">
+                <span class="artigo">Art. 112, §3º LEP</span><br />
+                <strong class="numero-importante">60% da pena</strong> (3/5) +
+                bom comportamento<br />
+                Para condenado reincidente
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+          padding: 30px;
+          border-radius: 15px;
+          border: 4px solid #0284c7;
+          margin: 25px 0;
+        "
+      >
+        <h3
+          style="
+            color: #0c4a6e;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            text-align: center;
+          "
+        >
+          💡 MACETE PARA DECORAR
+        </h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+          "
+        >
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              border: 3px solid #10b981;
+            "
+          >
+            <div style="font-size: 48px; margin-bottom: 10px">🟢</div>
+            <strong style="color: #10b981; font-size: 18px">COMUM</strong><br />
+            <span class="numero-importante" style="font-size: 32px">1/6</span
+            ><br />
+            <span style="font-size: 13px; color: #6b7280">~16,67%</span>
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              border: 3px solid #dc2626;
+            "
+          >
+            <div style="font-size: 48px; margin-bottom: 10px">🔴</div>
+            <strong style="color: #dc2626; font-size: 18px">HEDIONDO 1º</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 32px">40%</span
+            ><br />
+            <span style="font-size: 13px; color: #6b7280">2/5 = 40%</span>
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              border: 3px solid #991b1b;
+            "
+          >
+            <div style="font-size: 48px; margin-bottom: 10px">⚫</div>
+            <strong style="color: #991b1b; font-size: 18px"
+              >HEDIONDO REINC</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 32px">60%</span
+            ><br />
+            <span style="font-size: 13px; color: #6b7280">3/5 = 60%</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>
+        📝 Exame Criminológico (<span class="artigo">Art. 112, §1º LEP</span>)
+      </h2>
+      <div
+        style="
+          background: #f3f4f6;
+          padding: 25px;
+          border-radius: 12px;
+          margin: 25px 0;
+        "
+      >
+        <p style="font-size: 16px; color: #374151; line-height: 2">
+          <strong style="color: #1e3a8a"
+            >Exame criminológico NÃO é obrigatório</strong
+          >
+          para progressão de regime.<br /><br />
+
+          ✅ Juiz PODE determinar em decisão fundamentada<br />
+          ✅ Serve para avaliar personalidade e periculosidade<br />
+          ❌ Não é requisito automático<br /><br />
+
+          <span class="artigo">Súmula Vinculante 26 STF</span>: Exame
+          criminológico não é obrigatório para progressão
+        </p>
+      </div>
+
+      <h2>📊 Tabela Comparativa - Percentuais</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>TIPO DE CRIME</th>
+            <th>PRIMÁRIO</th>
+            <th>REINCIDENTE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: bold">Crimes Comuns</td>
+            <td style="background: #d1fae5">
+              <strong class="numero-importante">1/6</strong> (16,67%)
+            </td>
+            <td style="background: #d1fae5">
+              <strong class="numero-importante">1/6</strong> (16,67%)
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold">Crimes Hediondos</td>
+            <td style="background: #fecaca">
+              <strong class="numero-importante">40%</strong> (2/5)
+            </td>
+            <td style="background: #fee2e2">
+              <strong class="numero-importante">60%</strong> (3/5)
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold">Tráfico Privilegiado</td>
+            <td style="background: #fecaca">
+              <strong class="numero-importante">40%</strong> (2/5)
+            </td>
+            <td style="background: #fee2e2">
+              <strong class="numero-importante">60%</strong> (3/5)
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold">Tortura, Terrorismo</td>
+            <td style="background: #fecaca">
+              <strong class="numero-importante">40%</strong> (2/5)
+            </td>
+            <td style="background: #fee2e2">
+              <strong class="numero-importante">60%</strong> (3/5)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>
+        🚫 Falta Grave e Progressão (<span class="artigo">Art. 127 LEP</span>)
+      </h2>
+      <div
+        style="
+          background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+          padding: 25px;
+          border-radius: 12px;
+          border: 4px solid #dc2626;
+          margin: 25px 0;
+        "
+      >
+        <h3 style="color: #991b1b; margin: 0 0 15px 0; font-size: 22px">
+          ⚠️ CONSEQUÊNCIAS DA FALTA GRAVE
+        </h3>
+        <div
+          style="
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+          "
+        >
+          <p style="font-size: 16px; color: #374151; line-height: 2">
+            <strong style="color: #dc2626; font-size: 18px"
+              >Falta grave praticada:</strong
+            ><br /><br />
+
+            1️⃣ <strong>Regressão de regime</strong> (volta para regime mais
+            rigoroso)<br />
+            2️⃣ <strong>Perda de até 1/3 dos dias remidos</strong><br />
+            3️⃣ <strong>Reinicia contagem</strong> do requisito objetivo (1/6,
+            40% ou 60%)<br />
+            4️⃣ <strong>Perda do bom comportamento</strong><br /><br />
+
+            ❌ <span class="errado">NÃO anula todo o tempo cumprido!</span
+            ><br />
+            ✅
+            <span class="certo"
+              >Reinicia contagem do percentual necessário</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="pegadinhas">
+        <h2>🚨 TOP 8 PEGADINHAS AOCP - PROGRESSÃO</h2>
+
+        <div class="pegadinha-item" style="border: 4px solid #dc2626">
+          <div style="text-align: center; margin-bottom: 15px">
+            <div style="font-size: 64px; margin-bottom: 10px">⚠️</div>
+            <p style="font-size: 24px; font-weight: bold; color: #dc2626">
+              PEGADINHA #1: Percentuais Errados
+            </p>
+          </div>
+          <div style="background: #fee2e2; padding: 20px; border-radius: 10px">
+            <p style="font-size: 18px; line-height: 1.8; text-align: center">
+              <span class="errado"
+                >❌ "Hediondo: primário 1/3, reincidente 1/2"</span
+              ><br />
+              <span class="errado"
+                >❌ "Hediondo: primário 30%, reincidente 50%"</span
+              ><br /><br />
+              <span class="certo" style="font-size: 22px"
+                >✅ Primário <span class="numero-importante">40%</span> /
+                Reincidente <span class="numero-importante">60%</span></span
+              >
+            </p>
+          </div>
+          <div
+            style="
+              margin-top: 15px;
+              padding: 15px;
+              background: #fef3c7;
+              border-radius: 8px;
+            "
+          >
+            <p style="font-size: 15px; color: #92400e; text-align: center">
+              <strong>💡 Lei 13.964/2019 - Pacote Anticrime mudou!</strong
+              ><br />
+              Antes: 2/5 e 3/5 | Agora:
+              <span class="numero-importante">40%</span> e
+              <span class="numero-importante">60%</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #2: Exame Criminológico Obrigatório</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Exame criminológico é obrigatório para progressão"</span
+            ><br />
+            <span class="certo"
+              >✅ NÃO é obrigatório! Juiz pode determinar em decisão
+              fundamentada</span
+            ><br />
+            <span style="color: #1e3a8a; font-size: 13px"
+              ><span class="artigo">Súmula Vinculante 26 STF</span></span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #3: Só Bom Comportamento Basta</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Tendo bom comportamento, pode progredir a qualquer
+              tempo"</span
+            ><br />
+            <span class="certo"
+              >✅ Precisa DOS 2: Tempo (1/6, 40% ou 60%) + Bom
+              comportamento</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #4: Falta Grave Anula Tudo</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Falta grave anula todo o tempo de pena cumprida"</span
+            ><br />
+            <span class="certo"
+              >✅ Reinicia contagem do requisito objetivo (1/6, 40% ou
+              60%)</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >O tempo anterior não é perdido, mas precisa recumprir o
+              percentual</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #5: Tráfico Privilegiado = Crime Comum</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Tráfico privilegiado progride com 1/6"</span
+            ><br />
+            <span class="certo"
+              >✅ Tráfico privilegiado continua hediondo:
+              <span class="numero-importante">40%</span> ou
+              <span class="numero-importante">60%</span></span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #6: Progressão Direta</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Pode pular do fechado direto para o aberto"</span
+            ><br />
+            <span class="certo"
+              >✅ Precisa passar pelo semiaberto (regra geral)</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Exceção: STF admite em casos excepcionais</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #7: Crimes Comuns e Reincidência</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Crime comum reincidente: 1/4 da pena"</span
+            ><br />
+            <span class="certo"
+              >✅ Crime comum (primário OU reincidente):
+              <span class="numero-importante">1/6</span> da pena</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #8: Progressão Automática</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado"
+              >❌ "Cumprindo 1/6, progressão é automática"</span
+            ><br />
+            <span class="certo"
+              >✅ Precisa de DECISÃO JUDICIAL após manifestação MP</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+          padding: 30px;
+          border-radius: 15px;
+          border: 4px solid #10b981;
+          margin: 25px 0;
+        "
+      >
+        <h3
+          style="
+            color: #065f46;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            text-align: center;
+          "
+        >
+          📊 QUADRO RESUMO FINAL
+        </h3>
+        <table style="width: 100%; border-collapse: collapse">
+          <tr style="border-bottom: 2px solid #10b981">
+            <td
+              style="
+                padding: 15px;
+                font-weight: bold;
+                color: #065f46;
+                font-size: 18px;
+              "
+            >
+              Crimes Comuns
+            </td>
+            <td
+              style="
+                padding: 15px;
+                font-size: 28px;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              <span class="numero-importante">1/6</span>
+            </td>
+          </tr>
+          <tr style="border-bottom: 2px solid #10b981">
+            <td
+              style="
+                padding: 15px;
+                font-weight: bold;
+                color: #065f46;
+                font-size: 18px;
+              "
+            >
+              Hediondo Primário
+            </td>
+            <td
+              style="
+                padding: 15px;
+                font-size: 28px;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              <span class="numero-importante">40%</span>
+            </td>
+          </tr>
+          <tr style="border-bottom: 2px solid #10b981">
+            <td
+              style="
+                padding: 15px;
+                font-weight: bold;
+                color: #065f46;
+                font-size: 18px;
+              "
+            >
+              Hediondo Reincidente
+            </td>
+            <td
+              style="
+                padding: 15px;
+                font-size: 28px;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              <span class="numero-importante">60%</span>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 15px;
+                font-weight: bold;
+                color: #065f46;
+                font-size: 18px;
+              "
+            >
+              Requisito Subjetivo
+            </td>
+            <td
+              style="
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              Bom Comportamento
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="footer">
+        <h3 style="font-size: 26px; margin-bottom: 15px">
+          ✅ Resumo Completo - Progressão de Regime
+        </h3>
+        <p style="font-size: 16px; margin-bottom: 10px">
+          Baseado em <strong>análise de 400+ questões reais da AOCP</strong>
+        </p>
+        <p style="font-size: 14px; opacity: 0.9; line-height: 1.8">
+          📚 2º tema mais cobrado (22% das questões!)<br />
+          💪 DECORE: <span class="numero-importante">1/6</span> comum |
+          <span class="numero-importante">40%</span> hediondo 1º |
+          <span class="numero-importante">60%</span> hediondo reinc<br />
+          🎯 Próximo: Remição (3º mais cobrado - 15%)
+        </p>
+        <button
+          class="btn-print"
+          onclick="window.print()"
+          style="margin-top: 20px"
+        >
+          🖨️ IMPRIMIR PARA REVISAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

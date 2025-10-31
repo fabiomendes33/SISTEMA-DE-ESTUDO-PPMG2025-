@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lei 9.455/1997 - Lei de Tortura</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+        padding: 20px;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #b71c1c;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        border-bottom: 5px solid #d32f2f;
+        padding-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #c62828;
+        font-size: 1.3em;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+
+      h2 {
+        color: #d32f2f;
+        font-size: 1.8em;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: linear-gradient(to right, #ffebee, #ffffff);
+        border-left: 6px solid #d32f2f;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c62828;
+        font-size: 1.4em;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        border-left: 4px solid #d32f2f;
+        font-weight: bold;
+      }
+
+      .destaque {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+        border-left: 5px solid #ff6f00;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .importante {
+        background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+        border-left: 5px solid #d32f2f;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .atencao {
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        border-left: 5px solid #1976d2;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .artigo {
+        background: #fff3e0;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 3px solid #f57c00;
+      }
+
+      .artigo-numero {
+        color: #e65100;
+        font-weight: bold;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #ffcc80, #ffb74d);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .artigo-texto {
+        color: #0066cc;
+        font-weight: bold;
+        font-size: 1.05em;
+        line-height: 1.9;
+        margin-bottom: 10px;
+      }
+
+      .questao {
+        background: #f5f5f5;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 10px;
+        border-left: 5px solid #d32f2f;
+      }
+
+      .questao-pergunta {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+      }
+
+      .questao-resposta {
+        color: #0066cc;
+        font-size: 1em;
+        line-height: 1.8;
+        padding-left: 20px;
+        font-weight: bold;
+      }
+
+      .jurisprudencia {
+        background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 3px solid #ff6f00;
+      }
+
+      .jurisprudencia-titulo {
+        color: #e65100;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+
+      ul,
+      ol {
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.8;
+        color: #2c3e50;
+      }
+
+      .definicao {
+        background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border-left: 5px solid #8e24aa;
+      }
+
+      .definicao-termo {
+        color: #4a148c;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .tabela-comparativa {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .tabela-comparativa th {
+        background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-family: "Arial Black", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .tabela-comparativa td {
+        padding: 15px;
+        border-bottom: 2px solid #ddd;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        font-size: 1.05em;
+        text-align: center;
+      }
+
+      .tabela-comparativa tr:nth-child(even) {
+        background: linear-gradient(to right, #ffebee, #ffcdd2);
+      }
+
+      .tabela-comparativa tr:nth-child(odd) {
+        background: linear-gradient(to right, #ffffff, #f8f9fa);
+      }
+
+      .tabela-comparativa tr:hover {
+        background: linear-gradient(to right, #fff3e0, #ffe0b2);
+        transform: scale(1.01);
+        transition: all 0.3s ease;
+      }
+
+      .tabela-comparativa td:first-child {
+        color: #d32f2f;
+        font-weight: bold;
+      }
+
+      .tabela-comparativa td:nth-child(2) {
+        color: #2c3e50;
+        font-weight: bold;
+      }
+
+      .exemplo {
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border-left: 5px solid #1976d2;
+      }
+
+      .exemplo-titulo {
+        color: #0d47a1;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .sumula {
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 3px solid #e91e63;
+        font-weight: bold;
+      }
+
+      .sumula-numero {
+        color: #880e4f;
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+
+      .titulo-secao {
+        background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+        color: white;
+        padding: 18px;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      ol.lista-colorida {
+        counter-reset: item;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ol.lista-colorida li {
+        counter-increment: item;
+        margin-bottom: 15px;
+        padding: 12px;
+        background: linear-gradient(to right, #ffebee, #ffcdd2);
+        border-left: 5px solid #d32f2f;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #b71c1c;
+      }
+
+      ol.lista-colorida li::before {
+        content: counter(item) ". ";
+        font-weight: bold;
+        color: #d32f2f;
+        font-size: 1.2em;
+        margin-right: 8px;
+      }
+
+      ul.lista-colorida-ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul.lista-colorida-ul li {
+        margin-bottom: 12px;
+        padding: 12px;
+        background: linear-gradient(to right, #fff3e0, #ffe0b2);
+        border-left: 5px solid #f57c00;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #e65100;
+        position: relative;
+        padding-left: 40px;
+      }
+
+      ul.lista-colorida-ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 12px;
+        font-weight: bold;
+        color: #ff6f00;
+        font-size: 1.3em;
+      }
+
+      .pena {
+        background: #ffebee;
+        color: #c62828;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.1em;
+        border: 2px solid #ef5350;
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+          padding: 20px;
+        }
+
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚠️ Lei 9.455/1997</h1>
+      <div class="subtitle">
+        Lei de Tortura - Resumo COMPLETO para AOCP | Carreiras Policiais MG
+      </div>
+
+      <div class="importante">
+        ⚠️ <strong>ATENÇÃO:</strong>
+        <span style="color: #b71c1c"
+          >Material COMPLETO SEM OMITIR NENHUM ARTIGO! Focado 100% na AOCP para
+          carreiras policiais de Minas Gerais com TODOS os detalhes!</span
+        >
+      </div>
+
+      <!-- CONCEITOS INICIAIS -->
+      <h2>📖 1. Conceitos Fundamentais</h2>
+
+      <div class="definicao">
+        <div class="definicao-termo">O que é Tortura?</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Segundo a Convenção Contra a Tortura (ratificada no Brasil em 1991),
+          tortura é
+          <span style="color: #d32f2f; font-size: 1.05em"
+            >qualquer ato pelo qual dores ou sofrimentos agudos, físicos ou
+            mentais, são infligidos intencionalmente</span
+          >
+          a uma pessoa com fins de obter informação ou confissão, castigo,
+          intimidação ou coação.</span
+        >
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828"
+          >🚨 PREVISÃO CONSTITUCIONAL (Art. 5º, III):</strong
+        ><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >"Ninguém será submetido a tortura nem a tratamento desumano ou
+          degradante"</span
+        >
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">🎯 CF, Art. 5º, XLIII:</strong><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >A lei considerará crimes
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >INAFIANÇÁVEIS e INSUSCETÍVEIS de GRAÇA ou ANISTIA</span
+          >
+          a prática de tortura, tráfico ilícito de entorpecentes, terrorismo e
+          crimes hediondos.</span
+        >
+      </div>
+
+      <h3>🔸 Tortura é Imprescritível?</h3>
+
+      <div class="importante">
+        <strong style="color: #c62828; font-size: 1.2em"
+          >❌ NÃO! PEGADINHA CLÁSSICA!</strong
+        ><br />
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>Tortura é <span style="color: #d32f2f">INAFIANÇÁVEL</span></li>
+          <li>
+            Tortura é
+            <span style="color: #d32f2f">INSUSCETÍVEL de GRAÇA ou ANISTIA</span>
+          </li>
+          <li>
+            <span style="color: #d32f2f; font-size: 1.1em"
+              >Tortura NÃO é IMPRESCRITÍVEL!</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1"
+          >📌 ÚNICOS CRIMES IMPRESCRITÍVEIS NO BRASIL (CF art. 5º):</strong
+        ><br />
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li><span style="color: #1976d2">Racismo</span> (XLII)</li>
+          <li>
+            <span style="color: #1976d2">Ação de grupos armados</span> contra
+            ordem constitucional e Estado Democrático (XLIV)
+          </li>
+        </ul>
+      </div>
+
+      <h3>🔸 Anistia, Graça e Indulto</h3>
+
+      <div class="definicao">
+        <div class="definicao-termo">ANISTIA</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Perdão coletivo concedido por LEI do Congresso Nacional. Extingue o
+          crime e todas suas consequências (penais, civis e administrativas). É
+          RETROATIVA.</span
+        >
+      </div>
+
+      <div class="definicao">
+        <div class="definicao-termo">GRAÇA</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Clemência concedida pelo Presidente da República. Perdão INDIVIDUAL.
+          Extingue apenas a pena, mas permanecem efeitos secundários
+          (reincidência, antecedentes).</span
+        >
+      </div>
+
+      <div class="definicao">
+        <div class="definicao-termo">INDULTO</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Clemência concedida pelo Presidente da República. Perdão COLETIVO.
+          Extingue apenas a pena. Beneficiado será considerado reincidente em
+          novo crime.</span
+        >
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">⚠️ INDULTO TAMBÉM É VEDADO!</strong
+        ><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >Embora a CF só mencione anistia e graça, a Lei 8.072/90 (Crimes
+          Hediondos), art. 2º, I, veda expressamente: anistia, graça E
+          indulto!</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ STF - Vedação do Indulto</div>
+        <span style="color: #bf360c; font-weight: bold"
+          >"O art. 5º, XLIII, da CF, que proíbe a graça (gênero do qual o
+          indulto é espécie) nos crimes hediondos, NÃO conflita com o art. 84,
+          XII da Lei Maior. O decreto presidencial que concede indulto configura
+          ato de governo, caracterizado pela ampla discricionariedade, MAS
+          limitado pela vedação constitucional."</span
+        >
+      </div>
+
+      <!-- DOS CRIMES -->
+      <div class="titulo-secao">🔥 2. DOS CRIMES DE TORTURA</div>
+
+      <h2>⚖️ Art. 1º - Condutas Típicas</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º - Constitui crime de tortura</div>
+        <div class="pena" style="font-size: 1.2em; text-align: center">
+          Pena: Reclusão de 2 a 8 anos
+        </div>
+      </div>
+
+      <h3>🔸 I - Tortura-Prova / Tortura-Confissão (Inciso I, "a")</h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, I, "a" - Tortura-Prova</div>
+        <div class="artigo-texto">
+          Constranger alguém com emprego de VIOLÊNCIA ou GRAVE AMEAÇA,
+          causando-lhe sofrimento físico ou mental,
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >com o fim de obter informação, declaração ou confissão da vítima ou
+            de terceira pessoa</span
+          >.
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">🎯 CARACTERÍSTICAS:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            <span style="color: #d32f2f">Sujeito ativo:</span> CRIME COMUM
+            (qualquer pessoa)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Sujeito passivo:</span> Qualquer pessoa
+            (inclusive terceiro)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Elemento subjetivo:</span> DOLO
+            ESPECÍFICO (finalidade de obter informação/confissão)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Consumação:</span> CRIME FORMAL
+            (independe do resultado)
+          </li>
+          <li><span style="color: #d32f2f">Tentativa:</span> ADMISSÍVEL</li>
+        </ul>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplos Práticos</div>
+        <strong style="color: #1976d2"
+          >Policial tortura suspeito para obter confissão:</strong
+        >
+        <span style="color: #0d47a1; font-weight: bold">Tortura-prova</span
+        ><br /><br />
+        <strong style="color: #1976d2"
+          >Sequestrador tortura vítima para ela revelar senha do banco:</strong
+        >
+        <span style="color: #0d47a1; font-weight: bold">Tortura-prova</span
+        ><br /><br />
+        <strong style="color: #1976d2"
+          >Torturar o filho para os pais confessarem crime:</strong
+        >
+        <span style="color: #0d47a1; font-weight: bold"
+          >Tortura-prova (terceiro como vítima)</span
+        >
+      </div>
+
+      <h3>🔸 II - Tortura para Prática de Crime (Inciso I, "b")</h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, I, "b" - Tortura-Crime</div>
+        <div class="artigo-texto">
+          Constranger alguém com emprego de VIOLÊNCIA ou GRAVE AMEAÇA,
+          causando-lhe sofrimento físico ou mental,
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >para provocar ação ou omissão de natureza criminosa</span
+          >.
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">🎯 COAÇÃO MORAL IRRESISTÍVEL:</strong
+        ><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >A vítima que pratica crime sob tortura está sob
+          <span style="color: #d32f2f; font-size: 1.05em"
+            >COAÇÃO MORAL IRRESISTÍVEL</span
+          >
+          (CP, art. 22) → Excludente de culpabilidade → Vítima NÃO responde pelo
+          crime!</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">🔗 CONCURSO DE CRIMES:</strong><br />
+        <span style="color: #1976d2; font-weight: bold"
+          >O torturador responde em
+          <span style="font-size: 1.05em">CONCURSO MATERIAL</span> (art. 69 CP)
+          pela tortura E pelo crime praticado pela vítima (caso
+          consumado)!</span
+        >
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplo Prático</div>
+        <strong style="color: #1976d2"
+          >Bandido tortura funcionário para ele abrir cofre do banco:</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold">
+          • Torturador: Responde por tortura-crime + furto qualificado (concurso
+          material)<br />
+          • Funcionário: NÃO responde (coação moral irresistível)
+        </span>
+      </div>
+
+      <h3>🔸 III - Tortura Discriminatória (Inciso I, "c")</h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">
+          Art. 1º, I, "c" - Tortura Discriminatória
+        </div>
+        <div class="artigo-texto">
+          Constranger alguém com emprego de VIOLÊNCIA ou GRAVE AMEAÇA,
+          causando-lhe sofrimento físico ou mental,
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >em razão de discriminação RACIAL ou RELIGIOSA</span
+          >.
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828"
+          >⚠️ LIMITAÇÃO DA LEI - CRÍTICA DOUTRINÁRIA:</strong
+        ><br />
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            Lei prevê APENAS discriminação
+            <span style="color: #d32f2f">RACIAL</span> ou
+            <span style="color: #d32f2f">RELIGIOSA</span>
+          </li>
+          <li>
+            Doutrina critica exclusão de: orientação sexual, ideologia,
+            filosofia, gênero, etc.
+          </li>
+          <li>
+            <span style="color: #d32f2f; font-size: 1.05em"
+              >NÃO cabe analogia in malam partem!</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">
+          ⚖️ STF - ADO 26/DF (2019) - Homofobia e Transfobia
+        </div>
+        <span style="color: #bf360c; font-weight: bold"
+          >Aplica-se a Lei 7.716/89 (racismo) às condutas de discriminação por
+          orientação sexual ou identidade de gênero, MAS os efeitos estão
+          restritos ao crime de RACISMO. NÃO se estendem ao crime de TORTURA,
+          sob pena de violação ao princípio da legalidade.</span
+        >
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplo Prático</div>
+        <strong style="color: #1976d2"
+          >Skinhead tortura judeu por ódio religioso:</strong
+        >
+        <span style="color: #0d47a1; font-weight: bold"
+          >Tortura discriminatória + Racismo (Lei 7.716/89) em concurso</span
+        ><br /><br />
+        <strong style="color: #1976d2"
+          >Torturar homossexual por orientação sexual:</strong
+        >
+        <span style="color: #d32f2f; font-weight: bold"
+          >❌ NÃO é tortura discriminatória! (Lei não prevê)</span
+        >
+      </div>
+
+      <h3>🔸 IV - Tortura-Castigo (Inciso II)</h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, II - Tortura-Castigo</div>
+        <div class="artigo-texto">
+          Submeter alguém,
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >sob sua guarda, poder ou autoridade</span
+          >, com emprego de violência ou grave ameaça, a
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >INTENSO sofrimento físico ou mental</span
+          >, como forma de aplicar castigo pessoal ou medida de caráter
+          preventivo.
+        </div>
+        <div class="pena" style="font-size: 1.15em">
+          Pena: Reclusão de 2 a 8 anos
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">🎯 CARACTERÍSTICAS ESPECIAIS:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            <span style="color: #d32f2f">Sujeito ativo:</span> CRIME PRÓPRIO (só
+            quem tem guarda/poder/autoridade)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Sujeito passivo:</span> Pessoa sob
+            guarda/poder/autoridade
+          </li>
+          <li>
+            <span style="color: #d32f2f">Elemento subjetivo:</span> DOLO +
+            animus corrigendi (intenção de corrigir/castigar)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Consumação:</span> CRIME MATERIAL
+            (exige resultado: INTENSO sofrimento)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Tentativa:</span> ADMISSÍVEL na
+            modalidade comissiva
+          </li>
+        </ul>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">⚠️ DIFERENÇA CRUCIAL:</strong><br />
+        <span style="color: #1976d2; font-weight: bold">
+          • Inciso I: exige apenas "sofrimento"<br />
+          • Inciso II: exige "<span style="color: #d32f2f; font-size: 1.05em"
+            >INTENSO</span
+          >
+          sofrimento"
+        </span>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Quem pode ser Sujeito Ativo?</div>
+        <ul class="lista-colorida-ul">
+          <li>Pai/mãe em relação ao filho</li>
+          <li>Tutor em relação ao tutelado</li>
+          <li>Curador em relação ao curatelado</li>
+          <li>Professor em relação ao aluno</li>
+          <li>Babá em relação à criança sob cuidado</li>
+          <li>Diretor de escola em relação ao interno</li>
+          <li>Médico em relação ao paciente internado</li>
+          <li>
+            <span style="color: #d32f2f"
+              >❌ NÃO: Marido em relação à esposa</span
+            >
+            (não há relação de guarda/poder/autoridade)
+          </li>
+        </ul>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">
+          ⚖️ STJ - HC 169.379/SP (2011) - Babá
+        </div>
+        <span style="color: #bf360c; font-weight: bold"
+          >Babá que submete criança sob sua responsabilidade a intenso
+          sofrimento físico/mental, como forma de castigo, PRATICA crime de
+          tortura-castigo.</span
+        >
+      </div>
+
+      <h3>
+        🔸 V - Tortura do Preso ou Pessoa Sujeita à Medida de Segurança (§1º)
+      </h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, §1º - Tortura-Própria</div>
+        <div class="artigo-texto">
+          Na mesma pena incorre quem submete
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >pessoa presa ou sujeita a medida de segurança</span
+          >
+          a sofrimento físico ou mental,
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >por intermédio da prática de ato não previsto em lei ou não
+            resultante de medida legal</span
+          >.
+        </div>
+        <div class="pena" style="font-size: 1.15em">
+          Pena: Reclusão de 2 a 8 anos
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">🎯 CARACTERÍSTICAS:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            <span style="color: #d32f2f">Sujeito ativo:</span> CRIME COMUM
+            (qualquer pessoa, não exige guarda/poder)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Sujeito passivo:</span> Pessoa PRESA ou
+            sujeita a MEDIDA DE SEGURANÇA
+          </li>
+          <li>
+            <span style="color: #d32f2f">Natureza:</span> NORMA PENAL EM BRANCO
+            (depende de complementação)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Elemento subjetivo:</span> DOLO (sem
+            exigência de finalidade específica)
+          </li>
+        </ul>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplo de Ato Não Previsto em Lei</div>
+        <strong style="color: #1976d2"
+          >Regime Disciplinar Diferenciado (RDD) - LEP art. 52:</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold">
+          • Diretor insere preso no RDD
+          <span style="color: #4caf50">COM autorização judicial</span> → ✅
+          Legal<br />
+          • Diretor insere preso no RDD
+          <span style="color: #d32f2f">SEM autorização judicial</span> → ❌
+          Tortura!
+        </span>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">⚠️ E O ADOLESCENTE?</strong><br />
+        <span style="color: #1976d2; font-weight: bold"
+          >Adolescentes estão sujeitos a
+          <span style="color: #d32f2f">MEDIDAS SOCIOEDUCATIVAS</span> (não são
+          "presos" nem "medida de segurança"). Logo,
+          <span style="color: #d32f2f; font-size: 1.05em"
+            >NÃO se enquadram neste §1º!</span
+          >
+          Se torturado, aplica-se outro inciso.</span
+        >
+      </div>
+
+      <h3>🔸 VI - Tortura-Omissão / Tortura Imprópria (§2º)</h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, §2º - Tortura-Omissão</div>
+        <div class="artigo-texto">
+          Aquele que
+          <span style="color: #d32f2f; font-size: 1.1em">SE OMITE</span> em face
+          dessas condutas, quando tinha o
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >DEVER de EVITÁ-LAS ou APURÁ-LAS</span
+          >, incorre na pena:
+        </div>
+        <div
+          class="pena"
+          style="background: #fff3e0; color: #e65100; font-size: 1.2em"
+        >
+          Pena: DETENÇÃO de 1 a 4 anos
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828; font-size: 1.2em"
+          >🚨 ATENÇÃO ESPECIAL:</strong
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            <span style="color: #d32f2f">Sujeito ativo:</span> CRIME PRÓPRIO (só
+            quem tem dever legal de evitar/apurar)
+          </li>
+          <li>
+            <span style="color: #d32f2f">Natureza da pena:</span> DETENÇÃO (não
+            reclusão!)
+          </li>
+          <li>
+            <span style="color: #d32f2f; font-size: 1.1em"
+              >NÃO é equiparado a crime hediondo!</span
+            >
+          </li>
+          <li>
+            <span style="color: #d32f2f; font-size: 1.1em"
+              >NÃO exige regime inicial fechado!</span
+            >
+          </li>
+          <li>
+            <span style="color: #d32f2f">Classificação:</span> Crime OMISSIVO
+            PRÓPRIO
+          </li>
+        </ul>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">💡 EVITAR vs APURAR:</strong><br />
+        <span style="color: #1976d2; font-weight: bold">
+          • <span style="color: #4caf50">EVITAR:</span> Quem presencia e pode
+          impedir, mas se omite (ex: comandante que vê subordinados torturando)
+          → Responde por TORTURA (art. 13, §2º CP - garantidor), NÃO por
+          omissão!<br /><br />
+          • <span style="color: #f57c00">APURAR:</span> Quem tem dever de
+          investigar/apurar e não o faz (ex: delegado que não investiga denúncia
+          de tortura) → Responde por TORTURA-OMISSÃO (§2º)
+        </span>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplos Práticos</div>
+        <strong style="color: #d32f2f"
+          >EVITAR (responde por tortura comum):</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold"
+          >Comandante presencia subordinados torturando e nada faz → Responde
+          pelo caput (garantidor)</span
+        ><br /><br />
+        <strong style="color: #f57c00"
+          >APURAR (responde por tortura-omissão):</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold"
+          >Delegado recebe denúncia de tortura e não investiga → Responde pelo
+          §2º</span
+        >
+      </div>
+
+      <!-- FORMAS QUALIFICADAS -->
+      <h2>🔥 3. Formas Qualificadas (§3º)</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, §3º - Formas Qualificadas</div>
+        <div class="artigo-texto">
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >Se resulta LESÃO CORPORAL de natureza GRAVE ou GRAVÍSSIMA:</span
+          >
+        </div>
+        <div class="pena" style="font-size: 1.2em">
+          Pena: Reclusão de 4 a 10 anos
+        </div>
+
+        <div class="artigo-texto" style="margin-top: 15px">
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >Se resulta MORTE:</span
+          >
+        </div>
+        <div class="pena" style="font-size: 1.2em">
+          Pena: Reclusão de 8 a 16 anos
+        </div>
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828; font-size: 1.2em"
+          >🎯 CRIME PRETERDOLOSO!</strong
+        ><br />
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            <span style="color: #d32f2f">DOLO</span> na tortura (quer torturar)
+          </li>
+          <li>
+            <span style="color: #d32f2f">CULPA</span> no resultado agravador
+            (lesão grave/morte)
+          </li>
+          <li>
+            <span style="color: #d32f2f">NÃO queria</span> o resultado mais
+            grave, mas agiu com imprudência/negligência
+          </li>
+        </ul>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">⚠️ DIFERENÇA IMPORTANTE:</strong><br />
+        <span style="color: #1976d2; font-weight: bold">
+          <strong style="color: #d32f2f"
+            >Tortura qualificada pela MORTE:</strong
+          >
+          DOLO na tortura + CULPA na morte = Reclusão 8 a 16 anos<br /><br />
+          <strong style="color: #4a148c"
+            >Homicídio qualificado pela TORTURA:</strong
+          >
+          DOLO de matar usando tortura como meio = Reclusão 12 a 30 anos
+          (hediondo)
+        </span>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Lesões Leves</div>
+        <strong style="color: #1976d2">Se resultarem lesões LEVES:</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold"
+          >Ficam ABSORVIDAS pela tortura (princípio da consunção). Não
+          qualificam nem são crime autônomo.</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">📚 Lesões Graves e Gravíssimas:</strong
+        ><br />
+        <span style="color: #1976d2; font-weight: bold">
+          <strong>CP, Art. 129, §1º (GRAVES):</strong> Incapacidade para
+          ocupações habituais por mais de 30 dias; perigo de vida; debilidade
+          permanente de membro, sentido ou função; aceleração de parto.<br /><br />
+          <strong>CP, Art. 129, §2º (GRAVÍSSIMAS):</strong> Incapacidade
+          permanente para o trabalho; enfermidade incurável; perda ou
+          inutilização de membro, sentido ou função; deformidade permanente;
+          aborto.
+        </span>
+      </div>
+
+      <!-- CAUSAS DE AUMENTO -->
+      <h2>⬆️ 4. Causas de Aumento de Pena (§4º)</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">
+          Art. 1º, §4º - Aumenta-se a pena de 1/6 até 1/3
+        </div>
+      </div>
+
+      <table class="tabela-comparativa">
+        <tr>
+          <th>Inciso</th>
+          <th>Hipótese de Aumento</th>
+        </tr>
+        <tr>
+          <td>I</td>
+          <td>Se o crime é cometido por <strong>AGENTE PÚBLICO</strong></td>
+        </tr>
+        <tr>
+          <td>II</td>
+          <td>
+            Se cometido contra
+            <strong
+              >CRIANÇA, GESTANTE, PORTADOR DE DEFICIÊNCIA, ADOLESCENTE ou MAIOR
+              DE 60 ANOS</strong
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>III</td>
+          <td>Se o crime é cometido mediante <strong>SEQUESTRO</strong></td>
+        </tr>
+      </table>
+
+      <div class="definicao">
+        <div class="definicao-termo">Agente Público (CP art. 327)</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Considera-se funcionário público, para os efeitos penais, quem,
+          embora transitoriamente ou sem remuneração, exerce cargo, emprego ou
+          função pública.</span
+        >
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">⚠️ NÃO SE APLICA QUANDO:</strong><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >A condição de funcionário público já é REQUISITO do tipo penal (evita
+          bis in idem).</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1"
+          >📌 Inciso II - Vítimas Vulneráveis:</strong
+        ><br />
+        <span style="color: #1976d2; font-weight: bold"
+          >Fundamenta-se na
+          <span style="color: #d32f2f">maior vulnerabilidade</span> da vítima.
+          Agente deve ter CONHECIMENTO da condição da vítima (evitar
+          responsabilização penal objetiva).</span
+        >
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Inciso III - Sequestro</div>
+        <strong style="color: #1976d2">Tortura mediante sequestro:</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold">
+          • O sequestro é MEIO DE EXECUÇÃO da tortura<br />
+          • Sequestro (CP art. 148) fica ABSORVIDO pela tortura majorada
+          (consunção)<br />
+          • <span style="color: #d32f2f">MAS:</span> Se após tortura, por
+          desígnio autônomo, mantém vítima sequestrada → Concurso material
+        </span>
+      </div>
+
+      <!-- EFEITOS DA CONDENAÇÃO -->
+      <h2>⚖️ 5. Efeitos da Condenação (§5º)</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, §5º</div>
+        <div class="artigo-texto">A condenação acarretará:</div>
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>
+            <span style="color: #d32f2f; font-size: 1.05em"
+              >PERDA do cargo, função ou emprego público</span
+            >
+          </li>
+          <li>
+            <span style="color: #d32f2f; font-size: 1.05em"
+              >INTERDIÇÃO para seu exercício pelo DOBRO do prazo da pena
+              aplicada</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ STJ - Efeito Automático</div>
+        <span style="color: #bf360c; font-weight: bold"
+          >"A perda do cargo, função ou emprego público é efeito AUTOMÁTICO da
+          condenação pela prática do crime de tortura, NÃO sendo necessária
+          fundamentação concreta para sua aplicação" (AgRg no Ag
+          1388953/SP)</span
+        >
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Cálculo da Interdição</div>
+        <strong style="color: #1976d2">Condenado a 5 anos de reclusão:</strong
+        ><br />
+        <span style="color: #0d47a1; font-weight: bold">
+          • Perde automaticamente o cargo<br />
+          • Fica interditado por 10 anos (dobro de 5 anos)
+        </span>
+      </div>
+
+      <!-- VEDAÇÕES -->
+      <h2>🚫 6. Vedações (§6º e §7º)</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º, §6º</div>
+        <div class="artigo-texto">
+          O crime de tortura é
+          <span style="color: #d32f2f; font-size: 1.2em"
+            >INAFIANÇÁVEL e INSUSCETÍVEL de GRAÇA ou ANISTIA</span
+          >.
+        </div>
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">
+          Art. 1º, §7º - Regime Inicial de Cumprimento
+        </div>
+        <div class="artigo-texto">
+          O condenado por crime previsto nesta Lei,
+          <span style="color: #d32f2f; font-size: 1.05em"
+            >salvo a hipótese do §2º</span
+          >
+          (tortura-omissão), iniciará o cumprimento da pena em
+          <span style="color: #d32f2f; font-size: 1.2em">REGIME FECHADO</span>.
+        </div>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">
+          ⚖️ STF - Regime Inicial NÃO é Obrigatório
+        </div>
+        <span style="color: #bf360c; font-weight: bold"
+          >O STF declarou inconstitucional a obrigatoriedade de regime inicial
+          fechado nos crimes hediondos e equiparados, por ferir o princípio da
+          individualização da pena. O juiz deve observar os critérios do CP
+          (art. 33, §§2º e 3º) considerando as circunstâncias do caso
+          concreto.</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1">⚠️ PARA PROVA AOCP:</strong><br />
+        <span style="color: #1976d2; font-weight: bold">
+          • Se perguntar "O QUE A LEI PREVÊ" → Marque que prevê regime inicial
+          fechado<br />
+          • Se perguntar "É OBRIGATÓRIO" → Marque que NÃO (STF considerou
+          inconstitucional)
+        </span>
+      </div>
+
+      <h3>🔸 Progressão de Regime</h3>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1"
+          >📊 APÓS PACOTE ANTICRIME (Lei 13.964/2019):</strong
+        ><br />
+        <span style="color: #1976d2; font-weight: bold"
+          >Tortura segue regras dos crimes hediondos (LEP art. 112):</span
+        >
+      </div>
+
+      <table class="tabela-comparativa" style="margin-top: 15px">
+        <tr>
+          <th>Situação</th>
+          <th>Primário</th>
+          <th>Reincidente</th>
+        </tr>
+        <tr>
+          <td>Crime Hediondo ou Equiparado</td>
+          <td>40% da pena</td>
+          <td>60% da pena</td>
+        </tr>
+        <tr>
+          <td>Com resultado MORTE</td>
+          <td>50% da pena</td>
+          <td>70% da pena</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="color: #c62828"
+          >📌 LIVRAMENTO CONDICIONAL (CP art. 83, V):</strong
+        ><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >Exige cumprimento de
+          <span style="color: #d32f2f; font-size: 1.1em">2/3 da pena</span> para
+          concessão do benefício.</span
+        >
+      </div>
+
+      <div class="importante">
+        <strong style="color: #c62828">🚫 VEDAÇÃO DE SUBSTITUIÇÃO:</strong
+        ><br />
+        <span style="color: #b71c1c; font-weight: bold"
+          >Crimes de tortura envolvem violência ou grave ameaça →
+          <span style="color: #d32f2f; font-size: 1.05em"
+            >NÃO permite substituição</span
+          >
+          da pena privativa de liberdade por restritiva de direitos, mesmo se
+          pena ≤ 4 anos.</span
+        >
+      </div>
+
+      <!-- EXTRATERRITORIALIDADE -->
+      <h2>🌍 7. Extraterritorialidade (Art. 2º)</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 2º</div>
+        <div class="artigo-texto">
+          O disposto nesta Lei
+          <span style="color: #d32f2f; font-size: 1.1em"
+            >aplica-se AINDA QUANDO o crime NÃO tenha sido cometido em
+            território nacional</span
+          >, sendo:
+        </div>
+        <ul class="lista-colorida-ul" style="margin-top: 10px">
+          <li>A vítima BRASILEIRA, OU</li>
+          <li>O agente se encontrar em local sob JURISDIÇÃO BRASILEIRA</li>
+        </ul>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplos Práticos</div>
+        <strong style="color: #1976d2"
+          >Brasileiro torturado na Argentina:</strong
+        >
+        <span style="color: #0d47a1; font-weight: bold"
+          >Aplica-se Lei 9.455/97 (vítima brasileira)</span
+        ><br /><br />
+        <strong style="color: #1976d2"
+          >Estrangeiro tortura estrangeiro, mas está em embaixada
+          brasileira:</strong
+        >
+        <span style="color: #0d47a1; font-weight: bold"
+          >Aplica-se Lei 9.455/97 (local sob jurisdição brasileira)</span
+        >
+      </div>
+
+      <!-- COMPETÊNCIA -->
+      <h2>⚖️ 8. Competência para Julgamento</h2>
+
+      <div class="importante">
+        <strong style="color: #c62828">🎯 REGRAS DE COMPETÊNCIA:</strong>
+      </div>
+
+      <table class="tabela-comparativa">
+        <tr>
+          <th>Situação</th>
+          <th>Competência</th>
+        </tr>
+        <tr>
+          <td>Crime comum</td>
+          <td>JUSTIÇA ESTADUAL (regra)</td>
+        </tr>
+        <tr>
+          <td>Praticado por agente público FEDERAL no exercício da função</td>
+          <td>JUSTIÇA FEDERAL (CF art. 109, IV)</td>
+        </tr>
+        <tr>
+          <td>Praticado por Policial Militar</td>
+          <td>JUSTIÇA MILITAR ESTADUAL</td>
+        </tr>
+        <tr>
+          <td>Praticado por militar das Forças Armadas</td>
+          <td>JUSTIÇA MILITAR FEDERAL</td>
+        </tr>
+      </table>
+
+      <div class="atencao">
+        <strong style="color: #0d47a1"
+          >📌 LEI 13.491/2017 - ALTERAÇÃO IMPORTANTE:</strong
+        ><br />
+        <span style="color: #1976d2; font-weight: bold"
+          >Alterou CPM art. 9º, possibilitando que crimes previstos em
+          legislações especiais (como tortura) sejam julgados pela Justiça
+          Militar, desde que praticados por militares em situação prevista no
+          CPM.</span
+        >
+      </div>
+
+      <!-- CLASSIFICAÇÃO DOS CRIMES -->
+      <h2>📋 9. Classificação Doutrinária</h2>
+
+      <table class="tabela-comparativa">
+        <tr>
+          <th>Critério</th>
+          <th>Classificação</th>
+        </tr>
+        <tr>
+          <td>Sujeito Ativo</td>
+          <td>
+            Tortura-prova, discriminatória, preso: COMUM<br />Tortura-castigo,
+            omissão: PRÓPRIO
+          </td>
+        </tr>
+        <tr>
+          <td>Consumação</td>
+          <td>
+            Tortura-prova, discriminatória, crime: FORMAL<br />Tortura-castigo,
+            preso: MATERIAL<br />Tortura-omissão: OMISSIVO PRÓPRIO
+          </td>
+        </tr>
+        <tr>
+          <td>Bem Jurídico</td>
+          <td>DANO (lesão efetiva)</td>
+        </tr>
+        <tr>
+          <td>Execução</td>
+          <td>COMISSIVO (regra) ou OMISSIVO (§2º)</td>
+        </tr>
+        <tr>
+          <td>Número de Agentes</td>
+          <td>UNISSUBJETIVO (pode ser praticado por 1 pessoa)</td>
+        </tr>
+        <tr>
+          <td>Fracionamento</td>
+          <td>PLURISSUBSISTENTE (tentativa possível)</td>
+        </tr>
+        <tr>
+          <td>Elemento Subjetivo</td>
+          <td>DOLO (com finalidades específicas)</td>
+        </tr>
+      </table>
+
+      <!-- QUESTÕES AOCP -->
+      <h2>📝 10. Questões Estilo AOCP com Respostas</h2>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          1. O crime de tortura é imprescritível?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Tortura é inafiançável e insuscetível de graça/anistia, MAS
+          NÃO é imprescritível. Únicos crimes imprescritíveis: racismo e ação de
+          grupos armados contra ordem constitucional.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          2. Torturar homossexual por discriminação à orientação sexual
+          configura tortura discriminatória?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Lei só prevê discriminação RACIAL ou RELIGIOSA. NÃO cabe
+          analogia in malam partem. Orientação sexual NÃO está prevista no art.
+          1º, I, "c".
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          3. Policial que tortura suspeito para obter confissão pratica
+          tortura-castigo?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! É tortura-PROVA (art. 1º, I, "a"). Finalidade é obter
+          informação/confissão. Tortura-castigo é para aplicar castigo a quem
+          está sob guarda/poder/autoridade.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          4. Babá que submete criança a intenso sofrimento como castigo pratica
+          maus-tratos, não tortura?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! STJ: Babá detém GUARDA da criança, portanto pode praticar
+          tortura-castigo (art. 1º, II). HC 169.379/SP.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          5. Delegado que não apura denúncia de tortura responde pela mesma pena
+          do torturador?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Responde por tortura-omissão (§2º): DETENÇÃO de 1 a 4 anos.
+          Pena mais branda que tortura comum (reclusão 2 a 8 anos).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          6. Tortura-omissão é equiparada a crime hediondo?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Tortura-omissão é a ÚNICA exceção! NÃO é equiparada a
+          hediondo, tem pena de DETENÇÃO e NÃO exige regime inicial fechado.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          7. Na tortura qualificada pela morte, o agente quer matar a vítima?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Tortura qualificada é PRETERDOLOSA: dolo na tortura + CULPA
+          na morte. Se quisesse matar, seria homicídio qualificado pela tortura
+          (CP art. 121, §2º, III).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          8. A perda do cargo público exige fundamentação específica do juiz?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! STJ: Perda do cargo é efeito AUTOMÁTICO da condenação. NÃO
+          exige fundamentação concreta (AgRg Ag 1388953/SP).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          9. É obrigatório que condenado por tortura inicie pena em regime
+          fechado?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! STF: Regime inicial fechado obrigatório fere princípio da
+          individualização da pena. Juiz deve observar critérios do CP art. 33,
+          §§2º e 3º. Lei prevê, mas STF considera inconstitucional.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          10. Crime de tortura cometido no exterior contra brasileiro NÃO se
+          aplica lei brasileira?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Art. 2º: Aplica-se Lei 9.455/97 mesmo fora do território
+          nacional se vítima for brasileira OU agente estiver em local sob
+          jurisdição brasileira (extraterritorialidade).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          11. Tortura contra maior de 65 anos é causa de aumento de pena?
+        </div>
+        <div class="questao-resposta">
+          ✅ CORRETO! Art. 1º, §4º, II: Aumenta 1/6 a 1/3 se contra criança,
+          gestante, deficiente, adolescente ou MAIOR DE 60 ANOS. Aos 65 já está
+          incluído!
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          12. Agente força vítima mediante tortura a praticar crime. Quem
+          responde?
+        </div>
+        <div class="questao-resposta">
+          ✅ Torturador responde por tortura-crime + crime praticado (concurso
+          material). Vítima NÃO responde (coação moral irresistível - CP art.
+          22).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          13. Adolescente é sujeito passivo do crime do art. 1º, §1º (tortura do
+          preso)?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Adolescente está sujeito a MEDIDA SOCIOEDUCATIVA (não é
+          "preso" nem "medida de segurança"). NÃO se enquadra no §1º.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          14. Lesões leves resultantes de tortura qualificam o crime?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Lesões LEVES ficam ABSORVIDAS (consunção). Só qualificam
+          lesões GRAVES ou GRAVÍSSIMAS (CP art. 129, §§1º e 2º).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          15. Marido que submete esposa a castigo sob sua autoridade pratica
+          tortura-castigo?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! Esposa NÃO está "sob guarda, poder ou autoridade" do
+          marido. Não há relação de subordinação legal. Pode configurar outra
+          modalidade de tortura, mas NÃO a do inciso II.
+        </div>
+      </div>
+
+      <!-- TABELA RESUMO -->
+      <h2>📊 11. Tabela Resumo Completa</h2>
+
+      <table class="tabela-comparativa">
+        <tr>
+          <th>Modalidade</th>
+          <th>Artigo</th>
+          <th>Pena</th>
+          <th>Características</th>
+        </tr>
+        <tr>
+          <td>Tortura-Prova</td>
+          <td>Art. 1º, I, "a"</td>
+          <td>Reclusão 2-8 anos</td>
+          <td>Comum / Formal / Obter informação</td>
+        </tr>
+        <tr>
+          <td>Tortura-Crime</td>
+          <td>Art. 1º, I, "b"</td>
+          <td>Reclusão 2-8 anos</td>
+          <td>Comum / Formal / Provocar crime</td>
+        </tr>
+        <tr>
+          <td>Tortura-Discriminação</td>
+          <td>Art. 1º, I, "c"</td>
+          <td>Reclusão 2-8 anos</td>
+          <td>Comum / Formal / Racial/religiosa</td>
+        </tr>
+        <tr>
+          <td>Tortura-Castigo</td>
+          <td>Art. 1º, II</td>
+          <td>Reclusão 2-8 anos</td>
+          <td>Próprio / Material / INTENSO sofrimento</td>
+        </tr>
+        <tr>
+          <td>Tortura do Preso</td>
+          <td>Art. 1º, §1º</td>
+          <td>Reclusão 2-8 anos</td>
+          <td>Comum / Ato ilegal</td>
+        </tr>
+        <tr>
+          <td>Tortura-Omissão</td>
+          <td>Art. 1º, §2º</td>
+          <td>DETENÇÃO 1-4 anos</td>
+          <td>Próprio / NÃO hediondo</td>
+        </tr>
+        <tr>
+          <td>Lesão Grave/Gravíssima</td>
+          <td>Art. 1º, §3º</td>
+          <td>Reclusão 4-10 anos</td>
+          <td>Preterdoloso</td>
+        </tr>
+        <tr>
+          <td>Resultado Morte</td>
+          <td>Art. 1º, §3º</td>
+          <td>Reclusão 8-16 anos</td>
+          <td>Preterdoloso</td>
+        </tr>
+      </table>
+
+      <!-- DICAS FINAIS -->
+      <h2>💡 12. Dicas Finais para AOCP</h2>
+
+      <div class="importante">
+        <strong style="color: #c62828"
+          >🎯 Temas MAIS COBRADOS pela AOCP:</strong
+        >
+        <ol class="lista-colorida" style="margin-top: 15px">
+          <li>Tortura NÃO é imprescritível</li>
+          <li>Diferença entre modalidades (prova, crime, castigo, omissão)</li>
+          <li>Tortura-omissão NÃO é hediondo</li>
+          <li>Causas de aumento (agente público, vulneráveis, sequestro)</li>
+          <li>Qualificadoras (lesão grave, morte) - preterdolo</li>
+          <li>Efeitos da condenação (perda automática do cargo)</li>
+          <li>
+            Regime inicial (lei prevê fechado, STF diz que não é obrigatório)
+          </li>
+          <li>Discriminação (só racial/religiosa)</li>
+          <li>Competência (estadual, federal, militar)</li>
+          <li>Extraterritorialidade (vítima brasileira)</li>
+        </ol>
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #e65100">⚡ Pegadinhas Clássicas AOCP:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>Dizer que tortura é imprescritível</li>
+          <li>Confundir modalidades de tortura</li>
+          <li>Dizer que tortura-omissão é hediondo</li>
+          <li>Incluir orientação sexual na discriminatória</li>
+          <li>Confundir "sofrimento" com "intenso sofrimento"</li>
+          <li>Dizer que lesão leve qualifica</li>
+          <li>Achar que perda de cargo precisa fundamentação</li>
+          <li>Esquecer que indulto também é vedado</li>
+        </ul>
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 50px;
+          padding: 30px;
+          background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+          color: white;
+          border-radius: 15px;
+        "
+      >
+        <h2 style="color: white; border: none; margin: 0; font-weight: bold">
+          💪 Bons Estudos!
+        </h2>
+        <p style="margin-top: 15px; font-size: 1.1em; font-weight: bold">
+          Material COMPLETO elaborado especialmente para AOCP - Carreiras
+          Policiais MG 2025
+        </p>
+        <p style="margin-top: 10px; font-size: 0.95em">
+          ✨ TODOS os artigos detalhados! ✨
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

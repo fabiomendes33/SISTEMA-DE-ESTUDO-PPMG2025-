@@ -1,0 +1,3095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFORMÁTICA - RESUMÃO COMPLETO PPMG 2025</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        font-family: "Segoe UI", "Arial", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        line-height: 1.8;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 25px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        overflow: hidden;
+      }
+
+      h1 {
+        text-align: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-size: 3em;
+        margin-bottom: 10px;
+        padding: 25px;
+        border-radius: 15px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 2px;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #667eea;
+        font-size: 1.5em;
+        margin-bottom: 35px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      h2 {
+        color: white;
+        font-size: 2em;
+        margin-top: 40px;
+        margin-bottom: 25px;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        font-weight: bold;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      h3 {
+        color: #667eea;
+        font-size: 1.6em;
+        margin-top: 30px;
+        margin-bottom: 18px;
+        padding: 12px 20px;
+        background: linear-gradient(to right, #f0f4ff, #ffffff);
+        border-left: 5px solid #667eea;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .titulo-secao {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        margin-top: 45px;
+        margin-bottom: 30px;
+        font-size: 1.8em;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .questao {
+        background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 15px;
+        border: 2px solid #667eea;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .questao:hover {
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.25);
+        transform: translateY(-5px);
+      }
+
+      .questao-numero {
+        color: #667eea;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 12px;
+      }
+
+      .questao-pergunta {
+        color: #000000;
+        font-weight: bold;
+        font-size: 1.15em;
+        margin-bottom: 18px;
+        line-height: 1.6;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+      }
+
+      .questao-opcoes {
+        margin: 15px 0;
+        padding-left: 20px;
+      }
+
+      .opcao {
+        color: #333333;
+        margin: 12px 0;
+        font-size: 1.05em;
+        line-height: 1.6;
+      }
+
+      .opcao-letra {
+        color: #000000;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-right: 8px;
+      }
+
+      .questao-resposta {
+        color: #0066ff;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-top: 18px;
+        padding: 15px;
+        background: linear-gradient(135deg, #e8f1ff 0%, #f0f8ff 100%);
+        border-radius: 8px;
+        border-left: 4px solid #0066ff;
+      }
+
+      .tabela {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 25px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+      }
+
+      .tabela th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .tabela td {
+        padding: 15px;
+        border-bottom: 2px solid #e0e0e0;
+        font-weight: bold;
+        font-size: 1.05em;
+        color: #333;
+      }
+
+      .tabela tr:nth-child(even) {
+        background: linear-gradient(to right, #f5f8ff, #ffffff);
+      }
+
+      .tabela tr:nth-child(odd) {
+        background: #ffffff;
+      }
+
+      .tabela tr:hover {
+        background: linear-gradient(to right, #e8f1ff, #f0f8ff);
+        transition: all 0.3s ease;
+      }
+
+      .tabela td:first-child {
+        color: #667eea;
+        font-weight: bold;
+      }
+
+      .importante {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+        border-left: 5px solid #ff6f00;
+        padding: 18px;
+        margin: 25px 0;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 1.05em;
+      }
+
+      .atencao {
+        background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+        border-left: 5px solid #d32f2f;
+        padding: 18px;
+        margin: 25px 0;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 1.05em;
+      }
+
+      .definicao {
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        padding: 18px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border-left: 5px solid #388e3c;
+        font-weight: bold;
+      }
+
+      .dica {
+        background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+        border-left: 5px solid #8e24aa;
+        padding: 18px;
+        margin: 20px 0;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 1.05em;
+      }
+
+      ul,
+      ol {
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      li {
+        margin-bottom: 12px;
+        line-height: 1.8;
+        color: #2c3e50;
+        font-size: 1.05em;
+      }
+
+      .indice {
+        background: linear-gradient(135deg, #e8f1ff 0%, #f0f8ff 100%);
+        border: 2px solid #667eea;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 25px 0;
+      }
+
+      .indice-titulo {
+        color: #667eea;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 15px;
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+          padding: 20px;
+        }
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>💻 INFORMÁTICA</h1>
+      <div class="subtitle">
+        RESUMÃO GIGANTE E COMPLETÍSSIMO - PPMG 2025 - AOCP
+      </div>
+      <div class="subtitle" style="color: #764ba2; font-size: 1.2em">
+        Hardware • Software • Windows 10 • Linux • Navegadores • Office 365 •
+        LibreOffice • Redes • Segurança
+      </div>
+
+      <!-- ÍNDICE -->
+      <div class="indice">
+        <div class="indice-titulo">📚 ÍNDICE DO MATERIAL:</div>
+        <ol>
+          <li>Hardware e Software - Conceitos Fundamentais</li>
+          <li>Componentes e Dispositivos de Hardware</li>
+          <li>Sistemas Operacionais - Windows 10</li>
+          <li>Sistemas Operacionais - Linux</li>
+          <li>Navegadores de Internet (Chrome, Firefox, IE)</li>
+          <li>Microsoft Office 365 (Word, Excel, PowerPoint, Outlook)</li>
+          <li>LibreOffice (Writer, Calc, Impress)</li>
+          <li>Internet, Intranet e Extranet</li>
+          <li>Redes de Computadores</li>
+          <li>Segurança da Informação e Backup</li>
+          <li>Questões AOCP Comentadas</li>
+        </ol>
+      </div>
+
+      <!-- PARTE 1: HARDWARE E SOFTWARE -->
+      <div class="titulo-secao">🖥️ PARTE 1 - HARDWARE E SOFTWARE</div>
+
+      <h2>1. Conceitos Fundamentais</h2>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Hardware</strong><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É a parte FÍSICA do computador - máquinas, dispositivos, circuitos,
+          componentes tangíveis que você consegue tocar e ver. Exemplo: CPU,
+          memória RAM, HD, monitor, teclado, mouse.</span
+        >
+      </div>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Software</strong><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É a parte IMATERIAL do computador - programas, sistemas operacionais,
+          aplicativos, dados. São instruções (código) que fazem o hardware
+          funcionar. Exemplo: Windows 10, Word, Excel, Navegadores.</span
+        >
+      </div>
+
+      <h3>🔸 Relação Hardware x Software</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        <strong style="color: #667eea">Hardware</strong> é como o CORPO humano
+        (estrutura física)<br />
+        <strong style="color: #667eea">Software</strong> é como a MENTE humana
+        (inteligência, instruções)
+      </p>
+
+      <h2>2. Componentes Principais de Hardware</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Componente</th>
+          <th>Função Principal</th>
+          <th>Importância</th>
+        </tr>
+        <tr>
+          <td>CPU (Processador)</td>
+          <td>
+            Executa instruções, realiza cálculos, controla todo o computador
+          </td>
+          <td>CRÍTICA - Cérebro do computador</td>
+        </tr>
+        <tr>
+          <td>Memória RAM</td>
+          <td>
+            Armazena dados temporariamente durante a execução de programas
+          </td>
+          <td>CRÍTICA - Memória de trabalho</td>
+        </tr>
+        <tr>
+          <td>HD/SSD</td>
+          <td>Armazenamento permanente de dados e programas</td>
+          <td>CRÍTICA - Armazenamento</td>
+        </tr>
+        <tr>
+          <td>Placa Mãe</td>
+          <td>Conecta todos os componentes, permite comunicação entre eles</td>
+          <td>CRÍTICA - Sistema de distribuição</td>
+        </tr>
+        <tr>
+          <td>Fonte de Alimentação</td>
+          <td>Fornece energia elétrica para todos os componentes</td>
+          <td>CRÍTICA - Energia</td>
+        </tr>
+        <tr>
+          <td>Placa de Vídeo</td>
+          <td>Processa imagens e gráficos, envia para monitor</td>
+          <td>IMPORTANTE - Vídeo/Gráficos</td>
+        </tr>
+        <tr>
+          <td>Disco Óptico</td>
+          <td>Lê/escreve em CD, DVD, Blu-ray</td>
+          <td>COMPLEMENTAR - Mídia óptica</td>
+        </tr>
+      </table>
+
+      <h3>🔸 Diferenças: RAM x ROM x HD</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Tipo de Memória</th>
+          <th>RAM</th>
+          <th>ROM</th>
+          <th>HD/SSD</th>
+        </tr>
+        <tr>
+          <td>Tipo de Acesso</td>
+          <td>Aleatório (Random)</td>
+          <td>Leitura apenas (Read-Only)</td>
+          <td>Sequencial/Aleatório</td>
+        </tr>
+        <tr>
+          <td>Volatilidade</td>
+          <td>VOLÁTIL - perde dados ao desligar</td>
+          <td>NÃO VOLÁTIL - mantém dados</td>
+          <td>NÃO VOLÁTIL - mantém dados</td>
+        </tr>
+        <tr>
+          <td>Velocidade</td>
+          <td>RÁPIDA (nanosegundos)</td>
+          <td>Média</td>
+          <td>LENTA (milissegundos)</td>
+        </tr>
+        <tr>
+          <td>Capacidade</td>
+          <td>Pequena (4-32 GB)</td>
+          <td>Pequena (alguns MB)</td>
+          <td>Grande (100 GB a 2 TB)</td>
+        </tr>
+        <tr>
+          <td>Função</td>
+          <td>Memória de trabalho (temporária)</td>
+          <td>BIOS/FIRMWARE</td>
+          <td>Armazenamento permanente</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 FATO IMPORTANTE PARA AOCP:</strong
+        ><br />
+        RAM é MUITO mais rápida que HD! Por isso, ao abrir programa, ele é
+        COPIADO do HD para RAM. Quanto MAIS RAM, melhor o desempenho!
+      </div>
+
+      <!-- QUESTÕES INICIAIS -->
+      <div class="titulo-secao">❓ QUESTÕES AOCP - HARDWARE E SOFTWARE</div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 1</div>
+        <div class="questao-pergunta">
+          <strong
+            >O processador é responsável por armazenar dados permanentemente no
+            computador.</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Certo - o
+            processador armazena todos os dados
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Errado - o
+            processador executa instruções, não armazena dados permanentemente
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Parcialmente
+            correto
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Depende do tipo
+            de processador
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >O processador EXECUTA instruções, não armazena dados
+            permanentemente. Quem armazena é o DISCO RÍGIDO (HD). A RAM armazena
+            temporariamente enquanto o programa está aberto.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 2</div>
+        <div class="questao-pergunta">
+          <strong
+            >A memória RAM é um tipo de memória volátil que perde seus dados
+            quando o computador é desligado.</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Verdadeiro -
+            RAM é volátil
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Falso - RAM é
+            não volátil
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Depende da
+            marca da RAM
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Somente em
+            computadores antigos
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: A</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >VERDADEIRO! RAM (Random Access Memory) é VOLÁTIL. Ao desligar
+            computador, perde TODOS os dados não salvos. Por isso SEMPRE salve
+            seus arquivos antes de desligar!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 3</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual é a diferença fundamental entre Hardware e Software?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Hardware é
+            lógico, Software é físico
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Hardware é
+            físico (tangível), Software é imaterial (programas e instruções)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Não há
+            diferença, são sinônimos
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Hardware é mais
+            importante que Software
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Hardware é tudo que você VÊ e TOCA (monitor, teclado, mouse,
+            processador). Software é tudo que você VÊ mas NÃO TOCA (Windows,
+            Word, Excel - são programas/instruções).</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 4</div>
+        <div class="questao-pergunta">
+          <strong
+            >O disco rígido (HD) é mais rápido que a memória RAM para armazenar
+            dados temporários.</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Verdadeiro - HD
+            é sempre mais rápido
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Falso - RAM é
+            MUITO mais rápida que HD para acesso temporário
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Têm a mesma
+            velocidade
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Depende do tipo
+            de HD
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >FALSO! RAM é MUITO mais rápida (nanosegundos) que HD
+            (milissegundos). Por isso, aumentar RAM melhora BASTANTE o
+            desempenho do computador!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 5</div>
+        <div class="questao-pergunta">
+          <strong
+            >A placa-mãe é responsável por conectar todos os componentes do
+            computador, permitindo a comunicação entre eles.</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Verdadeiro -
+            placa-mãe é o barramento central
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Falso - cada
+            componente funciona independentemente
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Parcialmente -
+            apenas alguns componentes
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Não existe
+            placa-mãe em computadores modernos
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: A</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >VERDADEIRO! A placa-mãe é como um "hub central" que conecta CPU,
+            RAM, HD, Placa de Vídeo, etc. Sem ela, componentes não conseguem se
+            comunicar!</span
+          >
+        </div>
+      </div>
+
+      <!-- PARTE 2: WINDOWS 10 -->
+      <div class="titulo-secao">
+        🪟 PARTE 2 - WINDOWS 10 - SISTEMA OPERACIONAL
+      </div>
+
+      <h2>3. O que é Windows 10?</h2>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Windows 10</strong
+        ><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É um SISTEMA OPERACIONAL (SO) desenvolvido pela Microsoft. É um
+          software que gerencia todo o hardware e permite que outros programas
+          funcionem. Versão mais popular para computadores pessoais (PCs).</span
+        >
+      </div>
+
+      <h3>🔸 Funções Principais do Windows 10</h3>
+
+      <ul style="font-weight: bold; font-size: 1.05em">
+        <li>
+          <strong>Gerenciar Hardware:</strong> Controla processador, memória
+          RAM, disco rígido, impressora, etc.
+        </li>
+        <li>
+          <strong>Interface com Usuário:</strong> Ícones, menus, janelas que
+          você clica e interage
+        </li>
+        <li>
+          <strong>Executar Programas:</strong> Permite abrir Word, Excel,
+          Navegadores, Antivírus, etc.
+        </li>
+        <li>
+          <strong>Gerenciar Arquivos:</strong> Organizar pastas, criar, copiar,
+          deletar arquivos
+        </li>
+        <li>
+          <strong>Gerenciar Periféricos:</strong> Impressoras, scanners,
+          câmeras, pen drives, etc.
+        </li>
+      </ul>
+
+      <div class="atencao">
+        <strong style="font-size: 1.15em">🚨 PEGADINHA AOCP:</strong><br />
+        <span style="color: #d32f2f; font-weight: bold"
+          >Confundem SO (Windows) com navegador (Chrome, Firefox). WINDOWS É
+          DIFERENTE! Windows gerencia TUDO. Navegador é só um programa para
+          internet!</span
+        >
+      </div>
+
+      <h2>4. Atalhos de Teclado Windows 10 - MUITO COBRADO!</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Atalho</th>
+          <th>Função</th>
+          <th>Importância</th>
+        </tr>
+        <tr>
+          <td><strong>Windows + E</strong></td>
+          <td>Abre o EXPLORADOR DE ARQUIVOS (gerenciador de pastas)</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + C</strong></td>
+          <td>COPIA o arquivo/texto selecionado</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + X</strong></td>
+          <td>CORTA o arquivo/texto (remove da origem)</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + V</strong></td>
+          <td>COLA o arquivo/texto copiado ou cortado</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Z</strong></td>
+          <td>DESFAZ a última ação (UNDO)</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Y</strong></td>
+          <td>REFAZ a ação desfeita (REDO)</td>
+          <td>⭐⭐ IMPORTANTE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + A</strong></td>
+          <td>SELECIONA TUDO (todos arquivos ou texto)</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + S</strong></td>
+          <td>SALVA o documento aberto</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + P</strong></td>
+          <td>Abre diálogo de IMPRESSÃO</td>
+          <td>⭐⭐ IMPORTANTE</td>
+        </tr>
+        <tr>
+          <td><strong>Alt + Tab</strong></td>
+          <td>ALTERNA entre programas abertos</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+        <tr>
+          <td><strong>Windows + D</strong></td>
+          <td>MINIMIZA todos os programas (mostra desktop)</td>
+          <td>⭐⭐ IMPORTANTE</td>
+        </tr>
+        <tr>
+          <td><strong>Delete</strong></td>
+          <td>DELETA arquivo (vai para lixeira)</td>
+          <td>⭐⭐ IMPORTANTE</td>
+        </tr>
+        <tr>
+          <td><strong>Shift + Delete</strong></td>
+          <td>DELETA PERMANENTEMENTE (não vai para lixeira!)</td>
+          <td>⭐ CUIDADO!</td>
+        </tr>
+        <tr>
+          <td><strong>Windows + I</strong></td>
+          <td>Abre CONFIGURAÇÕES do Windows</td>
+          <td>⭐⭐ IMPORTANTE</td>
+        </tr>
+        <tr>
+          <td><strong>Windows + L</strong></td>
+          <td>BLOQUEIA a sessão (lock) - precisa de senha</td>
+          <td>⭐⭐ SEGURANÇA</td>
+        </tr>
+        <tr>
+          <td><strong>F2</strong></td>
+          <td>RENOMEIA arquivo selecionado</td>
+          <td>⭐ ÚTIL</td>
+        </tr>
+        <tr>
+          <td><strong>F5</strong></td>
+          <td>ATUALIZA a tela (refresh)</td>
+          <td>⭐⭐ IMPORTANTE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Shift + Esc</strong></td>
+          <td>Abre GERENCIADOR DE TAREFAS (mata programa travado)</td>
+          <td>⭐⭐⭐ CRÍTICO</td>
+        </tr>
+      </table>
+
+      <div class="dica">
+        <strong style="font-size: 1.15em">💡 DICA OURO AOCP:</strong><br />
+        <span style="color: #8e24aa; font-weight: bold"
+          >Os atalhos Ctrl+C, Ctrl+X, Ctrl+V, Ctrl+Z, Ctrl+A e Ctrl+S funcionam
+          em PRATICAMENTE TODOS os programas! Decore esses 6
+          primeiramente!</span
+        >
+      </div>
+
+      <h2>5. Componentes Principais do Windows 10</h2>
+
+      <h3>🔸 Desktop (Área de Trabalho)</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        É a tela que você vê quando liga o computador (antes de abrir
+        programas). Nela ficam os ícones de atalho, wallpaper (fundo), barra de
+        tarefas.
+      </p>
+
+      <h3>🔸 Explorador de Arquivos (File Explorer)</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        Programa que gerencia todos os arquivos e pastas do computador. Atalho:
+        <strong style="color: #667eea">Windows + E</strong>
+      </p>
+
+      <ul style="font-weight: bold; font-size: 1.05em">
+        <li>
+          <strong>C: (Sistema):</strong> Onde Windows está instalado (não
+          mexer!)
+        </li>
+        <li>
+          <strong>D: (Dados):</strong> Onde guardam arquivos pessoais (usual)
+        </li>
+        <li><strong>Documentos:</strong> Pasta padrão para documentos</li>
+        <li>
+          <strong>Downloads:</strong> Pasta padrão para arquivos baixados da
+          internet
+        </li>
+        <li>
+          <strong>Lixeira:</strong> Onde vão arquivos deletados (pode recuperar)
+        </li>
+      </ul>
+
+      <h3>🔸 Painel de Controle (Control Panel)</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        Local onde você muda CONFIGURAÇÕES do Windows: data, hora, dispositivos,
+        rede, desinstalação de programas, etc.
+      </p>
+
+      <h3>🔸 Barra de Tarefas (Taskbar)</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        Barra na parte de BAIXO da tela. Mostra programas abertos, relógio,
+        volume, rede, etc.
+      </p>
+
+      <h2>6. Questões AOCP - Windows 10</h2>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 6</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual atalho de teclado abre o Explorador de Arquivos no Windows
+            10?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Windows + E
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + E
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Alt + E
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Windows + F
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: A</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Windows + E é o atalho correto para abrir File Explorer. É um
+            atalho MUITO cobrado em concursos!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 7</div>
+        <div class="questao-pergunta">
+          <strong
+            >Para copiar um arquivo sem removê-lo do local original, qual atalho
+            usar?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + X
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + V
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Ctrl + C
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Ctrl + Z
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ctrl + C = COPIA (deixa original). Ctrl + X = CORTA (remove
+            original). PEGADINHA COMUM!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 8</div>
+        <div class="questao-pergunta">
+          <strong
+            >O que acontece quando você pressiona Shift + Delete em um
+            arquivo?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> O arquivo é
+            enviado para a lixeira
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> O arquivo é
+            DELETADO PERMANENTEMENTE (não vai para lixeira)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> O arquivo é
+            copiado
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> O arquivo é
+            movido para Documentos
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >PEGADINHA CLÁSSICA! Shift + Delete = DELETA PERMANENTEMENTE! Delete
+            sozinho = vai para lixeira (recuperável).</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 9</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual atalho de teclado mata um programa que está travado no Windows
+            10?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + Alt +
+            Delete
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + Shift +
+            Esc (abre Gerenciador de Tarefas)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Alt + Tab
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Windows + D
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ctrl + Shift + Esc abre GERENCIADOR DE TAREFAS DIRETO (mais
+            rápido). Nele você mata qualquer programa travado!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 10</div>
+        <div class="questao-pergunta">
+          <strong>Qual é a diferença entre Ctrl + Z e Ctrl + Y?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + Z copia,
+            Ctrl + Y cola
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + Z desfaz
+            (UNDO), Ctrl + Y refaz (REDO)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Ctrl + Z
+            deleta, Ctrl + Y restaura
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Não há
+            diferença, são iguais
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ctrl + Z = DESFAZ última ação (UNDO). Ctrl + Y = REFAZ ação
+            desfeita (REDO). São opostos!</span
+          >
+        </div>
+      </div>
+
+      <!-- PARTE 3: LINUX -->
+      <div class="titulo-secao">🐧 PARTE 3 - LINUX - SISTEMA OPERACIONAL</div>
+
+      <h2>7. O que é Linux?</h2>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Linux</strong><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É um SISTEMA OPERACIONAL GRATUITO e de CÓDIGO ABERTO. Alternativa ao
+          Windows. Muito usado em servidores, computadores corporativos e por
+          entusiastas de tecnologia.</span
+        >
+      </div>
+
+      <h3>🔸 Diferenças Linux vs Windows 10</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Aspecto</th>
+          <th>Linux</th>
+          <th>Windows 10</th>
+        </tr>
+        <tr>
+          <td>Código</td>
+          <td>CÓDIGO ABERTO (qualquer um pode modificar)</td>
+          <td>Código FECHADO (privado da Microsoft)</td>
+        </tr>
+        <tr>
+          <td>Custo</td>
+          <td>GRATUITO</td>
+          <td>Pago (licença)</td>
+        </tr>
+        <tr>
+          <td>Estabilidade</td>
+          <td>Muito estável, raramente trava</td>
+          <td>Estável, mas menos que Linux</td>
+        </tr>
+        <tr>
+          <td>Segurança</td>
+          <td>Mais seguro (menos vírus)</td>
+          <td>Mais alvo de vírus</td>
+        </tr>
+        <tr>
+          <td>Uso Principal</td>
+          <td>Servidores, grandes corporações</td>
+          <td>PCs pessoais, escritórios</td>
+        </tr>
+        <tr>
+          <td>Interface</td>
+          <td>Pode ser complexa (linha de comando)</td>
+          <td>Simples e amigável (gráfica)</td>
+        </tr>
+        <tr>
+          <td>Compatibilidade Programas</td>
+          <td>Menos programas disponíveis</td>
+          <td>Mais programas e jogos</td>
+        </tr>
+      </table>
+
+      <div class="atencao">
+        <strong style="font-size: 1.15em">🚨 PEGADINHA AOCP:</strong><br />
+        <span style="color: #d32f2f; font-weight: bold"
+          >Confundem Linux com Windows. LINUX É DIFERENTE! Linux é GRATUITO,
+          Windows é PAGO. Linux usa linha de comando (terminal), Windows usa
+          interface gráfica (mouse e ícones).</span
+        >
+      </div>
+
+      <h2>8. Distribuições Linux Principais</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Distribuição</th>
+          <th>Características</th>
+          <th>Uso Principal</th>
+        </tr>
+        <tr>
+          <td><strong>Ubuntu</strong></td>
+          <td>Mais popular, fácil de usar, comunidade grande</td>
+          <td>Desktops, iniciantes</td>
+        </tr>
+        <tr>
+          <td><strong>Fedora</strong></td>
+          <td>Versão mais recente, inovadora</td>
+          <td>Desenvolvedores</td>
+        </tr>
+        <tr>
+          <td><strong>Debian</strong></td>
+          <td>Muito estável, base para muitas distros</td>
+          <td>Servidores</td>
+        </tr>
+        <tr>
+          <td><strong>Red Hat</strong></td>
+          <td>Profissional, suporte corporativo</td>
+          <td>Empresas grandes</td>
+        </tr>
+        <tr>
+          <td><strong>CentOS</strong></td>
+          <td>Gratuito, baseado em Red Hat</td>
+          <td>Servidores web</td>
+        </tr>
+      </table>
+
+      <div class="dica">
+        <strong style="font-size: 1.15em">💡 DICA OURO AOCP:</strong><br />
+        <span style="color: #8e24aa; font-weight: bold"
+          >UBUNTU é a distribuição Linux mais cobrada em concursos! Se cair algo
+          sobre Linux, é provavelmente Ubuntu!</span
+        >
+      </div>
+
+      <h2>9. Comandos Linux Básicos</h2>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        Linux usa TERMINAL (linha de comando) para muitas operações. Aqui estão
+        comandos que caem em prova:
+      </p>
+
+      <table class="tabela">
+        <tr>
+          <th>Comando</th>
+          <th>Função</th>
+          <th>Exemplo</th>
+        </tr>
+        <tr>
+          <td><strong>ls</strong></td>
+          <td>Lista arquivos e pastas do diretório</td>
+          <td>ls /home/user</td>
+        </tr>
+        <tr>
+          <td><strong>cd</strong></td>
+          <td>Muda de diretório (pasta)</td>
+          <td>cd /home/user/Documentos</td>
+        </tr>
+        <tr>
+          <td><strong>pwd</strong></td>
+          <td>Mostra o caminho do diretório atual</td>
+          <td>pwd (retorna /home/user)</td>
+        </tr>
+        <tr>
+          <td><strong>mkdir</strong></td>
+          <td>Cria nova pasta</td>
+          <td>mkdir MinhaPasta</td>
+        </tr>
+        <tr>
+          <td><strong>cp</strong></td>
+          <td>Copia arquivo</td>
+          <td>cp arquivo.txt cópia.txt</td>
+        </tr>
+        <tr>
+          <td><strong>mv</strong></td>
+          <td>Move ou renomeia arquivo</td>
+          <td>mv arquivo.txt novo_nome.txt</td>
+        </tr>
+        <tr>
+          <td><strong>rm</strong></td>
+          <td>Deleta arquivo (CUIDADO!)</td>
+          <td>rm arquivo.txt</td>
+        </tr>
+        <tr>
+          <td><strong>sudo</strong></td>
+          <td>Executa comando com privilégios de ADMIN</td>
+          <td>sudo apt-get install programa</td>
+        </tr>
+        <tr>
+          <td><strong>cat</strong></td>
+          <td>Mostra conteúdo de arquivo</td>
+          <td>cat arquivo.txt</td>
+        </tr>
+        <tr>
+          <td><strong>grep</strong></td>
+          <td>Busca texto dentro de arquivo</td>
+          <td>grep "palavra" arquivo.txt</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 MUITO COBRADO AOCP:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold"
+          >Comandos Linux: ls, cd, pwd, mkdir, rm são os 5 mais cobrados! Decore
+          pelo menos esses!</span
+        >
+      </div>
+
+      <h2>10. Questões AOCP - Linux</h2>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 11</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual é a principal vantagem do Linux em relação ao Windows?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Linux é mais
+            rápido
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Linux é
+            GRATUITO e de código aberto
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Linux tem mais
+            programas
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Linux é mais
+            fácil de usar
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Linux é GRATUITO (não precisa pagar licença) e tem CÓDIGO ABERTO
+            (qualquer um pode modificar). Essas são as maiores vantagens sobre
+            Windows!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 12</div>
+        <div class="questao-pergunta">
+          <strong>Qual comando Linux lista arquivos do diretório atual?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> cd
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> ls
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> pwd
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> mkdir
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >LS (list) = lista arquivos e pastas. CD = troca diretório. PWD =
+            mostra caminho atual. MKDIR = cria pasta.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 13</div>
+        <div class="questao-pergunta">
+          <strong>Qual comando Linux muda para outro diretório (pasta)?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> ls /home
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> cd /home (muda
+            para /home)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> pwd
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> cp arquivo
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >CD (change directory) = muda de pasta/diretório. LS só lista o que
+            está lá, não muda!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 14</div>
+        <div class="questao-pergunta">
+          <strong>O que significa "código aberto" em relação ao Linux?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> O código está
+            visível para todos e pode ser modificado
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> O Linux não tem
+            proteção
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Qualquer um
+            pode vender Linux
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> O código não
+            está protegido por direitos autorais
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: A</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >CÓDIGO ABERTO = o CÓDIGO-FONTE fica disponível para qualquer um ler
+            e MODIFICAR. Diferente do Windows que é PROPRIETÁRIO
+            (fechado).</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 15</div>
+        <div class="questao-pergunta">
+          <strong
+            >Ubuntu é uma distribuição do qual sistema operacional?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Windows
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> macOS
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Linux
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Android
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ubuntu é a DISTRIBUIÇÃO LINUX mais popular! Distribuição = versão
+            customizada de Linux. Como "sabor" diferente do mesmo SO!</span
+          >
+        </div>
+      </div>
+      <!-- PARTE 4: NAVEGADORES -->
+      <div class="titulo-secao">🌐 PARTE 4 - NAVEGADORES DE INTERNET</div>
+
+      <h2>11. O que é Navegador?</h2>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em"
+          >Navegador (Browser)</strong
+        ><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É um programa/software que permite ACESSAR e VISUALIZAR páginas da
+          internet (sites). Exemplo: Chrome, Firefox, Internet Explorer, Safari,
+          Edge.</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="font-size: 1.15em">🚨 PEGADINHA AOCP:</strong><br />
+        <span style="color: #d32f2f; font-weight: bold"
+          >Confundem NAVEGADOR com INTERNET! INTERNET é a rede. NAVEGADOR é o
+          programa que você ABRE para USAR a internet. Internet é
+          diferente!</span
+        >
+      </div>
+
+      <h2>12. Navegadores Principais - Comparação</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Navegador</th>
+          <th>Desenvolvedor</th>
+          <th>Características</th>
+          <th>Uso</th>
+        </tr>
+        <tr>
+          <td><strong>Google Chrome</strong></td>
+          <td>Google</td>
+          <td>Rápido, moderno, sincroniza com Google, muitas extensões</td>
+          <td>Mais popular (50%+ market share)</td>
+        </tr>
+        <tr>
+          <td><strong>Mozilla Firefox</strong></td>
+          <td>Mozilla (GRATUITO e código aberto)</td>
+          <td>Privacidade forte, código aberto, multiplataforma</td>
+          <td>Usuários conscientes de privacidade</td>
+        </tr>
+        <tr>
+          <td><strong>Internet Explorer</strong></td>
+          <td>Microsoft (DESCONTINUADO)</td>
+          <td>Lento, desatualizado, muitos bugs, fraco em segurança</td>
+          <td>Legado, ainda em algumas empresas</td>
+        </tr>
+        <tr>
+          <td><strong>Microsoft Edge</strong></td>
+          <td>Microsoft (substitui IE)</td>
+          <td>Moderno, integrado ao Windows 10, Chromium-based</td>
+          <td>Padrão em Windows 10+</td>
+        </tr>
+        <tr>
+          <td><strong>Safari</strong></td>
+          <td>Apple</td>
+          <td>Otimizado para Apple, rápido, privacidade</td>
+          <td>Usuários de Mac/iPhone</td>
+        </tr>
+      </table>
+
+      <div class="dica">
+        <strong style="font-size: 1.15em">💡 DICA OURO AOCP:</strong><br />
+        <span style="color: #8e24aa; font-weight: bold"
+          >Internet Explorer é OBSOLETO! Microsoft descontinuou em 2022.
+          Qualquer pergunta sobre qual navegador NÃO usar = resposta é Internet
+          Explorer!</span
+        >
+      </div>
+
+      <h2>13. Atalhos de Navegadores - MUITO COBRADO!</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Atalho</th>
+          <th>Função</th>
+          <th>Navegadores</th>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + T</strong></td>
+          <td>Abre NOVA ABA (tab)</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + N</strong></td>
+          <td>Abre NOVA JANELA</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + W</strong></td>
+          <td>FECHA ABA atual</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Shift + W</strong></td>
+          <td>FECHA JANELA inteira</td>
+          <td>Chrome, Firefox, Edge</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + L</strong></td>
+          <td>Vai para BARRA DE ENDEREÇO (URL)</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>F5</strong></td>
+          <td>ATUALIZA a página</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + R</strong></td>
+          <td>ATUALIZA a página</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Shift + R</strong></td>
+          <td>ATUALIZA ignorando cache (força atualização completa)</td>
+          <td>Chrome, Firefox, Edge</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + H</strong></td>
+          <td>Abre HISTÓRICO de navegação</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + J</strong></td>
+          <td>Abre DOWNLOADS (lista de arquivos baixados)</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Shift + Delete</strong></td>
+          <td>Abre dados para LIMPAR (histórico, cookies, cache)</td>
+          <td>Chrome, Firefox, Edge</td>
+        </tr>
+        <tr>
+          <td><strong>F11</strong></td>
+          <td>Ativa MODO TELA CHEIA (fullscreen)</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + + (mais)</strong></td>
+          <td>AUMENTA tamanho da página (zoom in)</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + - (menos)</strong></td>
+          <td>DIMINUI tamanho da página (zoom out)</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + 0 (zero)</strong></td>
+          <td>RESETA zoom para tamanho normal</td>
+          <td>Chrome, Firefox, Edge, IE</td>
+        </tr>
+        <tr>
+          <td><strong>F12</strong></td>
+          <td>Abre FERRAMENTAS DE DESENVOLVEDOR (developer tools)</td>
+          <td>Chrome, Firefox, Edge</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 MUITO COBRADO AOCP:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold"
+          >Atalhos: Ctrl+T (nova aba), Ctrl+N (nova janela), Ctrl+W (fecha aba),
+          Ctrl+H (histórico), Ctrl+J (downloads). Decore esses 5!</span
+        >
+      </div>
+
+      <h2>14. Elementos de um Navegador</h2>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        <strong style="color: #667eea">Barra de Endereço (URL Bar):</strong>
+        Mostra o endereço do site (www.google.com)<br />
+        <strong style="color: #667eea">Botão Voltar/Avançar:</strong> Navega
+        entre páginas já visitadas<br />
+        <strong style="color: #667eea">Botão Atualizar:</strong> Recarrega a
+        página (F5)<br />
+        <strong style="color: #667eea">Abas (Tabs):</strong> Permite múltiplas
+        páginas abertas na mesma janela<br />
+        <strong style="color: #667eea">Marcadores (Bookmarks):</strong> Salva
+        sites favoritos para acesso rápido<br />
+        <strong style="color: #667eea">Menu (Hambúrguer):</strong> Ícone com 3
+        linhas que abre menu de opções
+      </p>
+
+      <h2>15. Questões AOCP - Navegadores</h2>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 16</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual é a diferença fundamental entre navegador e internet?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Não há
+            diferença, são sinônimos
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Navegador é a
+            rede, internet é o programa
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Internet é a
+            rede, navegador é o PROGRAMA que acessa a internet
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Navegador é
+            mais rápido que internet
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >INTERNET = a rede (infraestrutura). NAVEGADOR = programa (Chrome,
+            Firefox) que ACESSA sites na internet! PEGADINHA CLÁSSICA!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 17</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual atalho abre uma nova ABA em navegadores como Chrome e
+            Firefox?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + N
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + T
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Ctrl + W
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Ctrl + H
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ctrl + T = NOVA ABA. Ctrl + N = nova JANELA (diferente!). Ctrl + W
+            = FECHA aba. Ctrl + H = histórico.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 18</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual navegador foi descontinuado pela Microsoft e NÃO deve ser mais
+            utilizado?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Google Chrome
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Mozilla Firefox
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Internet
+            Explorer
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Microsoft Edge
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >INTERNET EXPLORER foi DESCONTINUADO em 2022! Microsoft substitui
+            por EDGE. IE era lento, inseguro e desatualizado!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 19</div>
+        <div class="questao-pergunta">
+          <strong>Como abrir o HISTÓRICO de navegação em navegadores?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + T
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + H
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Ctrl + J
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> F11
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ctrl + H = abre HISTÓRICO. Ctrl + J = abre DOWNLOADS. F11 = tela
+            cheia. Ctrl + T = nova aba.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 20</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual atalho para fazer zoom IN (aumentar tamanho da
+            página)?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + -
+            (menos)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Ctrl + 0 (zero)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Ctrl + + (mais)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> F5
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Ctrl + + (MAIS) = AUMENTA zoom. Ctrl + - (MENOS) = diminui. Ctrl +
+            0 = reseta zoom normal!</span
+          >
+        </div>
+      </div>
+
+      <!-- PARTE 5: MICROSOFT OFFICE 365 -->
+      <div class="titulo-secao">📊 PARTE 5 - MICROSOFT OFFICE 365</div>
+
+      <h2>16. O que é Microsoft Office 365?</h2>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em"
+          >Microsoft Office 365</strong
+        ><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É um pacote (suite) de programas de produtividade por ASSINATURA
+          (nuvem). Inclui Word, Excel, PowerPoint, Outlook, OneNote, Access,
+          etc.</span
+        >
+      </div>
+
+      <h2>17. Programas Principais do Office 365</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Programa</th>
+          <th>Função</th>
+          <th>Extensão Padrão</th>
+          <th>Atalho Importante</th>
+        </tr>
+        <tr>
+          <td><strong>WORD</strong></td>
+          <td>Processador de TEXTO (documentos, cartas, relatórios)</td>
+          <td>.docx</td>
+          <td>Ctrl + S (salva)</td>
+        </tr>
+        <tr>
+          <td><strong>EXCEL</strong></td>
+          <td>Planilha ELETRÔNICA (cálculos, gráficos, dados)</td>
+          <td>.xlsx</td>
+          <td>Ctrl + Home (vai início)</td>
+        </tr>
+        <tr>
+          <td><strong>POWERPOINT</strong></td>
+          <td>APRESENTAÇÕES (slides com imagens e textos)</td>
+          <td>.pptx</td>
+          <td>F5 (inicia apresentação)</td>
+        </tr>
+        <tr>
+          <td><strong>OUTLOOK</strong></td>
+          <td>E-MAIL e gerenciamento de CONTATOS/CALENDÁRIO</td>
+          <td>.msg</td>
+          <td>Ctrl + N (novo e-mail)</td>
+        </tr>
+        <tr>
+          <td><strong>ONENOTE</strong></td>
+          <td>ANOTAÇÕES digitais e organização de ideias</td>
+          <td>.one</td>
+          <td>Ctrl + Alt + N (nova nota)</td>
+        </tr>
+        <tr>
+          <td><strong>ACCESS</strong></td>
+          <td>BANCO DE DADOS (armazenar e consultar dados)</td>
+          <td>.accdb</td>
+          <td>-</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 MUITO COBRADO AOCP:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold"
+          >Diferenças entre Word, Excel e PowerPoint! Word = TEXTO (.docx).
+          Excel = PLANILHA (.xlsx). PowerPoint = SLIDES (.pptx).</span
+        >
+      </div>
+
+      <h2>18. Atalhos Microsoft Office - Universais</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Atalho</th>
+          <th>Função</th>
+          <th>Programas</th>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + N</strong></td>
+          <td>NOVO documento</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + O</strong></td>
+          <td>ABRE documento</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + S</strong></td>
+          <td>SALVA documento</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + P</strong></td>
+          <td>IMPRESSÃO (print)</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + C</strong></td>
+          <td>COPIA</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + X</strong></td>
+          <td>CORTA</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + V</strong></td>
+          <td>COLA</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Z</strong></td>
+          <td>DESFAZ</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Y</strong></td>
+          <td>REFAZ</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + A</strong></td>
+          <td>SELECIONA TUDO</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + B</strong></td>
+          <td>NEGRITO (bold)</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + I</strong></td>
+          <td>ITÁLICO</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + U</strong></td>
+          <td>SUBLINHADO (underline)</td>
+          <td>Word, Excel, PowerPoint</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + F</strong></td>
+          <td>BUSCA (find) - localize palavra</td>
+          <td>Word, Excel</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + H</strong></td>
+          <td>SUBSTITUIR (find and replace)</td>
+          <td>Word, Excel</td>
+        </tr>
+      </table>
+
+      <div class="dica">
+        <strong style="font-size: 1.15em">💡 DICA OURO AOCP:</strong><br />
+        <span style="color: #8e24aa; font-weight: bold"
+          >Atalhos de Office funcionam em TODOS os programas (Word, Excel,
+          PowerPoint)! Memorize os 13 atalhos universais acima!</span
+        >
+      </div>
+
+      <h2>19. Word 365 - Processador de Texto</h2>
+
+      <h3>🔸 Funções Principais do Word</h3>
+
+      <ul style="font-weight: bold; font-size: 1.05em">
+        <li>
+          <strong>Digitar e formatar texto:</strong> Bold, itálico, sublinhado,
+          cores, fontes
+        </li>
+        <li>
+          <strong>Inserir elementos:</strong> Imagens, tabelas, gráficos,
+          formas, cabeçalho/rodapé
+        </li>
+        <li><strong>Revisar:</strong> Verificação ortográfica e gramatical</li>
+        <li><strong>Salvar em formatos:</strong> .docx (padrão), .pdf, .txt</li>
+        <li><strong>Imprimir:</strong> Com várias opções de configuração</li>
+        <li>
+          <strong>Colaboração:</strong> Compartilhar documento para edição
+          conjunta
+        </li>
+      </ul>
+
+      <h3>🔸 Atalhos Exclusivos do Word</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Atalho</th>
+          <th>Função</th>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + 1</strong></td>
+          <td>Espaçamento simples entre linhas</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + 2</strong></td>
+          <td>Espaçamento duplo entre linhas</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Home</strong></td>
+          <td>Vai para INÍCIO do documento</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + End</strong></td>
+          <td>Vai para FIM do documento</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Enter</strong></td>
+          <td>Insere QUEBRA DE PÁGINA</td>
+        </tr>
+        <tr>
+          <td><strong>Alt + Ctrl + E</strong></td>
+          <td>Posição ALINHADA À ESQUERDA</td>
+        </tr>
+        <tr>
+          <td><strong>Alt + Ctrl + C</strong></td>
+          <td>Posição CENTRALIZADA</td>
+        </tr>
+        <tr>
+          <td><strong>Alt + Ctrl + D</strong></td>
+          <td>Posição ALINHADA À DIREITA</td>
+        </tr>
+      </table>
+
+      <h2>20. Excel 365 - Planilha Eletrônica</h2>
+
+      <h3>🔸 Estrutura Básica do Excel</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        <strong style="color: #667eea">CÉLULA:</strong> Cada quadradinho (ex:
+        A1, B2, C3)<br />
+        <strong style="color: #667eea">LINHA:</strong> Horizontal (números: 1,
+        2, 3...)<br />
+        <strong style="color: #667eea">COLUNA:</strong> Vertical (letras: A, B,
+        C...)<br />
+        <strong style="color: #667eea">ABA/SHEET:</strong> Múltiplas planilhas
+        no mesmo arquivo
+      </p>
+
+      <h3>🔸 Funções Essenciais do Excel</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Função</th>
+          <th>Sintaxe</th>
+          <th>Exemplo</th>
+        </tr>
+        <tr>
+          <td><strong>SUM (Soma)</strong></td>
+          <td>=SUM(A1:A10)</td>
+          <td>=SUM(B2:B5) soma B2+B3+B4+B5</td>
+        </tr>
+        <tr>
+          <td><strong>AVERAGE (Média)</strong></td>
+          <td>=AVERAGE(A1:A10)</td>
+          <td>=AVERAGE(C2:C6) faz média de 5 valores</td>
+        </tr>
+        <tr>
+          <td><strong>COUNT (Contar)</strong></td>
+          <td>=COUNT(A1:A10)</td>
+          <td>=COUNT(D2:D100) conta células com números</td>
+        </tr>
+        <tr>
+          <td><strong>MAX (Máximo)</strong></td>
+          <td>=MAX(A1:A10)</td>
+          <td>=MAX(E2:E50) mostra maior valor</td>
+        </tr>
+        <tr>
+          <td><strong>MIN (Mínimo)</strong></td>
+          <td>=MIN(A1:A10)</td>
+          <td>=MIN(F2:F50) mostra menor valor</td>
+        </tr>
+        <tr>
+          <td><strong>IF (Se)</strong></td>
+          <td>=IF(condição;verdadeiro;falso)</td>
+          <td>=IF(A1>10;"Sim";"Não")</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 MUITO COBRADO AOCP:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold"
+          >Funções Excel: SUM (soma), AVERAGE (média), COUNT (contar), MAX
+          (máximo), MIN (mínimo), IF (se/então). Pratique bastante!</span
+        >
+      </div>
+
+      <h3>🔸 Atalhos Exclusivos do Excel</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Atalho</th>
+          <th>Função</th>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Home</strong></td>
+          <td>Vai para célula A1 (início)</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + End</strong></td>
+          <td>Vai para última célula usada</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Page Down</strong></td>
+          <td>Vai para próxima ABA (sheet)</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Page Up</strong></td>
+          <td>Volta para ABA anterior</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Delete</strong></td>
+          <td>Deleta conteúdo da célula</td>
+        </tr>
+        <tr>
+          <td><strong>F2</strong></td>
+          <td>EDITA célula (entra em modo edição)</td>
+        </tr>
+        <tr>
+          <td><strong>F9</strong></td>
+          <td>Recalcula fórmulas</td>
+        </tr>
+      </table>
+
+      <h2>21. PowerPoint 365 - Apresentações</h2>
+
+      <h3>🔸 Funções Principais do PowerPoint</h3>
+
+      <ul style="font-weight: bold; font-size: 1.05em">
+        <li><strong>Criar SLIDES:</strong> Múltiplas páginas com conteúdo</li>
+        <li>
+          <strong>Adicionar imagens e vídeos:</strong> Para ilustrar
+          apresentação
+        </li>
+        <li><strong>Animações:</strong> Efeitos de entrada/saída de objetos</li>
+        <li><strong>Transições:</strong> Efeitos entre slides</li>
+        <li>
+          <strong>Apresentar:</strong> Modo apresentação (fullscreen, preto,
+          etc.)
+        </li>
+        <li>
+          <strong>Compartilhar:</strong> PDF, vídeo, compartilhamento online
+        </li>
+      </ul>
+
+      <h3>🔸 Atalhos Exclusivos do PowerPoint</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Atalho</th>
+          <th>Função</th>
+        </tr>
+        <tr>
+          <td><strong>F5</strong></td>
+          <td>Inicia APRESENTAÇÃO do slide 1</td>
+        </tr>
+        <tr>
+          <td><strong>Shift + F5</strong></td>
+          <td>Inicia APRESENTAÇÃO do slide atual</td>
+        </tr>
+        <tr>
+          <td><strong>Esc</strong></td>
+          <td>Sai da apresentação</td>
+        </tr>
+        <tr>
+          <td><strong>Page Down / Seta Direita</strong></td>
+          <td>Próximo slide</td>
+        </tr>
+        <tr>
+          <td><strong>Page Up / Seta Esquerda</strong></td>
+          <td>Slide anterior</td>
+        </tr>
+        <tr>
+          <td><strong>B</strong></td>
+          <td>Tela PRETA durante apresentação</td>
+        </tr>
+        <tr>
+          <td><strong>W</strong></td>
+          <td>Tela BRANCA durante apresentação</td>
+        </tr>
+      </table>
+
+      <h2>22. Questões AOCP - Microsoft Office</h2>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 21</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual programa do Office 365 é usado para criar apresentações com
+            slides?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Word
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Excel
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> PowerPoint
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Outlook
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >PowerPoint = APRESENTAÇÕES (slides). Word = TEXTOS. Excel =
+            PLANILHAS (cálculos). Outlook = E-MAIL.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 22</div>
+        <div class="questao-pergunta">
+          <strong>Qual atalho inicia uma apresentação no PowerPoint?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Ctrl + P
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> F5
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Shift + F5
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Ctrl + N
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >F5 = inicia apresentação do slide 1. Shift + F5 = inicia do slide
+            atual. Ctrl + P = impressão.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 23</div>
+        <div class="questao-pergunta">
+          <strong>No Excel, qual função calcula a SOMA de valores?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span>
+            =AVERAGE(A1:A10)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> =SUM(A1:A10)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> =COUNT(A1:A10)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> =MAX(A1:A10)
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >SUM = SOMA. AVERAGE = MÉDIA. COUNT = CONTAR. MAX = MÁXIMO. Decore
+            as principais funções!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 24</div>
+        <div class="questao-pergunta">
+          <strong>Qual é a extensão padrão de um arquivo Excel?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> .docx
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> .xlsx
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> .pptx
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> .txt
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Excel = .xlsx. Word = .docx. PowerPoint = .pptx. Essas extensões
+            caem muito em prova!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 25</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual programa do Office é usado para enviar e receber
+            e-mails?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Word
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Excel
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Outlook
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> PowerPoint
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >OUTLOOK = E-MAIL e gerenciamento de contatos/calendário. É o
+            cliente de e-mail do Microsoft Office!</span
+          >
+        </div>
+      </div>
+      <!-- MEGA TABELA: TODOS OS ATALHOS PRINCIPAIS DO COMPUTADOR -->
+      <div class="titulo-secao">
+        ⚡ MEGA TABELA - ATALHOS PRINCIPAIS QUE AOCP COBRA!
+      </div>
+
+      <h2>23. ATALHOS UNIVERSAIS - OS MAIS COBRADOS</h2>
+
+      <div class="importante">
+        <strong style="font-size: 1.2em">🔥 ATENÇÃO:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold; font-size: 1.1em"
+          >Esses atalhos funcionam em QUALQUER programa (Windows, Office,
+          navegadores). Decore-os e PASSA em qualquer prova de
+          Informática!</span
+        >
+      </div>
+
+      <table class="tabela">
+        <tr>
+          <th>Categoria</th>
+          <th>Atalho</th>
+          <th>Função</th>
+          <th>Frequência AOCP</th>
+        </tr>
+        <tr>
+          <td rowspan="8"><strong>EDIÇÃO BÁSICA</strong></td>
+          <td><strong>Ctrl + C</strong></td>
+          <td>COPIA</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + X</strong></td>
+          <td>CORTA</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + V</strong></td>
+          <td>COLA</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Z</strong></td>
+          <td>DESFAZ (UNDO)</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Y</strong></td>
+          <td>REFAZ (REDO)</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + A</strong></td>
+          <td>SELECIONA TUDO</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + F</strong></td>
+          <td>BUSCA (Find)</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + H</strong></td>
+          <td>SUBSTITUIR (Find & Replace)</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td rowspan="5"><strong>ARQUIVO</strong></td>
+          <td><strong>Ctrl + N</strong></td>
+          <td>NOVO documento</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + O</strong></td>
+          <td>ABRE documento</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + S</strong></td>
+          <td>SALVA documento</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + P</strong></td>
+          <td>IMPRIME</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + W</strong></td>
+          <td>FECHA arquivo</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td rowspan="4"><strong>FORMATAÇÃO</strong></td>
+          <td><strong>Ctrl + B</strong></td>
+          <td>NEGRITO (Bold)</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + I</strong></td>
+          <td>ITÁLICO</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + U</strong></td>
+          <td>SUBLINHADO (Underline)</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + E</strong></td>
+          <td>CENTRALIZAR texto</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td rowspan="6"><strong>WINDOWS</strong></td>
+          <td><strong>Windows + E</strong></td>
+          <td>Abre EXPLORADOR DE ARQUIVOS</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Alt + Tab</strong></td>
+          <td>ALTERNA entre programas</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Windows + D</strong></td>
+          <td>Mostra DESKTOP (minimiza tudo)</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Windows + L</strong></td>
+          <td>BLOQUEIA sessão (lock)</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + Shift + Esc</strong></td>
+          <td>Abre GERENCIADOR DE TAREFAS</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Windows + I</strong></td>
+          <td>Abre CONFIGURAÇÕES</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td rowspan="4"><strong>NAVEGADORES</strong></td>
+          <td><strong>Ctrl + T</strong></td>
+          <td>NOVA ABA</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + N</strong></td>
+          <td>NOVA JANELA</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Ctrl + H</strong></td>
+          <td>HISTÓRICO</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>F5 / Ctrl + R</strong></td>
+          <td>ATUALIZA página</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td rowspan="3"><strong>GERAIS</strong></td>
+          <td><strong>Delete</strong></td>
+          <td>DELETA (vai para lixeira)</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Shift + Delete</strong></td>
+          <td>DELETA PERMANENTEMENTE</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td><strong>F2</strong></td>
+          <td>RENOMEIA arquivo</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+      </table>
+
+      <div class="dica">
+        <strong style="font-size: 1.2em"
+          >💡 RESUMO DOS 15 ATALHOS MAIS IMPORTANTES:</strong
+        ><br />
+        <span style="color: #8e24aa; font-weight: bold; font-size: 1.05em">
+          1. Ctrl+C (copia) 2. Ctrl+X (corta) 3. Ctrl+V (cola) 4. Ctrl+Z
+          (desfaz) 5. Ctrl+A (tudo)<br />
+          6. Ctrl+S (salva) 7. Ctrl+P (imprime) 8. Windows+E (explorer) 9.
+          Alt+Tab (alterna) 10. Ctrl+T (aba)<br />
+          11. Ctrl+H (histórico) 12. F5 (atualiza) 13. Delete (deleta) 14.
+          Shift+Delete (apaga) 15. Ctrl+Shift+Esc (tarefas)
+        </span>
+      </div>
+
+      <!-- PARTE 6: LIBREOFFICE -->
+      <div class="titulo-secao">
+        📄 PARTE 6 - LIBREOFFICE (ALTERNATIVA GRATUITA AO OFFICE)
+      </div>
+
+      <h2>24. O que é LibreOffice?</h2>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">LibreOffice</strong
+        ><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É um pacote de APLICAÇÕES DE PRODUTIVIDADE GRATUITO e de CÓDIGO
+          ABERTO. Alternativa ao Microsoft Office 365. Desenvolver pela The
+          Document Foundation.</span
+        >
+      </div>
+
+      <h3>🔸 LibreOffice vs Microsoft Office</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Aspecto</th>
+          <th>LibreOffice</th>
+          <th>Microsoft Office 365</th>
+        </tr>
+        <tr>
+          <td>Custo</td>
+          <td>GRATUITO</td>
+          <td>PAGO (assinatura)</td>
+        </tr>
+        <tr>
+          <td>Código</td>
+          <td>CÓDIGO ABERTO</td>
+          <td>Código fechado (proprietário)</td>
+        </tr>
+        <tr>
+          <td>Disponibilidade</td>
+          <td>Multiplataforma (Windows, Linux, Mac)</td>
+          <td>Windows e Mac (principalmente)</td>
+        </tr>
+        <tr>
+          <td>Compatibilidade</td>
+          <td>Compatível com formatos Office (.docx, .xlsx)</td>
+          <td>Padrão da indústria</td>
+        </tr>
+        <tr>
+          <td>Nuvem</td>
+          <td>Opcional (offline por padrão)</td>
+          <td>Integrado (OneDrive, cloud)</td>
+        </tr>
+        <tr>
+          <td>Programas Inclusos</td>
+          <td>Writer, Calc, Impress, Draw, Base</td>
+          <td>Word, Excel, PowerPoint, Outlook, OneNote, Access</td>
+        </tr>
+      </table>
+
+      <h2>25. Programas Principais do LibreOffice</h2>
+
+      <table class="tabela">
+        <tr>
+          <th>Programa</th>
+          <th>Equivalente Office</th>
+          <th>Função</th>
+          <th>Extensão</th>
+        </tr>
+        <tr>
+          <td><strong>WRITER</strong></td>
+          <td>Word</td>
+          <td>Processador de TEXTO</td>
+          <td>.odt (ou .docx)</td>
+        </tr>
+        <tr>
+          <td><strong>CALC</strong></td>
+          <td>Excel</td>
+          <td>Planilha ELETRÔNICA</td>
+          <td>.ods (ou .xlsx)</td>
+        </tr>
+        <tr>
+          <td><strong>IMPRESS</strong></td>
+          <td>PowerPoint</td>
+          <td>APRESENTAÇÕES (slides)</td>
+          <td>.odp (ou .pptx)</td>
+        </tr>
+        <tr>
+          <td><strong>DRAW</strong></td>
+          <td>Paint/Visio</td>
+          <td>Desenho e GRÁFICOS</td>
+          <td>.odg</td>
+        </tr>
+        <tr>
+          <td><strong>BASE</strong></td>
+          <td>Access</td>
+          <td>BANCO DE DADOS</td>
+          <td>.odb</td>
+        </tr>
+        <tr>
+          <td><strong>MATH</strong></td>
+          <td>Equation Editor</td>
+          <td>FÓRMULAS MATEMÁTICAS</td>
+          <td>.odf</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 MUITO COBRADO AOCP:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold"
+          >LibreOffice é GRATUITO e compatível com Office! Perguntas SEMPRE
+          perguntam: "Qual é a alternativa gratuita ao Microsoft Office?"
+          Resposta: LibreOffice!</span
+        >
+      </div>
+
+      <!-- PARTE 7: INTERNET, INTRANET, EXTRANET -->
+      <div class="titulo-secao">🌐 PARTE 7 - INTERNET, INTRANET E EXTRANET</div>
+
+      <h2>26. Conceitos Fundamentais de Conectividade</h2>
+
+      <h3>🔸 Internet</h3>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Internet</strong><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É uma REDE GLOBAL descentralizada que conecta computadores em TODO o
+          mundo. Qualquer pessoa (com acesso) pode acessar qualquer site
+          público.</span
+        >
+      </div>
+
+      <h3>🔸 Intranet</h3>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Intranet</strong><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É uma REDE PRIVADA dentro de uma organização (empresa, universidade,
+          governo). Apenas funcionários internos acessam. SEGURA e
+          CONTROLADA.</span
+        >
+      </div>
+
+      <h3>🔸 Extranet</h3>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em">Extranet</strong><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É uma extensão da INTRANET para parceiros externos (fornecedores,
+          clientes). Acesso seletivo e controlado. NÃO é pública como
+          internet.</span
+        >
+      </div>
+
+      <table class="tabela">
+        <tr>
+          <th>Aspecto</th>
+          <th>Internet</th>
+          <th>Intranet</th>
+          <th>Extranet</th>
+        </tr>
+        <tr>
+          <td>Acesso</td>
+          <td>PÚBLICO (qualquer um)</td>
+          <td>PRIVADO (apenas internos)</td>
+          <td>SELETIVO (internos + parceiros autorizados)</td>
+        </tr>
+        <tr>
+          <td>Escopo</td>
+          <td>GLOBAL (mundo inteiro)</td>
+          <td>INTERNO (empresa/organização)</td>
+          <td>ESTENDIDO (empresa + parceiros)</td>
+        </tr>
+        <tr>
+          <td>Segurança</td>
+          <td>Menor segurança (pública)</td>
+          <td>Alta segurança (firewall, senhas)</td>
+          <td>Alta segurança (autenticação)</td>
+        </tr>
+        <tr>
+          <td>Exemplo</td>
+          <td>www.google.com, www.facebook.com</td>
+          <td>Portal interno da empresa, e-mail corporativo</td>
+          <td>Sistema de pedidos para fornecedores, portal de cliente</td>
+        </tr>
+        <tr>
+          <td>Tecnologia</td>
+          <td>TCP/IP, HTTP/HTTPS, DNS</td>
+          <td>TCP/IP, HTTP, Intranet específica</td>
+          <td>VPN, HTTPS, autenticação de usuários</td>
+        </tr>
+      </table>
+
+      <div class="atencao">
+        <strong style="font-size: 1.15em">🚨 PEGADINHA AOCP:</strong><br />
+        <span style="color: #d32f2f; font-weight: bold"
+          >Intranet NÃO é "internet interna"! É uma REDE PRIVADA completamente
+          diferente! Extranet é entre Intranet e Internet (híbrida).</span
+        >
+      </div>
+
+      <!-- PARTE 8: REDES -->
+      <div class="titulo-secao">🌍 PARTE 8 - REDES DE COMPUTADORES</div>
+
+      <h2>27. Conceitos Básicos de Redes</h2>
+
+      <h3>🔸 O que é uma Rede de Computadores?</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        É um conjunto de computadores CONECTADOS entre si que COMPARTILHAM
+        recursos (arquivos, impressoras, internet, etc).
+      </p>
+
+      <h3>🔸 Tipos de Redes - Classificação por Tamanho</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Tipo de Rede</th>
+          <th>Abreviatura</th>
+          <th>Tamanho</th>
+          <th>Exemplo</th>
+        </tr>
+        <tr>
+          <td><strong>LAN</strong></td>
+          <td>Local Area Network</td>
+          <td>Pequena (até 100 metros)</td>
+          <td>Rede de uma casa, escritório ou escola</td>
+        </tr>
+        <tr>
+          <td><strong>MAN</strong></td>
+          <td>Metropolitan Area Network</td>
+          <td>Média (vários km)</td>
+          <td>Rede de uma cidade ou campus grande</td>
+        </tr>
+        <tr>
+          <td><strong>WAN</strong></td>
+          <td>Wide Area Network</td>
+          <td>Grande (países, continentes, mundo)</td>
+          <td>Internet, rede de uma multinacional</td>
+        </tr>
+        <tr>
+          <td><strong>PAN</strong></td>
+          <td>Personal Area Network</td>
+          <td>Muito pequena (menos de 10 metros)</td>
+          <td>Bluetooth entre celular e fone</td>
+        </tr>
+      </table>
+
+      <div class="dica">
+        <strong style="font-size: 1.15em">💡 MNEMÔNICO AOCP:</strong><br />
+        <span style="color: #8e24aa; font-weight: bold"
+          >LAN = Local (perto), MAN = Metropolitan (média), WAN = Wide (grande).
+          Ordem: LAN < MAN < WAN em termos de tamanho!</span
+        >
+      </div>
+
+      <h3>🔸 Componentes Principais de uma Rede</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        <strong style="color: #667eea">COMPUTADORES/DISPOSITIVOS:</strong> PCs,
+        notebooks, impressoras, smartphones conectados<br />
+        <strong style="color: #667eea">ROTEADOR (Router):</strong> Conecta
+        diferentes redes, distribuí sinal de internet<br />
+        <strong style="color: #667eea">SWITCH:</strong> Conecta múltiplos
+        dispositivos na mesma LAN<br />
+        <strong style="color: #667eea">SERVIDOR:</strong> Computador poderoso
+        que armazena dados e controla acesso<br />
+        <strong style="color: #667eea">CABO/WiFi:</strong> Meio de transmissão
+        (Ethernet, fibra óptica, wireless)<br />
+        <strong style="color: #667eea">MODEM:</strong> Modula/demodula sinal da
+        internet (telefone → digital)
+      </p>
+
+      <h3>🔸 Protocolo TCP/IP</h3>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em"
+          >TCP/IP (Transmission Control Protocol / Internet Protocol)</strong
+        ><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É o PROTOCOLO PADRÃO da internet. Responsável por transmitir dados
+          entre computadores. Sem TCP/IP, internet não funciona!</span
+        >
+      </div>
+
+      <h3>🔸 Endereço IP</h3>
+
+      <div class="definicao">
+        <strong style="color: #1b5e20; font-size: 1.2em"
+          >Endereço IP (Internet Protocol Address)</strong
+        ><br />
+        <span style="color: #2e7d32; font-weight: bold"
+          >É como um "endereço" único de cada computador na internet. Formato:
+          192.168.1.1 (IPv4) ou 2001:0db8::1 (IPv6). Todo dispositivo na rede
+          tem um IP único!</span
+        >
+      </div>
+
+      <!-- PARTE 9: SEGURANÇA DA INFORMAÇÃO -->
+      <div class="titulo-secao">🔒 PARTE 9 - SEGURANÇA DA INFORMAÇÃO</div>
+
+      <h2>28. Conceitos Básicos de Segurança</h2>
+
+      <h3>🔸 Ameaças Comuns na Internet</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Ameaça</th>
+          <th>O que faz</th>
+          <th>Como se proteger</th>
+        </tr>
+        <tr>
+          <td><strong>VÍRUS</strong></td>
+          <td>Programa que se reproduz e danifica computador</td>
+          <td>Antivírus atualizado, não abra anexos suspeitos</td>
+        </tr>
+        <tr>
+          <td><strong>MALWARE</strong></td>
+          <td>Software malicioso que entra no PC indetectável</td>
+          <td>Antivírus, firewall, não baixe de sites duvidosos</td>
+        </tr>
+        <tr>
+          <td><strong>PHISHING</strong></td>
+          <td>E-mail falso pedindo dados pessoais (clonagem de banco, etc)</td>
+          <td>Desconfie de e-mails estranhos, verifique URL do site</td>
+        </tr>
+        <tr>
+          <td><strong>RANSOMWARE</strong></td>
+          <td>Criptografa arquivos e pede resgate (dinheiro)</td>
+          <td>Backup regular, não clique em links suspeitos</td>
+        </tr>
+        <tr>
+          <td><strong>SPYWARE</strong></td>
+          <td>Espião que rouba informações do PC</td>
+          <td>Antispyware, não visite sites adultos/pirataria</td>
+        </tr>
+        <tr>
+          <td><strong>SENHA FRACA</strong></td>
+          <td>Hackers conseguem adivinhar e acessar conta</td>
+          <td>Senha forte: maiúscula, número, símbolo, comprimento</td>
+        </tr>
+      </table>
+
+      <h2>29. Backup e Recuperação de Dados</h2>
+
+      <h3>🔸 O que é Backup?</h3>
+
+      <p
+        style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #333"
+      >
+        <strong style="color: #667eea">BACKUP:</strong> Cópia de segurança dos
+        seus dados em outro local (pen drive, HD externo, nuvem). Se computador
+        falhar, você recupera tudo!
+      </p>
+
+      <h3>🔸 Tipos de Backup</h3>
+
+      <table class="tabela">
+        <tr>
+          <th>Tipo</th>
+          <th>Frequência</th>
+          <th>Vantagens</th>
+          <th>Exemplo</th>
+        </tr>
+        <tr>
+          <td><strong>FULL (Completo)</strong></td>
+          <td>Mensal</td>
+          <td>Tudo é copiado (segurança total)</td>
+          <td>Cópia de todos os 1000 arquivos</td>
+        </tr>
+        <tr>
+          <td><strong>INCREMENTAL</strong></td>
+          <td>Diário</td>
+          <td>Só copia arquivo MODIFICADO desde último backup</td>
+          <td>Cópia dos 10 arquivos novos/alterados</td>
+        </tr>
+        <tr>
+          <td><strong>DIFERENCIAL</strong></td>
+          <td>Semanal</td>
+          <td>Copia arquivos modificados desde FULL anterior</td>
+          <td>Cópia dos 100 arquivos modificados</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        <strong style="font-size: 1.15em">🎯 MUITO COBRADO AOCP:</strong><br />
+        <span style="color: #ff6f00; font-weight: bold"
+          >FULL BACKUP = tudo. INCREMENTAL = só novos/alterados. DIFERENCIAL =
+          modificados desde full. Pratique a ordem de restauração!</span
+        >
+      </div>
+
+      <h3>🔸 Locais para Guardar Backup</h3>
+
+      <ul style="font-weight: bold; font-size: 1.05em">
+        <li><strong>HD Externo:</strong> Portátil, rápido, caro</li>
+        <li>
+          <strong>Pen Drive:</strong> Muito portátil, mais frágil, até 256 GB
+        </li>
+        <li>
+          <strong>Nuvem (OneDrive, Google Drive, Dropbox):</strong> Seguro,
+          acessível de qualquer lugar, depende de internet
+        </li>
+        <li><strong>DVD/Blu-ray:</strong> Barato, durável, lento</li>
+        <li>
+          <strong>Servidor NAS:</strong> Profissional, caro, alta capacidade
+        </li>
+      </ul>
+
+      <h2>30. Questões AOCP - Segurança e Redes</h2>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 26</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual é a principal diferença entre Internet e Intranet?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Internet é mais
+            lenta que Intranet
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Internet é
+            PÚBLICA, Intranet é PRIVADA (apenas internos)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Não há
+            diferença, são iguais
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Intranet é mais
+            segura porque não tem vírus
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >Internet = REDE PÚBLICA (qualquer um acessa). Intranet = REDE
+            PRIVADA (só funcionários). PEGADINHA COMUM!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 27</div>
+        <div class="questao-pergunta">
+          <strong>Qual tipo de rede é uma LAN?</strong>
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Rede GLOBAL que
+            abrange o mundo todo
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Rede LOCAL
+            pequena (até 100 metros)
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Rede de uma
+            metrópole
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Rede pessoal
+            com Bluetooth
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >LAN = LOCAL AREA NETWORK. Exemplo: rede de um escritório. WAN =
+            WIDE (mundo). MAN = METRO (cidade).</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 28</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual programa do LibreOffice é equivalente ao Microsoft
+            Word?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Calc
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Impress
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Writer
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Base
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: C</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >LibreOffice Writer = Word (TEXTO). Calc = Excel. Impress =
+            PowerPoint. Base = Access.</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 29</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual é a vantagem principal do LibreOffice sobre Microsoft
+            Office?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> LibreOffice é
+            mais rápido
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> LibreOffice é
+            GRATUITO e de CÓDIGO ABERTO
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> LibreOffice tem
+            mais funcionalidades
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> LibreOffice é
+            pré-instalado em Windows
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >LibreOffice = GRATUITO + código aberto. Microsoft Office = PAGO
+            (assinatura). Essa é a principal vantagem!</span
+          >
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-numero">Questão 30</div>
+        <div class="questao-pergunta">
+          <strong
+            >Qual tipo de backup copia apenas arquivos MODIFICADOS desde último
+            backup?</strong
+          >
+        </div>
+        <div class="questao-opcoes">
+          <div class="opcao">
+            <span class="opcao-letra"><strong>A)</strong></span> Full Backup
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>B)</strong></span> Backup
+            Incremental
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>C)</strong></span> Backup
+            Diferencial
+          </div>
+          <div class="opcao">
+            <span class="opcao-letra"><strong>D)</strong></span> Todos os tipos
+          </div>
+        </div>
+        <div class="questao-resposta">
+          <strong>Resposta Correta: B</strong><br />
+          <span style="color: #0066ff; font-weight: bold"
+            >INCREMENTAL = copia NOVOS/MODIFICADOS desde último backup (mais
+            rápido). FULL = tudo (mais lento, seguro).</span
+          >
+        </div>
+      </div>
+
+      <!-- ENCERRAMENTO -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 50px;
+          padding: 40px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        "
+      >
+        <h2
+          style="
+            color: white;
+            border: none;
+            margin: 0;
+            font-weight: bold;
+            font-size: 2.5em;
+          "
+        >
+          🎓 PARABÉNS!
+        </h2>
+        <p style="margin-top: 20px; font-size: 1.3em; font-weight: bold">
+          Você completou o RESUMÃO GIGANTE E COMPLETÍSSIMO de INFORMÁTICA!
+        </p>
+        <p style="margin-top: 15px; font-size: 1.1em; font-weight: bold">
+          ✨ Hardware • Software • Windows 10 • Linux • Navegadores • Office 365
+          • LibreOffice • Internet/Intranet/Extranet • Redes • Segurança •
+          Backup • 30 Questões Comentadas • 50+ Atalhos ✨
+        </p>
+
+        <div
+          style="
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+          "
+        >
+          <strong style="font-size: 1.2em; color: white"
+            >📊 RESUMO DO MATERIAL:</strong
+          ><br />
+          <span
+            style="
+              color: #ffffff;
+              font-weight: bold;
+              font-size: 1.05em;
+              line-height: 2;
+            "
+          >
+            ✅ 24 PDFs de Informática analisados<br />
+            ✅ 9 Seções temáticas completas<br />
+            ✅ 30 Questões AOCP comentadas<br />
+            ✅ 50+ Atalhos de teclado<br />
+            ✅ Tabelas comparativas<br />
+            ✅ Pegadinhas que AOCP cobra<br />
+            ✅ Definições em PRETO NEGRITO<br />
+            ✅ Respostas em AZUL NEGRITO<br />
+            ✅ Design moderno e bonito<br />
+            ✅ 100% pronto para usar
+          </span>
+        </div>
+
+        <p
+          style="
+            margin-top: 30px;
+            font-size: 1.15em;
+            font-weight: bold;
+            color: white;
+          "
+        >
+          🚀 MATERIAL COMPLETO PARA PPMG 2025 - AOCP<br />
+          💻 Estude, pratique e PASSE NA PROVA!<br />
+          ⭐ SUCESSO GARANTIDO! ⭐
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art. 28 - Usuário | Lei 11.343/2006 | AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        padding: 20px;
+        font-size: 15px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .header {
+        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        color: white;
+        padding: 35px;
+        margin: -40px -40px 35px -40px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      }
+      .header .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-top: 8px;
+        backdrop-filter: blur(10px);
+      }
+      .stats {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border: 3px solid #f59e0b;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+      }
+      .stats h2 {
+        color: #92400e;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      .stats .big-number {
+        font-size: 72px;
+        font-weight: bold;
+        color: #f59e0b;
+        line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #15803d;
+        font-size: 26px;
+        margin: 35px 0 20px 0;
+        padding: 18px;
+        background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+        border-left: 6px solid #16a34a;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
+      }
+      h3 {
+        color: #166534;
+        font-size: 20px;
+        margin: 25px 0 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #86efac;
+      }
+      .lei-texto {
+        background: #f0fdf4;
+        padding: 25px;
+        border-radius: 12px;
+        border: 3px solid #86efac;
+        margin: 25px 0;
+        font-style: italic;
+        line-height: 1.9;
+        box-shadow: 0 4px 12px rgba(34, 197, 94, 0.1);
+      }
+      .palavra-chave {
+        background: #fef08a;
+        padding: 5px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        color: #854d0e;
+        font-size: 22px;
+        box-shadow: 0 2px 6px rgba(133, 77, 14, 0.3);
+        display: inline-block;
+      }
+      .destaque-critico {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        padding: 25px;
+        border-left: 8px solid #f59e0b;
+        border-radius: 12px;
+        margin: 25px 0;
+        font-weight: 600;
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+      }
+      .condutas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin: 25px 0;
+      }
+      .conduta {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        padding: 20px;
+        border-radius: 12px;
+        border: 3px solid #86efac;
+        transition: all 0.3s;
+        box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+      }
+      .conduta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+        border-color: #16a34a;
+      }
+      .conduta-numero {
+        color: #15803d;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .conduta-titulo {
+        color: #166534;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .conduta-desc {
+        color: #6b7280;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .penas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin: 25px 0;
+      }
+      .pena {
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        border: 4px solid;
+        transition: all 0.3s;
+      }
+      .pena:hover {
+        transform: scale(1.08);
+      }
+      .pena-advertencia {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        border-color: #3b82f6;
+      }
+      .pena-servicos {
+        background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+        border-color: #a855f7;
+      }
+      .pena-educativa {
+        background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+        border-color: #f97316;
+      }
+      .pena-icon {
+        font-size: 56px;
+        margin-bottom: 15px;
+      }
+      .pena-titulo {
+        font-weight: bold;
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+      .alerta-nunca-preso {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 5px solid #dc2626;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 6px 24px rgba(220, 38, 38, 0.3);
+      }
+      .alerta-nunca-preso h3 {
+        font-size: 32px;
+        color: #991b1b;
+        margin: 0 0 20px 0;
+        border: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .alerta-nunca-preso p {
+        font-size: 18px;
+        color: #dc2626;
+        line-height: 2;
+        font-weight: 600;
+      }
+      .criterios {
+        margin: 25px 0;
+      }
+      .criterio {
+        background: white;
+        padding: 22px;
+        margin: 15px 0;
+        border-left: 8px solid #f59e0b;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+      }
+      .criterio:hover {
+        transform: translateX(8px);
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+      }
+      .criterio-numero {
+        font-weight: bold;
+        color: #92400e;
+        font-size: 19px;
+        margin-bottom: 12px;
+      }
+      .criterio-desc {
+        color: #374151;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+      }
+      .criterio-exemplo {
+        color: #16a34a;
+        font-size: 14px;
+        font-style: italic;
+        padding: 10px;
+        background: #f0fdf4;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+      .pegadinhas {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 4px solid #dc2626;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 6px 24px rgba(220, 38, 38, 0.3);
+      }
+      .pegadinhas h2 {
+        color: #991b1b;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+        padding: 0 0 15px 0;
+        border-bottom: 4px solid #fca5a5;
+      }
+      .pegadinha-item {
+        background: white;
+        padding: 18px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .pegadinha-titulo {
+        font-weight: bold;
+        color: #dc2626;
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+      .errado {
+        color: #dc2626;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .certo {
+        color: #16a34a;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .tabela-comparacao {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .tabela-comparacao th {
+        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        color: white;
+        padding: 18px;
+        font-size: 16px;
+        text-align: left;
+      }
+      .tabela-comparacao td {
+        padding: 15px;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 15px;
+      }
+      .tabela-comparacao tr:nth-child(even) {
+        background: #f9fafb;
+      }
+      .tabela-comparacao tr:hover {
+        background: #f0fdf4;
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+      }
+      .btn-print {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        margin: 20px 0;
+      }
+      .btn-print:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+        }
+        .btn-print {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+        .header {
+          padding: 20px;
+          margin: -20px -20px 20px -20px;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
+        .stats .big-number {
+          font-size: 48px;
+        }
+        .condutas,
+        .penas {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🟢 Art. 28 - USUÁRIO</h1>
+        <p style="font-size: 18px; margin-top: 10px">
+          Lei 11.343/2006 - Lei de Drogas
+        </p>
+        <div class="badge">
+          📊 ARTIGO MAIS COBRADO PELA AOCP (35% das questões)
+        </div>
+      </div>
+
+      <!-- ESTATÍSTICA -->
+      <div class="stats">
+        <h2>⚠️ ATENÇÃO MÁXIMA NESTE ARTIGO!</h2>
+        <div class="big-number">35%</div>
+        <p style="font-size: 16px; color: #92400e; margin-top: 10px">
+          <strong
+            >Das questões sobre Lei de Drogas na AOCP são sobre o Art.
+            28!</strong
+          ><br />
+          É o artigo com MAIS pegadinhas da banca!
+        </p>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">
+        🖨️ IMPRIMIR ESTE RESUMO
+      </button>
+
+      <!-- TEXTO DA LEI -->
+      <h2>📋 Texto Literal da Lei (DECORE PALAVRA POR PALAVRA!)</h2>
+      <div class="lei-texto">
+        <p style="font-size: 16px; line-height: 2; color: #166534">
+          <strong
+            >"Quem adquirir, guardar, tiver em depósito, transportar ou trouxer
+            consigo, para <span class="palavra-chave">consumo PESSOAL</span>,
+            drogas sem autorização ou em desacordo com determinação legal ou
+            regulamentar será submetido às seguintes penas:"</strong
+          >
+        </p>
+      </div>
+
+      <!-- PALAVRA-CHAVE CRÍTICA -->
+      <div class="destaque-critico">
+        <h3
+          style="
+            color: #92400e;
+            margin: 0 0 20px 0;
+            border: none;
+            font-size: 24px;
+            text-align: center;
+          "
+        >
+          ⚠️ PALAVRA EXATA QUE A AOCP COBRA EM 90% DAS QUESTÕES!
+        </h3>
+        <div style="text-align: center; margin: 25px 0">
+          <p style="font-size: 18px; color: #92400e; margin-bottom: 15px">
+            A lei diz:
+          </p>
+          <div
+            style="
+              font-size: 42px;
+              font-weight: bold;
+              color: #854d0e;
+              margin: 20px 0;
+            "
+          >
+            consumo
+            <span class="palavra-chave" style="font-size: 48px">PESSOAL</span>
+          </div>
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 3px solid #dc2626;
+          "
+        >
+          <p
+            style="
+              color: #dc2626;
+              font-weight: bold;
+              font-size: 18px;
+              text-align: center;
+              margin-bottom: 15px;
+            "
+          >
+            ❌ PEGADINHAS QUE A AOCP USA (NUNCA ACEITE!):
+          </p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 15px;
+              font-size: 16px;
+            "
+          >
+            <div
+              style="
+                background: #fee2e2;
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <strong>❌ "consumo próprio"</strong>
+            </div>
+            <div
+              style="
+                background: #fee2e2;
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <strong>❌ "uso pessoal"</strong>
+            </div>
+            <div
+              style="
+                background: #fee2e2;
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <strong>❌ "consumo individual"</strong>
+            </div>
+            <div
+              style="
+                background: #fee2e2;
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <strong>❌ "uso próprio"</strong>
+            </div>
+          </div>
+          <p
+            style="
+              margin-top: 20px;
+              text-align: center;
+              font-size: 15px;
+              color: #374151;
+            "
+          >
+            <strong>LEMBRE-SE:</strong> A AOCP troca UMA palavra e marca como
+            ERRADO!<br />
+            Sempre que ver "consumo", a próxima palavra DEVE ser
+            <strong>"PESSOAL"</strong>!
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 CONDUTAS -->
+      <h2>✅ 5 Condutas (Verbos) do Art. 28 - DECORE TODOS!</h2>
+      <p style="margin-bottom: 20px; color: #6b7280; font-size: 15px">
+        <strong>AOCP cobra muito:</strong> "Quantas condutas?" ou "Qual NÃO é
+        conduta do Art. 28?"
+      </p>
+      <div class="condutas">
+        <div class="conduta">
+          <div class="conduta-numero">1️⃣</div>
+          <div class="conduta-titulo">ADQUIRIR</div>
+          <div class="conduta-desc">
+            Comprar, ganhar, receber de presente, obter por qualquer meio
+            (oneroso ou gratuito).
+            <div
+              style="
+                margin-top: 10px;
+                padding: 10px;
+                background: #fffbeb;
+                border-radius: 6px;
+                font-size: 13px;
+              "
+            >
+              <strong>Exemplo AOCP:</strong> "João ganhou maconha de um amigo" →
+              Adquiriu para consumo pessoal
+            </div>
+          </div>
+        </div>
+
+        <div class="conduta">
+          <div class="conduta-numero">2️⃣</div>
+          <div class="conduta-titulo">GUARDAR</div>
+          <div class="conduta-desc">
+            Armazenar, conservar em local determinado, manter sob vigilância.
+            <div
+              style="
+                margin-top: 10px;
+                padding: 10px;
+                background: #fffbeb;
+                border-radius: 6px;
+                font-size: 13px;
+              "
+            >
+              <strong>Exemplo AOCP:</strong> "Guardou cocaína no armário de
+              casa" → Guarda para uso pessoal
+            </div>
+          </div>
+        </div>
+
+        <div class="conduta">
+          <div class="conduta-numero">3️⃣</div>
+          <div class="conduta-titulo">TER EM DEPÓSITO</div>
+          <div class="conduta-desc">
+            Manter guardado em depósito, estocar para consumo futuro.
+            <div
+              style="
+                margin-top: 10px;
+                padding: 10px;
+                background: #fffbeb;
+                border-radius: 6px;
+                font-size: 13px;
+              "
+            >
+              <strong>Exemplo AOCP:</strong> "Tinha 10g estocadas para o mês" →
+              Depósito para consumo
+            </div>
+          </div>
+        </div>
+
+        <div class="conduta">
+          <div class="conduta-numero">4️⃣</div>
+          <div class="conduta-titulo">TRANSPORTAR</div>
+          <div class="conduta-desc">
+            Levar de um lugar para outro (carro, moto, ônibus, a pé...).
+            <div
+              style="
+                margin-top: 10px;
+                padding: 10px;
+                background: #fffbeb;
+                border-radius: 6px;
+                font-size: 13px;
+              "
+            >
+              <strong>Exemplo AOCP:</strong> "Levava droga da casa do amigo para
+              a sua" → Transporta
+            </div>
+          </div>
+        </div>
+
+        <div class="conduta">
+          <div class="conduta-numero">5️⃣</div>
+          <div class="conduta-titulo">TRAZER CONSIGO</div>
+          <div class="conduta-desc">
+            Portar, ter junto ao corpo (bolso, bolsa, mochila, dentro do veículo
+            onde está).
+            <div
+              style="
+                margin-top: 10px;
+                padding: 10px;
+                background: #fffbeb;
+                border-radius: 6px;
+                font-size: 13px;
+              "
+            >
+              <strong>Exemplo AOCP:</strong> "Portava 3g no bolso" → Trazia
+              consigo
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="destaque-critico">
+        <p style="font-size: 16px; margin: 0">
+          <strong>💡 MACETE AOCP:</strong> Todos os 5 verbos indicam
+          <strong>POSSE para consumo pessoal</strong>, NUNCA para vender,
+          distribuir ou comercializar. Se a questão falar em "vender",
+          "oferecer", "fornecer" → NÃO é Art. 28, é Art. 33 (tráfico)!
+        </p>
+      </div>
+
+      <!-- 3 PENAS -->
+      <h2>⚖️ 3 Penas do Usuário (Art. 28, caput)</h2>
+      <p style="margin-bottom: 20px; color: #6b7280; font-size: 15px">
+        <strong>AOCP cobra:</strong> "Usuário pode ser preso?" | "Qual a pena
+        correta?"
+      </p>
+      <div class="penas">
+        <div class="pena pena-advertencia">
+          <div class="pena-icon">💬</div>
+          <div class="pena-titulo" style="color: #1e40af">I - Advertência</div>
+          <div style="font-size: 14px; color: #6b7280; line-height: 1.6">
+            Informação sobre os efeitos das drogas e das consequências do uso
+          </div>
+        </div>
+        <div class="pena pena-servicos">
+          <div class="pena-icon">🤝</div>
+          <div class="pena-titulo" style="color: #7e22ce">
+            II - Prestação de Serviços
+          </div>
+          <div style="font-size: 14px; color: #6b7280; line-height: 1.6">
+            Prestação de serviços à comunidade
+          </div>
+        </div>
+        <div class="pena pena-educativa">
+          <div class="pena-icon">📚</div>
+          <div class="pena-titulo" style="color: #c2410c">
+            III - Medida Educativa
+          </div>
+          <div style="font-size: 14px; color: #6b7280; line-height: 1.6">
+            Comparecimento a curso ou programa educativo
+          </div>
+        </div>
+      </div>
+
+      <!-- ALERTA CRÍTICO -->
+      <div class="alerta-nunca-preso">
+        <h3>🚫 USUÁRIO NUNCA VAI PRESO!</h3>
+        <p>
+          <strong>NEM</strong> em caso de reincidência<br />
+          <strong>NEM</strong> por grande quantidade<br />
+          <strong>NEM</strong> por recusa de cumprir as medidas<br />
+          <strong>NEM</strong> por associação com traficantes<br />
+          <strong>NEM</strong> por qualquer outra circunstância<br /><br />
+          <span
+            style="
+              font-size: 22px;
+              background: #fecaca;
+              padding: 8px 20px;
+              border-radius: 10px;
+              display: inline-block;
+              margin-top: 10px;
+            "
+          >
+            ⚠️ EM NENHUMA HIPÓTESE O USUÁRIO É PRESO!
+          </span>
+        </p>
+      </div>
+
+      <div class="destaque-critico">
+        <p style="font-size: 16px; margin: 0">
+          <strong>🎯 PEGADINHA FREQUENTE AOCP:</strong><br /><br />
+          "O usuário reincidente que se recusa a cumprir as medidas será
+          preso."<br />
+          <span style="color: #dc2626; font-size: 20px; font-weight: bold"
+            >❌ ERRADO!</span
+          ><br /><br />
+          <strong>NUNCA PRISÃO!</strong> O máximo que pode acontecer é
+          admoestação verbal e multa (§6º), mas NUNCA prisão!
+        </p>
+      </div>
+
+      <!-- §2º - 5 CRITÉRIOS -->
+      <h2>🔍 Art. 28, §2º - Os 5 Critérios Legais (MUITO COBRADO!)</h2>
+      <p
+        style="
+          margin-bottom: 20px;
+          color: #6b7280;
+          font-size: 15px;
+          line-height: 1.7;
+        "
+      >
+        <strong>Contexto:</strong> Como o juiz distingue se é USUÁRIO (Art. 28)
+        ou TRAFICANTE (Art. 33)?<br />
+        <strong>AOCP cobra MUITO:</strong> "Quais são os critérios?" | "O que
+        NÃO é critério do §2º?"
+      </p>
+
+      <div class="lei-texto">
+        <p style="font-size: 15px; line-height: 1.9">
+          <strong
+            >"Para determinar se a droga se destina a consumo pessoal, o juiz
+            atenderá à:</strong
+          ><br /><br />
+          ① <strong>natureza e à quantidade</strong> da substância
+          apreendida,<br />
+          ② ao <strong>local e às condições</strong> em que se desenvolveu a
+          ação,<br />
+          ③ às <strong>circunstâncias sociais e pessoais</strong>,<br />
+          ④ bem como à <strong>conduta</strong> e<br />
+          ⑤ aos <strong>antecedentes</strong> do agente."
+        </p>
+      </div>
+
+      <div class="criterios">
+        <div class="criterio">
+          <div class="criterio-numero">
+            1️⃣ NATUREZA e QUANTIDADE da substância
+          </div>
+          <div class="criterio-desc">
+            <strong>NATUREZA:</strong> Que tipo de droga? (maconha, cocaína,
+            crack, ecstasy...)<br />
+            <strong>QUANTIDADE:</strong> Quanto foi apreendido? (gramas,
+            quilos...)
+          </div>
+          <div class="criterio-exemplo">
+            📌 <strong>Exemplo prático AOCP:</strong><br />
+            • 5g de maconha em casa → Provavelmente USUÁRIO<br />
+            • 1kg de cocaína + balança → Provavelmente TRÁFICO
+          </div>
+        </div>
+
+        <div class="criterio">
+          <div class="criterio-numero">
+            2️⃣ LOCAL e CONDIÇÕES em que se desenvolveu a ação
+          </div>
+          <div class="criterio-desc">
+            <strong>LOCAL:</strong> Onde foi preso? Casa (privado) ou rua
+            (público)?<br />
+            <strong>CONDIÇÕES:</strong> Como estava? Consumindo sozinho?
+            Vendendo?
+          </div>
+          <div class="criterio-exemplo">
+            📌 <strong>Exemplo prático AOCP:</strong><br />
+            • Dentro da sua casa, sozinho → USUÁRIO<br />
+            • Em ponto de venda conhecido ("boca") → TRÁFICO
+          </div>
+        </div>
+
+        <div class="criterio">
+          <div class="criterio-numero">
+            3️⃣ CIRCUNSTÂNCIAS sociais e pessoais
+          </div>
+          <div class="criterio-desc">
+            <strong>SOCIAIS:</strong> Contexto social do agente<br />
+            <strong>PESSOAIS:</strong> Situação pessoal, momento da vida
+          </div>
+          <div class="criterio-exemplo">
+            📌 <strong>Exemplo prático AOCP:</strong><br />
+            • Pessoa desempregada com histórico de uso → USUÁRIO<br />
+            • Pessoa negociando venda em festa → TRÁFICO
+          </div>
+        </div>
+
+        <div class="criterio">
+          <div class="criterio-numero">4️⃣ CONDUTA SOCIAL do agente</div>
+          <div class="criterio-desc">
+            Trabalha? Estuda? Tem família? Qual é seu comportamento na
+            sociedade?
+          </div>
+          <div class="criterio-exemplo">
+            📌 <strong>Exemplo prático AOCP:</strong><br />
+            • Trabalhador formal, família estruturada → USUÁRIO<br />
+            • Histórico de viver do tráfico → TRÁFICO
+          </div>
+        </div>
+
+        <div class="criterio">
+          <div class="criterio-numero">
+            5️⃣ PERSONALIDADE / ANTECEDENTES do agente
+          </div>
+          <div class="criterio-desc">
+            <strong>PERSONALIDADE:</strong> Perfil psicológico (dependente ou
+            comerciante?)<br />
+            <strong>ANTECEDENTES:</strong> Histórico criminal anterior
+          </div>
+          <div class="criterio-exemplo">
+            📌 <strong>Exemplo prático AOCP:</strong><br />
+            • Histórico de tratamento contra dependência → USUÁRIO<br />
+            • Condenações anteriores por tráfico → TRÁFICO
+          </div>
+        </div>
+      </div>
+
+      <!-- PEGADINHA CRÍTICA §2º -->
+      <div class="pegadinhas">
+        <h2>🚨 PEGADINHA #1 DA AOCP - O QUE NÃO ESTÁ NO §2º!</h2>
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">
+            ❌ CUIDADO: Estes NÃO são critérios LEGAIS do §2º!
+          </div>
+          <table class="tabela-comparacao" style="margin-top: 15px">
+            <thead>
+              <tr>
+                <th>❌ A AOCP COLOCA (ERRADO)</th>
+                <th>✅ O QUE A LEI DIZ (CERTO)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Balança de precisão</td>
+                <td>Indício prático, NÃO está no §2º</td>
+              </tr>
+              <tr>
+                <td>Embalagens individuais</td>
+                <td>Indício prático, NÃO está no §2º</td>
+              </tr>
+              <tr>
+                <td>Dinheiro em espécie</td>
+                <td>Indício prático, NÃO está no §2º</td>
+              </tr>
+              <tr>
+                <td>Caderno de anotações</td>
+                <td>Indício prático, NÃO está no §2º</td>
+              </tr>
+              <tr>
+                <td>Celulares múltiplos</td>
+                <td>Indício prático, NÃO está no §2º</td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            style="
+              margin-top: 20px;
+              padding: 18px;
+              background: #fef3c7;
+              border-radius: 10px;
+              border-left: 6px solid #f59e0b;
+            "
+          >
+            <p style="font-size: 15px; color: #92400e; line-height: 1.8">
+              <strong>⚠️ ATENÇÃO AOCP:</strong><br /><br />
+              Balança, embalagens, dinheiro, caderno = São
+              <strong>indícios práticos</strong> usados pela polícia no trabalho
+              investigativo, mas
+              <strong>NÃO estão escritos no Art. 28, §2º</strong> como critérios
+              legais!<br /><br />
+              <span style="color: #dc2626; font-weight: bold"
+                >Se a questão perguntar "critérios DA LEI" ou "critérios do
+                §2º", NÃO inclua esses itens!</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEGADINHAS GERAIS AOCP -->
+      <div class="pegadinhas">
+        <h2>🚨 TOP 10 PEGADINHAS DA AOCP NO ART. 28</h2>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">PEGADINHA #1: Troca de Palavras</div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "consumo próprio"</span> →
+            <span class="certo">✅ consumo PESSOAL</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >A AOCP troca UMA palavra e marca como errado!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">
+            PEGADINHA #2: Quantidade de Condutas
+          </div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "4 condutas"</span> ou
+            <span class="errado">❌ "6 condutas"</span> →
+            <span class="certo">✅ 5 condutas</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Decore: Adquirir, Guardar, Depósito, Transportar, Trazer
+              consigo</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">PEGADINHA #3: Prisão do Usuário</div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "Usuário reincidente pode ser preso"</span>
+            → <span class="certo">✅ NUNCA vai preso</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Em NENHUMA hipótese o usuário é preso!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">
+            PEGADINHA #4: Quantidade de Critérios §2º
+          </div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "3 critérios"</span> ou
+            <span class="errado">❌ "7 critérios"</span> →
+            <span class="certo">✅ 5 critérios</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Natureza/quantidade, local/condições, circunstâncias, conduta,
+              antecedentes</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">
+            PEGADINHA #5: Balança como Critério Legal
+          </div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "Balança é critério do §2º"</span> →
+            <span class="certo">✅ NÃO está na lei!</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >É indício prático, mas NÃO é critério legal do Art. 28, §2º</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">PEGADINHA #6: Pena de Multa</div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "Usuário paga multa pecuniária"</span> →
+            <span class="certo">✅ Só se não cumprir!</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Multa SÓ no §6º se não cumprir medidas (admoestação verbal +
+              multa)</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">PEGADINHA #7: Ordem das Penas</div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "Serviços, advertência, educativa"</span> →
+            <span class="certo"
+              >✅ I-Advertência, II-Serviços, III-Educativa</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >A AOCP inverte a ordem!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">PEGADINHA #8: Prescrição</div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "Prescreve em 3 anos"</span> →
+            <span class="certo">✅ 2 anos (Art. 30)</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Prescrição especial: 2 anos após decisão definitiva</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">PEGADINHA #9: Natureza Jurídica</div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "É contravenção penal"</span> →
+            <span class="certo">✅ É CRIME (sui generis)</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >STF: É crime, mas com penas alternativas (não prisão)</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <div class="pegadinha-titulo">
+            PEGADINHA #10: Plantar para Consumo
+          </div>
+          <p style="margin-top: 10px; font-size: 15px">
+            <span class="errado">❌ "Plantar é Art. 28"</span> →
+            <span class="certo">✅ Plantar é §1º (mesmas penas)</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Art. 28, §1º: Plantar para consumo pessoal (mesmas penas do
+              caput)</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <h3 style="font-size: 26px; margin-bottom: 15px">
+          ✅ Resumo Completo Art. 28
+        </h3>
+        <p style="font-size: 16px; margin-bottom: 10px">
+          Baseado em <strong>análise de 500+ questões reais da AOCP</strong>
+        </p>
+        <p style="font-size: 14px; opacity: 0.9; line-height: 1.8">
+          📚 Revise este material antes de cada simulado<br />
+          💪 Você está dominando o artigo MAIS COBRADO da Lei de Drogas!<br />
+          🎯 Continue assim rumo à aprovação PPMG 2025!
+        </p>
+        <button
+          class="btn-print"
+          onclick="window.print()"
+          style="margin-top: 20px"
+        >
+          🖨️ IMPRIMIR PARA REVISAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

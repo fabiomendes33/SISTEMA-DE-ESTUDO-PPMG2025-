@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIMULADO 2 - 50 QUESTÕES - POLÍCIA PENAL MG 2021 AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        color: white;
+        padding: 40px 30px;
+        text-align: center;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .header-icon {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 16px;
+        opacity: 0.95;
+        font-weight: 500;
+      }
+
+      .content {
+        padding: 30px;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+        color: white;
+        padding: 20px;
+        margin: 30px 0 25px 0;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .section-icon {
+        font-size: 24px;
+      }
+
+      .questao-container {
+        background: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-left: 5px solid #1e40af;
+        border-radius: 4px;
+      }
+
+      .questao-label {
+        display: inline-block;
+        background: #e0e7ff;
+        color: #1e3a8a;
+        padding: 6px 14px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      .questao-texto {
+        font-weight: 600;
+        color: #1f2937;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .opcoes {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .opcao {
+        padding: 8px 0;
+        font-size: 14px;
+        color: #374151;
+        margin: 6px 0;
+      }
+
+      .opcao strong {
+        color: #1f2937;
+        font-weight: 600;
+      }
+
+      .botao-resposta {
+        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 12px;
+      }
+
+      .botao-resposta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+      }
+
+      .resposta-container {
+        display: none;
+        background: #dbeafe;
+        border-left: 4px solid #0284c7;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 4px;
+        animation: slideIn 0.3s ease;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .resposta-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        color: #0284c7;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .check-icon {
+        font-size: 16px;
+        color: #16a34a;
+      }
+
+      .resposta-texto {
+        color: #0284c7;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer {
+        background: #f3f4f6;
+        padding: 20px;
+        text-align: center;
+        color: #6b7280;
+        font-size: 12px;
+        border-top: 1px solid #e5e7eb;
+        margin-top: 30px;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .texto-referencia {
+        background: #fef3c7;
+        padding: 15px;
+        margin: 20px 0;
+        border-left: 4px solid #f59e0b;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 1.8;
+        color: #92400e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          <span class="header-icon">🎯</span>
+          SIMULADO 2 - NÍVEL MÉDIO
+        </h1>
+        <p>50 QUESTÕES COMENTADAS • PPMG 2025 • AOCP</p>
+      </div>
+
+      <div class="content">
+        <!-- TEXTO DE PORTUGUÊS -->
+        <div class="section-header">
+          <span class="section-icon">📖</span>
+          LEIA O TEXTO ABAIXO PARA RESPONDER AS QUESTÕES 1-10
+        </div>
+
+        <div class="texto-referencia">
+          <strong style="color: #78350f"
+            >NA DINÂMICA DAS LEIS (Alcebíades Nunes Cardoso)</strong
+          ><br /><br />
+          Toda legislação racionaliza os valores sociais, buscando reconhecê-los
+          e afastá-los do âmbito das paixões ou dos interesses mais estritos do
+          indivíduo, bem como compreendê-los no tempo vivo da História. Diz-se
+          que as leis "caducam", e o termo, pouco ortodoxo, é expressivo: por
+          anacronismo, dispositivos legais podem perder a razão de ser,
+          superados que são pela primazia que ganham novos costumes. São vários
+          os fatores que determinam mudanças drásticas em nosso comportamento.
+          Entre eles está a alta tecnologia de ponta, com seus incontáveis
+          reflexos na vida cotidiana. A mobilidade dos costumes enseja a
+          formação de novos sujeitos sociais. Note-se que, além das instituições
+          já clássicas, nosso tempo vem testemunhando a criação dos chamados
+          "coletivos", cuja natureza se distingue da dos partidos políticos ou
+          dos órgãos de classe tradicionais.
+        </div>
+
+        <!-- PORTUGUÊS -->
+        <div class="section-header">
+          <span class="section-icon">📋</span>
+          QUESTÕES 1-10: LÍNGUA PORTUGUESA
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q01 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            No terceiro parágrafo do texto, a necessidade de ajuste na
+            legislação é relacionada a qual fator?
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> À atuação do legislador com sensatez
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> À formação de novos sujeitos sociais
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Ao anacronismo dos dispositivos legais
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Ao reconhecimento dos valores sociais
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              O texto afirma: "A
+              <strong
+                >MOBILIDADE DOS COSTUMES ENSEJA A FORMAÇÃO DE NOVOS SUJEITOS
+                SOCIAIS</strong
+              >", o que implica necessidade de
+              <strong>AJUSTES NA LEGISLAÇÃO</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q02 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            Qual afirmativa está correta em relação à redação de comentários
+            sobre o texto?
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> "Caduco" é termo de evidente informalismo que
+              não se refere a vício da lei
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Toda legislação, ao se munir de novos
+              dispositivos, estará acompanhando a mutação dos hábitos sociais
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> As alterações radicais no comportamento se
+              refletem automaticamente na legislação
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Os "coletivos" são exatamente iguais aos
+              partidos políticos tradicionais
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. Correto</strong>: Ao se munir de novos dispositivos,
+              a legislação acompanha a mutação dos hábitos sociais. O texto
+              afirma que o legislador deve ter "sensatez e oportunidade", não
+              sendo automático.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q03 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            No fragmento "É possível que a legislação venha a contemplar as
+            iniciativas desses 'coletivos'", o termo "essas" refere-se a:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> às iniciativas</div>
+            <div class="opcao"><strong>B)</strong> aos coletivos</div>
+            <div class="opcao"><strong>C)</strong> aos dispositivos legais</div>
+            <div class="opcao"><strong>D)</strong> aos novos costumes</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              O pronome demonstrativo "<strong>ESSES COLETIVOS</strong>"
+              refere-se ao termo imediatamente anterior "coletivos" mencionado
+              no mesmo período.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q04 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            As palavras destacadas têm natureza adverbial, EXCETO em:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> "Certa vez, viajei com um amigo"
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> "Corajosamente, falo com meu assistente"
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> "Se existe serviço de impressão, é porque
+              fazem"
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> "Tornou-se falta de educação não registrar
+              certos momentos"
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              Em "é porque fazem", "<strong>porque</strong>" é uma
+              <strong>CONJUNÇÃO CAUSAL</strong> (locução adjetiva), não
+              advérbio. Em A e B temos advérbios de tempo e modo
+              respectivamente.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q05 [PORTUGUÊS]</div>
+          <div class="questao-texto">O uso da crase é OBRIGATÓRIO em:</div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Ele tomou o remédio gota a gota
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Na fazenda, vamos andar a cavalo e a pé
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Não irei a festas este mês
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Quanto à exigência feita pelo professor, a
+              cumprirei
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: D</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>"Quanto à exigência"</strong>: A locução prepositiva
+              "quanto a" rege "exigência" (feminina) com artigo "a", causando
+              crase (à). A é expressão adverbial, B: masculino "cavalo", C:
+              "festas" em sentido genérico.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q06 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            Leia: "[...] A gente não quer só comida, A gente quer comida,
+            diversão e arte. [...]" Os termos destacados correspondem a:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Orações subordinadas objetivas diretas
+            </div>
+            <div class="opcao"><strong>B)</strong> Objetos indiretos</div>
+            <div class="opcao">
+              <strong>C)</strong> Orações subordinadas objetivas indiretas
+            </div>
+            <div class="opcao"><strong>D)</strong> Objetos diretos</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: D</strong>
+            </div>
+            <div class="resposta-texto">
+              O verbo "quer" é transitivo direto. "Comida", "diversão", "arte" e
+              "saída pra qualquer parte" funcionam como
+              <strong>OBJETOS DIRETOS</strong> do verbo.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q07 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            Considere as frases: I - ___ muitas pessoas à espera. II - Hoje ___
+            04 de setembro. III - A tia estava ___ estressada. IV - É ___ a
+            entrada de estrangeiros. Complete respectivamente:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Havia / são / meio / proibido
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Haviam / são / meio / proibida
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Havia / são / meio / proibida
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Havia / é / meia / proibida
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              I - <strong>Havia</strong> (verbo haver impessoal); II -
+              <strong>são</strong> (a partir do dia 2); III -
+              <strong>meio</strong> (advérbio = mais ou menos); IV -
+              <strong>proibida</strong> (concorda com "entrada").
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q08 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            A expressão "Por que sim" está de acordo com a norma padrão porque:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> É uma regra do uso dos porquês
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> É um exemplo para exemplificar erro em regra
+              de uso dos porquês
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> É um exemplo correto de uso segundo norma
+              padrão
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> É uma regra referente ao uso correto
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Na verdade a forma correta é "porque sim" (junto, sem acento). A
+              expressão exemplifica um ERRO para fins didáticos de compreensão
+              das regras.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q09 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            A justificativa correta para o uso dos porquês:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> "Por quê" usa-se no início de frases
+              interrogativas
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> "Por quê" usa-se no final e quando
+              substantivado; "porque" em explicativas
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> "Porque" usa-se quando substantivado; "por
+              que" no início
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> "Por que" no início de interrogativas;
+              "porque" em explicativas
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: D</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>"Por que"</strong> (separado): no início de
+              interrogativas; <strong>"Porque"</strong> (junto): em frases
+              explicativas; <strong>"Por quê"</strong> (acento): final de
+              frases; <strong>"Porquê"</strong> (substantivo): motivo/causa.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q10 [PORTUGUÊS]</div>
+          <div class="questao-texto">
+            Marque a frase com ortografia e acentuação corretas:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Ingerir anti-inflamatório em excesso pode ser
+              prejudicial à saúde
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Ingerir antiinflamatório em excesso pode ser
+              prejudicial a saúde
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Injerir anti-inflamatorio em exceso pode ser
+              prejudicial a saúde
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Ingerir antinflamatório em excesso pode ser
+              prejudicial à saúde
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Forma correta</strong>: Todas as palavras estão grafadas
+              adequadamente. B: falta hífen. C: "injerir" e "exceso" estão
+              errados. D: falta hífen e acento.
+            </div>
+          </div>
+        </div>
+
+        <!-- DIREITOS HUMANOS -->
+        <div class="section-header">
+          <span class="section-icon">⚖️</span>
+          QUESTÕES 11-20: DIREITOS HUMANOS
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q11 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            Sobre asilo político na Declaração Universal dos Direitos Humanos
+            (Art. 14):
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Pode ser invocado em caso de perseguição por
+              crimes comuns
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Rege-se pelo princípio da autodeterminação dos
+              povos
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Todo ser humano, vítima de perseguição, tem
+              direito de procurar asilo
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Ninguém será obrigado a fazer senão em virtude
+              de lei
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 14.1 da DUDH</strong>: "<strong
+                >TODO SER HUMANO, VÍTIMA DE PERSEGUIÇÃO, TEM O DIREITO DE
+                PROCURAR E DE GOZAR ASILO EM OUTROS PAÍSES</strong
+              >".
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q12 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            A DUDH de 1948 inova ao universalizar direitos:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Apenas de solidariedade conferindo supremacia
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Civis, políticos, econômicos, sociais e
+              culturais em paridade hierárquica
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Apenas civis e políticos com supremacia
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Apenas econômicos, sociais e culturais
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              A DUDH inova ao conferir
+              <strong>PARIDADE HIERÁRQUICA</strong> entre direitos de primeira
+              dimensão (civis/políticos) e segunda dimensão
+              (econômicos/sociais/culturais).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q13 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            De acordo com o Pacto de San José da Costa Rica sobre prisão civil:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> É vedada qualquer prisão civil por dívidas
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> É permitida por descumprimento de contrato de
+              depósito
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> É permitida por ordem judicial em razão de
+              inadimplemento de obrigação alimentar
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> É permitida por ordem administrativa por
+              dívidas comuns
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 7.7 do Pacto de San José</strong>: A prisão civil é
+              permitida apenas "em virtude de inadimplemento de obrigação
+              alimentar".
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q14 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            Consoante a Convenção Americana sobre Direitos Humanos:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> A família é o núcleo natural e fundamental da
+              sociedade
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Apenas a Comissão Interamericana pode
+              apresentar casos à Corte
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Juiz da Corte não pode julgar casos de seu
+              país
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> A Comissão só comparece à Corte em casos por
+              ela apresentados
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 17.1 do Pacto de San José</strong>: "<strong
+                >A FAMÍLIA É O NÚCLEO NATURAL E FUNDAMENTAL DA SOCIEDADE</strong
+              >
+              e deve ser protegida pela sociedade e pelo Estado".
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q15 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            No Brasil, são pertinentes ao combate da tortura:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Constituição (1988), Convenção ONU (1989), Lei
+              9.455 (1997)
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Apenas Constituição e Lei 9.455
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Apenas Convenções Internacionais
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Apenas Lei 9.140 e Lei 9.455
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              O Brasil ratificou múltiplos tratados contra tortura:
+              <strong>CF/88 Art. 5º III</strong>,
+              <strong>Convenção ONU (1989)</strong>,
+              <strong>Lei 9.455/1997</strong> que tipifica crime de tortura.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q16 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            Nos termos da Lei 9.455/1997, submeter sob guarda com violência a
+            intenso sofrimento físico como castigo pessoal sujeita-se à pena de:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> Detenção e multa</div>
+            <div class="opcao"><strong>B)</strong> Reclusão, de 2 a 8 anos</div>
+            <div class="opcao"><strong>C)</strong> Detenção, de 1 a 2 anos</div>
+            <div class="opcao">
+              <strong>D)</strong> Prestação de serviços comunitários
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 1º II da Lei 9.455/1997</strong>: "Pena -
+              <strong>reclusão, de dois a oito anos</strong>" para
+              tortura-castigo.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q17 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            Sobre características dos direitos humanos:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> A irrenunciabilidade se harmoniza com
+              autonomia da vontade
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Admite-se relatividade e restrições legítimas
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> A universalidade é relativizada pelo
+              culturalismo
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Inexiste direito à indenização por violação em
+              regime militar
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Os direitos humanos admitem certa relatividade quando há
+              <strong>COLISÃO ENTRE DIREITOS</strong> ou
+              <strong>RESTRIÇÕES LEGÍTIMAS</strong> por ato estatal.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q18 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            Segundo DUDH, o direito de asilo NÃO pode ser invocado em caso de
+            perseguição:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> De militante político evadido
+            </div>
+            <div class="opcao"><strong>B)</strong> Por razões políticas</div>
+            <div class="opcao"><strong>C)</strong> Por razões religiosas</div>
+            <div class="opcao">
+              <strong>D)</strong> Legitimamente motivada por crimes de direito
+              comum
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: D</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 14.2 DUDH</strong>: "Este direito não pode ser
+              invocado em caso de perseguição
+              <strong>LEGITIMAMENTE MOTIVADA POR CRIMES DE DIREITO COMUM</strong
+              >".
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q19 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            Em conflito de normas de direitos e garantias, prevalece:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Sempre a norma mais benéfica à pessoa humana
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Sempre a norma internacional
+            </div>
+            <div class="opcao"><strong>C)</strong> Sempre a norma interna</div>
+            <div class="opcao"><strong>D)</strong> A norma posterior</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              Princípio fundamental:
+              <strong>PREVALECE A NORMA MAIS BENÉFICA À PESSOA HUMANA</strong>,
+              conforme jurisprudência do STF e direito internacional
+              humanitário.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q20 [DIR. HUMANOS]</div>
+          <div class="questao-texto">
+            A incorporação de tratado internacional de direitos humanos exige:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Assinatura, aprovação legislativa e
+              ratificação presidencial
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Aprovação legislativa e ratificação
+              presidencial
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Ratificação presidencial e decreto de execução
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Apenas ratificação presidencial
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Processo:
+              <strong>APROVAÇÃO PELO CONGRESSO NACIONAL</strong> (Decreto
+              Legislativo) +
+              <strong>RATIFICAÇÃO PELO PRESIDENTE</strong> (Decreto de
+              Execução).
+            </div>
+          </div>
+        </div>
+
+        <!-- CONHECIMENTOS ESPECÍFICOS: LEGISLAÇÃO E DIREITO PENAL -->
+        <div class="section-header">
+          <span class="section-icon">📋</span>
+          QUESTÕES 21-50: CONHECIMENTOS ESPECÍFICOS
+        </div>
+
+        <!-- Amostra de 5 questões (21-25) -->
+
+        <div class="questao-container">
+          <div class="questao-label">Q21 [LEI. PENAL]</div>
+          <div class="questao-texto">
+            Constituem objetivos fundamentais da República, EXCETO:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Construir sociedade livre, justa e igualitária
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Erradicar pobreza e reduzir desigualdades
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Garantir voto secreto, direto e universal
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Promover bem de todos sem preconceitos
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              Voto secreto, direto e universal é <strong>PRINCÍPIO</strong> do
+              sistema eleitoral (<strong>Art. 14 CF</strong>), não objetivo
+              fundamental <strong>(Art. 3º CF)</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q22 [LEI. PENAL]</div>
+          <div class="questao-texto">
+            De acordo com Lei 7.210/84 (LEP), é INCORRETA a alternativa:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Juiz pode determinar substituição de pena por
+              medida se houver doença mental
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Juiz pode ordenar exame para verificar
+              cessação de periculosidade
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Tratamento ambulatorial NÃO pode ser
+              convertido em internação
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Ninguém será internado sem guia expedida por
+              autoridade judiciária
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 97 LEP</strong>: O tratamento ambulatorial
+              <strong>PODE</strong> ser convertido em internação se o agente
+              revelar incompatibilidade com a medida.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q23 [LEI. PENAL]</div>
+          <div class="questao-texto">
+            Lei 12.850/13, Art. 2º § 6º: condenação por crime de organização
+            criminosa acarreta:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Perda do cargo e suspensão de direitos
+              políticos por 8-10 anos
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Perda do cargo e interdição para cargo público
+              por 8 anos
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Demissão e interdição para cargo público por
+              8-10 anos
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Demissão e suspensão de direitos políticos por
+              8 anos
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 2º § 6º Lei 12.850/13</strong>: "<strong
+                >PERDA DO CARGO</strong
+              >" e "<strong
+                >INTERDIÇÃO PARA O EXERCÍCIO DE FUNÇÃO OU CARGO PÚBLICO DE 8
+                ANOS SUBSEQUENTES</strong
+              >".
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q24 [PROCESSO PENAL]</div>
+          <div class="questao-texto">
+            Sobre recursos no Processo Penal, da decisão que nega livramento
+            condicional é cabível:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> Agravo</div>
+            <div class="opcao"><strong>B)</strong> Apelação</div>
+            <div class="opcao"><strong>C)</strong> Recurso especial</div>
+            <div class="opcao"><strong>D)</strong> Carta testemunhal</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Decisão sobre livramento</strong> é decisão da fase de
+              execução, cabendo contra ela <strong>AGRAVO</strong> (conforme
+              jurisprudência pacificada).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q25 [PROCESSO PENAL]</div>
+          <div class="questao-texto">
+            Conforme entendimento sumulado do STF, prazo para agravo contra
+            decisão do juiz da execução penal é:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> 2 dias</div>
+            <div class="opcao"><strong>B)</strong> 3 dias</div>
+            <div class="opcao"><strong>C)</strong> 5 dias</div>
+            <div class="opcao"><strong>D)</strong> 8 dias</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Súmula STF 266</strong>: O prazo para interposição de
+              agravo contra decisão do juiz da execução penal é de
+              <strong>CINCO DIAS</strong>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Questões 26-30 -->
+
+        <div class="questao-container">
+          <div class="questao-label">Q26 [EXECUÇÃO PENAL]</div>
+          <div class="questao-texto">De acordo com LEP, é correto afirmar:</div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Procedimento inicia-se de ofício ou a
+              requerimento do MP e interessado
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Contra decisões haverá recurso de agravo com
+              efeito suspensivo
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> RDD determinado por autoridade policial para
+              condenado em organização criminosa
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Permissão para sair mediante escolta concedida
+              por autoridade administrativa
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 180 LEP</strong>: O procedimento
+              <strong>INICIA-SE DE OFÍCIO OU A REQUERIMENTO</strong> do MP,
+              interessado, cônjuge, parente, descendente ou autoridade
+              administrativa.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q27 [EXECUÇÃO PENAL]</div>
+          <div class="questao-texto">
+            Regra do Art. 202 LEP: anotações de condenação não constarão da
+            folha corrida a partir:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Do cumprimento ou extinção da pena
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> De 5 anos contados da extinção da pena
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> De julgado procedente o incidente de
+              reabilitação
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Do início do cumprimento em regime aberto
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 202 LEP</strong>: As anotações deixarão de constar de
+              julgado <strong>PROCEDENTE O INCIDENTE DE REABILITAÇÃO</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q28 [EXECUÇÃO PENAL]</div>
+          <div class="questao-texto">
+            Julgue: I - Exame criminológico é obrigatório para todos. II -
+            Remição: 1 dia de pena por 3 de trabalho. III - Trabalho do preso
+            tem regime da CLT. A quantidade de itens corretos é:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> 1 item correto</div>
+            <div class="opcao"><strong>B)</strong> 2 itens corretos</div>
+            <div class="opcao"><strong>C)</strong> 3 itens corretos</div>
+            <div class="opcao"><strong>D)</strong> Nenhum correto</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              I - Incorreto (exame não é mais obrigatório). II -
+              <strong>Correto (Art. 126 LEP)</strong>. III - Incorreto (trabalho
+              tem regime especial, não CLT integral).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q29 [LEGISLAÇÃO]</div>
+          <div class="questao-texto">
+            De acordo com Lei 9.455/1997 (Tortura), é CORRETO:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Constranger com violência causando sofrimento
+              para obter confissão é tortura
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Condenação não acarreta perda do cargo público
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Constranger por discriminação religiosa é
+              tortura
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Guarda municipal pode submeter para aplicar
+              castigo pessoal
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 1º I (a) Lei 9.455/1997</strong>: Constranger com
+              violência para
+              <strong>OBTER INFORMAÇÃO, DECLARAÇÃO OU CONFISSÃO</strong> é crime
+              de tortura.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q30 [DESARMAMENTO]</div>
+          <div class="questao-texto">
+            De acordo com Estatuto do Desarmamento (Lei 10.826/03), compete ao
+            SINARM:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Cadastrar armeiros, apreensões e armas
+              produzidas/importadas
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Apenas identificar características de armas de
+              fogo
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Apenas cadastrar armas de uso restrito
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Apenas emitir portes de arma
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 2º Lei 10.826/03</strong>: SINARM cadastra armeiros,
+              identifica armas, cadastra apreensões e armas
+              produzidas/importadas no país.
+            </div>
+          </div>
+        </div>
+
+        <!-- RACIOCÍNIO LÓGICO: Questões 31-40 (Amostra) -->
+
+        <div class="section-header">
+          <span class="section-icon">🧠</span>
+          QUESTÕES 31-40: RACIOCÍNIO LÓGICO
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q31 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            Proposição é sentença valorável como verdadeira ou falsa. Sobre: I -
+            "Gratidão gera felicidade" II - "Gratidão gera felicidade e paz" III
+            - "Gratidão não gera felicidade" IV - "Gratidão gera felicidade?" -
+            Assinale INCORRETA:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> I é proposição simples</div>
+            <div class="opcao">
+              <strong>B)</strong> II é proposição composta
+            </div>
+            <div class="opcao"><strong>C)</strong> III é negação de I</div>
+            <div class="opcao">
+              <strong>D)</strong> IV é proposição interrogativa
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: D</strong>
+            </div>
+            <div class="resposta-texto">
+              IV não é proposição (não pode ser V ou F). A sentença
+              interrogativa não é proposição, pois pergunta não é verdadeira nem
+              falsa.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q32 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            A = {1,2,4,5,6,10}, B = {3,4,5,6,8,10}. A∩B e A-B são,
+            respectivamente:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> {4,5,6,10} e {1,2}</div>
+            <div class="opcao"><strong>B)</strong> {1,2} e {4,5,6,10}</div>
+            <div class="opcao"><strong>C)</strong> {4,5,6,10} e {1,2,3,8}</div>
+            <div class="opcao">
+              <strong>D)</strong> {1,2,3,4,5,6,8,10} e {1,2}
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              A∩B (interseção): elementos em ambos = {4,5,6,10}. A-B
+              (diferença): elementos em A mas não em B = {1,2}.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q33 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            "Luísa gosta de ir à praia, mas não gosta de areia no corpo".
+            Conectivo para substituir "mas" sem mudar sentido:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> "ou"</div>
+            <div class="opcao"><strong>B)</strong> "e"</div>
+            <div class="opcao"><strong>C)</strong> "se e somente se"</div>
+            <div class="opcao"><strong>D)</strong> "se então"</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Em lógica proposicional, "mas" (adversativo) é substituído por "e"
+              (∧). Do ponto de vista lógico: ambas são conjunções (interessa
+              apenas a verdade de ambas, não a relação sintática).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q34 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            Sobre conectivos lógicos, assinale INCORRETA:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> "Busco paz interior e felicidade" possui
+              conectivo lógico
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> O símbolo "→" NÃO representa conectivo lógico
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> O símbolo "∧" corresponde a "e"
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> A∨B pode ser lido como A ou B
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              B é incorreta! O símbolo "→" (seta)
+              <strong>REPRESENTA O CONECTIVO CONDICIONAL</strong> (se...então).
+              É conectivo lógico sim.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q35 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            Se valor lógico do condicional é FALSO, então:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Primeira é F e segunda é V
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Primeira é V e segunda é F
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Primeira é F e segunda é F
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Primeira é V e segunda é V
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Condicional (P→Q) é falso apenas quando antecedente é V e
+              consequente é F. Tabela verdade: V→F = F.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q36 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            Valor lógico de: (2/5 de 40 = 16) ou (30% de 150 = 60) é:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> Verdade</div>
+            <div class="opcao"><strong>B)</strong> Falso</div>
+            <div class="opcao"><strong>C)</strong> Inconclusivo</div>
+            <div class="opcao"><strong>D)</strong> Falso ou verdade</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              2/5 de 40 = 16 (V). 30% de 150 = 45 (F). V∨F =
+              <strong>VERDADE</strong> (disjunção é V se pelo menos uma parte é
+              V).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q37 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            Preencha tabela verdade (OR = Ou): P | Q | P OR Q; F|F|?; F|V|?;
+            V|F|?; V|V|?
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> F-F-F-V</div>
+            <div class="opcao"><strong>B)</strong> F-V-V-V</div>
+            <div class="opcao"><strong>C)</strong> V-V-V-F</div>
+            <div class="opcao"><strong>D)</strong> V-F-F-F</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Disjunção: F∨F=F, F∨V=V, V∨F=V, V∨V=V. Resultado:
+              <strong>F-V-V-V</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q38 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            Entre as alternativas, qual apresenta TAUTOLOGIA:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Roberto é culpado ou Roberto é inocente
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Se Roberto é culpado então é inocente
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Se Roberto é culpado então José é inocente
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Roberto não é culpado, nem é inocente
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              A é tipo P∨¬P (Lei do Terceiro Excluído = tautologia). Disjunção
+              entre P e sua negação é sempre V (nunca ambas F).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q39 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">Proposição [p ∨ (¬q ↔ r)] → ¬p é uma:</div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> Contingência</div>
+            <div class="opcao"><strong>B)</strong> Tautologia</div>
+            <div class="opcao"><strong>C)</strong> Contradição</div>
+            <div class="opcao"><strong>D)</strong> Equivalência</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              Tabela verdade mostra valores V e F (não apenas V = tautologia,
+              nem apenas F = contradição). Logo é <strong>CONTINGÊNCIA</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q40 [RACIOCÍNIO LÓGICO]</div>
+          <div class="questao-texto">
+            P: João teve ciúme de Maria; Q: Maria conversava; R: João pediu
+            divórcio. Negação de "P∧Q→¬R":
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> João teve ciúme E Maria conversava E João
+              pediu divórcio
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> João NÃO teve ciúme E Maria NÃO conversava E
+              João pediu divórcio
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Se João não teve ciúme, então João pediu
+              divórcio
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> João teve ciúme E Maria NÃO conversava E João
+              pediu divórcio
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              Negação de condicional P∧Q→¬R é: mantém antecedente (P∧Q) e nega
+              consequente (¬¬R = R). Resultado: <strong>P∧Q∧R</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- LEGISLAÇÃO ESTADUAL: Questões 41-50 (Amostra) -->
+
+        <div class="section-header">
+          <span class="section-icon">📋</span>
+          QUESTÕES 41-50: LEGISLAÇÃO ESTADUAL
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q41 [LEI. ESTADUAL]</div>
+          <div class="questao-texto">
+            Lei 869/1952 (Estatuto Funcionários MG): "____ é agrupamento de
+            cargos mesma profissão" e "____ é conjunto de carreiras"
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> Carreira / Classe</div>
+            <div class="opcao"><strong>B)</strong> Classe / Quadro</div>
+            <div class="opcao"><strong>C)</strong> Conjunto / Quadro</div>
+            <div class="opcao"><strong>D)</strong> Carreira / Função</div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 3-8 Lei 869/1952</strong>: "<strong>CLASSE</strong>"
+              = agrupamento de cargos. "<strong>QUADRO</strong>" = conjunto de
+              carreiras, cargos isolados e funções.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q42 [LEI. ESTADUAL]</div>
+          <div class="questao-texto">
+            NÃO corresponde a conceito da Lei 869/1952:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Classe é agrupamento de carreiras da mesma
+              profissão
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Carreira é conjunto de classes da mesma
+              profissão
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Cargo público criado por lei em número certo
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Cargos de Carreira e Cargos isolados definidos
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Conceito incorreto</strong>: "Classe" não é agrupamento de
+              "carreiras", e sim de "CARGOS". A relação inversa: Carreira agrupa
+              Classes.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q43 [CÓDIGO ÉTICA]</div>
+          <div class="questao-texto">
+            Código Ética Agente Público (MG) considera agente público:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Apenas em Administração Pública Direta
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Todo aquele que exerça, ainda que
+              transitoriamente e sem remuneração, em órgão Direto ou Indireto,
+              inclusive Alta Administração
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Todo aquele que exerça em Administração Direta
+              ou Indireta, EXCETO Alta Administração
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Apenas com remuneração permanente
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              Conceito amplo inclui: transitório, sem remuneração, Administração
+              Direta E Indireta, INCLUSIVE Alta Administração.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q44 [CÓDIGO ÉTICA]</div>
+          <div class="questao-texto">
+            Decreto 46.644/2014 (Ética): Assinale INCORRETA sobre deveres
+            éticos:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Facilitar fiscalização pelos órgãos de
+              controle
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Participar de atividade que signifique
+              conflito de interesse
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Ser ágil na prestação de contas
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Atender prontamente questões encaminhadas
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              B é VEDAÇÃO, não dever! É
+              <strong
+                >VEDADO PARTICIPAR DE ATIVIDADE QUE SIGNIFIQUE CONFLITO DE
+                INTERESSE</strong
+              >.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q45 [CÓDIGO ÉTICA]</div>
+          <div class="questao-texto">
+            Decreto 46.644/2014: Assinale o que NÃO é vedação:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Usar artifícios para procrastinar direito de
+              qualquer pessoa
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Deixar de utilizar conhecimentos técnicos ao
+              seu alcance
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Participar de movimentos e estudos para
+              melhoria de funções
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Iludir pessoa que necessite atendimento
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              C é DEVER ("participar de movimentos...para melhoria"), não
+              vedação! As demais (A, B, D) são vedações.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q46 [CÓDIGO ÉTICA]</div>
+          <div class="questao-texto">
+            Art. 14 Decreto 46.644/2014: CONSET composto de ___ membros,
+            designados pelo ___
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Sete / Governador do Estado
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Seis / Governador do Estado
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Quatro / Secretário de Estado
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Cinco / Secretário de Estado
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: A</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 14</strong>: Conselho de Ética Pública (CONSET)
+              composto de <strong>SETE MEMBROS</strong>, designados pelo
+              <strong>GOVERNADOR DO ESTADO</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q47 [EXECUÇÃO PENAL]</div>
+          <div class="questao-texto">
+            Lei 7.210/1984 (LEP): Assinale CORRETA:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Jornada trabalho interno não inferior a 4 e
+              superior a 8 horas semanais
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Recompensas: concessão de regalias e elogio
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Egresso: liberado definitivo pelo prazo de 6
+              meses
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Assistência ao egresso: alojamento e
+              alimentação por 3 dias
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 55 LEP</strong>: "<strong>RECOMPENSAS</strong>:
+              concessão de <strong>REGALIAS E ELOGIO</strong>" (única
+              alternativa correta).
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q48 [PROCESSO EXECUÇÃO]</div>
+          <div class="questao-texto">
+            Aspectos processuais LEP: Assinale CORRETA:
+          </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Prazo ordinário agravo é 5 dias; defensor não
+              intimado por publicação
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Juízo Execuções Federal executa sentenças da
+              Justiça Militar mesmo em estabelecimentos estaduais
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Isolamento e RDD competem ao diretor e juiz,
+              isolamento não excede 60 dias
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Regressão depende prévia oitiva apenas em
+              certos casos de falta grave
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: B</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 185 LEP</strong>: Juízo das Execuções Federal executa
+              penas de sentenciados pela Justiça Federal, Militar ou Eleitoral.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q49 [EXECUÇÃO PENAL]</div>
+          <div class="questao-texto">
+            Podem suscitar incidente de excesso/desvio de execução, EXCETO:
+          </div>
+          <div class="opcoes">
+            <div class="opcao"><strong>A)</strong> Ministério Público</div>
+            <div class="opcao"><strong>B)</strong> Conselho Penitenciário</div>
+            <div class="opcao"><strong>C)</strong> Sentenciado</div>
+            <div class="opcao">
+              <strong>D)</strong> Agente responsável pela guarda
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: D</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 184 LEP</strong>: Podem suscitar: MP, Conselho
+              Penitenciário, sentenciado, representante e defensor. NÃO consta o
+              agente/guarda.
+            </div>
+          </div>
+        </div>
+
+        <div class="questao-container">
+          <div class="questao-label">Q50 [EXECUÇÃO PENAL]</div>
+          <div class="questao-texto">Lei 7.210/84: Marque INCORRETA:</div>
+          <div class="opcoes">
+            <div class="opcao">
+              <strong>A)</strong> Juiz pode determinar substituição de pena por
+              medida se houver doença mental
+            </div>
+            <div class="opcao">
+              <strong>B)</strong> Juiz pode ordenar exame para verificar
+              cessação de periculosidade
+            </div>
+            <div class="opcao">
+              <strong>C)</strong> Tratamento ambulatorial NÃO pode ser
+              convertido em internação
+            </div>
+            <div class="opcao">
+              <strong>D)</strong> Ninguém será internado sem guia da autoridade
+              judiciária
+            </div>
+          </div>
+          <button class="botao-resposta" onclick="mostrarResposta(this)">
+            Ver Resposta
+          </button>
+          <div class="resposta-container">
+            <div class="resposta-label">
+              <span class="check-icon">✓</span> <strong>RESPOSTA: C</strong>
+            </div>
+            <div class="resposta-texto">
+              <strong>Art. 97 LEP</strong>: Tratamento ambulatorial
+              <strong>PODE</strong> ser convertido em internação se houver
+              incompatibilidade do agente.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          🎓 SIMULADO 2 - POLÍCIA PENAL-MG 2021 | Prof. Marcelo Narciso | Bravo
+          Concursos
+        </p>
+        <p>
+          📚 Questões 1-50 (Português 1-10 + Direitos Humanos 11-20 +
+          Conhecimentos Específicos 21-50) | Atualizado Conforme Legislação
+          Vigente
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function mostrarResposta(btn) {
+        const container = btn.parentNode;
+        const resposta = container.querySelector(".resposta-container");
+
+        if (resposta) {
+          if (
+            resposta.style.display === "none" ||
+            resposta.style.display === ""
+          ) {
+            resposta.style.display = "block";
+            btn.textContent = "Ocultar Resposta";
+            btn.style.opacity = "0.7";
+          } else {
+            resposta.style.display = "none";
+            btn.textContent = "Ver Resposta";
+            btn.style.opacity = "1";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

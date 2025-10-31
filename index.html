@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎯 SISTEMA DE ESTUDO PPMG 2025 - Menu Principal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        font-family: "Segoe UI", "Courier New", Verdana, Geneva, sans-serif;
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+      }
+      h1 {
+        text-align: center;
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        font-size: 2.8em;
+        text-transform: uppercase;
+        font-weight: 900;
+        box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+      }
+      .subtitle {
+        text-align: center;
+        color: #7c3aed;
+        font-size: 1.3em;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+      .secao {
+        margin: 40px 0;
+      }
+      .secao-titulo {
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .card {
+        background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+        border: 2px solid #7c3aed;
+        border-radius: 12px;
+        padding: 20px;
+        text-decoration: none;
+        color: #333;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+        background: linear-gradient(135deg, #ede9fe 0%, #f5e6ff 100%);
+      }
+      .card-titulo {
+        font-weight: bold;
+        color: #7c3aed;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+      }
+      .card-descricao {
+        color: #666;
+        font-size: 0.95em;
+        margin-bottom: 15px;
+      }
+      .card-link {
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      .card-link:hover {
+        background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+        transform: scale(1.05);
+      }
+      .info-box {
+        background: linear-gradient(135deg, #dbeafe 0%, #f0f4ff 100%);
+        border-left: 4px solid #0066ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        color: #1e40af;
+      }
+      .info-box h3 {
+        color: #0066ff;
+        margin-bottom: 10px;
+      }
+      .info-box ul {
+        margin-left: 20px;
+      }
+      .info-box li {
+        margin: 8px 0;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2em;
+        }
+        .container {
+          padding: 20px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎯 SISTEMA DE ESTUDO PPMG 2025</h1>
+      <div class="subtitle">Preparação Completa para Concursos Públicos</div>
+
+      <!-- SIMULADOS -->
+      <div class="secao">
+        <div class="secao-titulo">📋 SIMULADOS COMPLETOS</div>
+        <div class="grid">
+          <a href="simulado.html" class="card">
+            <div class="card-titulo">📝 Simulado 1</div>
+            <div class="card-descricao">
+              Nível Fácil-Médio • 50 Questões • SIMULADO GERAL
+            </div>
+            <div class="card-link">Acessar →</div>
+          </a>
+          <a href="simulado2.html" class="card">
+            <div class="card-titulo">📝 Simulado 2</div>
+            <div class="card-descricao">
+              Nível Médio • 50 Questões • SIMULADO GERAL
+            </div>
+            <div class="card-link">Acessar →</div>
+          </a>
+          <a href="simulado3.html" class="card">
+            <div class="card-titulo">📝 Simulado 3</div>
+            <div class="card-descricao">
+              Pegadinhas AOCP • 44 Questões • Intenso!
+            </div>
+            <div class="card-link">Acessar →</div>
+          </a>
+          <a href="simulado4.html" class="card">
+            <div class="card-titulo">📝 Simulado 4</div>
+            <div class="card-descricao">
+              Interpretação Profunda • 40 Questões • Expert
+            </div>
+            <div class="card-link">Acessar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- PORTUGUÊS -->
+      <div class="secao">
+        <div class="secao-titulo">📚 PORTUGUÊS POLICIAL</div>
+        <div class="grid">
+          <a href="Resumo2portugues.html" class="card">
+            <div class="card-titulo">🔤 Resumo 2 - Português</div>
+            <div class="card-descricao">
+              Gramática Completa • Sintaxe • Interpretação
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_portugues_policial_penal_MG_2025.html" class="card">
+            <div class="card-titulo">🔤 Português Policial MG</div>
+            <div class="card-descricao">
+              Específico para PPMG • Pegadinhas Comuns
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- DIREITO -->
+      <div class="secao">
+        <div class="secao-titulo">⚖️ DIREITO & LEGISLAÇÃO</div>
+        <div class="grid">
+          <a href="resumocompletodireitoconstitucional.html" class="card">
+            <div class="card-titulo">📖 Direito Constitucional</div>
+            <div class="card-descricao">
+              Completo • CF/88 • Direitos Fundamentais
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="Direitopenalpartegeral.html" class="card">
+            <div class="card-titulo">📖 Direito Penal - Parte Geral</div>
+            <div class="card-descricao">
+              Teoria do Crime • Imputabilidade • Penas
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="direitoshumanos.html" class="card">
+            <div class="card-titulo">📖 Direitos Humanos</div>
+            <div class="card-descricao">Tratados • Organizações • Proteção</div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="leimariadapenha.html" class="card">
+            <div class="card-titulo">📖 Lei Maria da Penha</div>
+            <div class="card-descricao">
+              Lei 11.340/2006 • Violência Doméstica
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- LEIS PENAIS ESPECÍFICAS -->
+      <div class="secao">
+        <div class="secao-titulo">⚖️ LEIS PENAIS ESPECÍFICAS</div>
+        <div class="grid">
+          <a
+            href="resumao_completo_LEI_8072_1990_CRIMES_HEDIONDOS.html"
+            class="card"
+          >
+            <div class="card-titulo">⚖️ Lei 8.072/1990</div>
+            <div class="card-descricao">Crimes Hediondos • Penas Rigorosas</div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumao_completo_LEI_11343_2006_DROGAS.html" class="card">
+            <div class="card-titulo">⚖️ Lei 11.343/2006</div>
+            <div class="card-descricao">
+              Lei de Drogas • Porte • Tráfico • Usuário
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="CrimedeTortura.html" class="card">
+            <div class="card-titulo">⚖️ Crime de Tortura</div>
+            <div class="card-descricao">Lei 9.455/1997 • Definição • Penas</div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="Resumao-Estatuto-do-Desarmamento.html" class="card">
+            <div class="card-titulo">⚖️ Estatuto do Desarmamento</div>
+            <div class="card-descricao">
+              Lei 10.826/2003 • Armas • Porte • Porte Ilegal
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- LEI DE EXECUÇÃO PENAL -->
+      <div class="secao">
+        <div class="secao-titulo">⚖️ LEI DE EXECUÇÃO PENAL (LEP)</div>
+        <div class="grid">
+          <a href="resumao_completoAtualizado_LEP_7210_1984.html" class="card">
+            <div class="card-titulo">📋 LEP Completa</div>
+            <div class="card-descricao">
+              Lei 7.210/1984 • Completo • Atualizado
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_completo_LEP_AOCP_parte2.html" class="card">
+            <div class="card-titulo">📋 LEP Parte 2 (AOCP)</div>
+            <div class="card-descricao">
+              Específico AOCP • Aplicação Prática
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_regimes_prisionais_LEP_AOCP.html" class="card">
+            <div class="card-titulo">📋 Regimes Prisionais</div>
+            <div class="card-descricao">
+              Fechado • Semi-aberto • Aberto • Progressão
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_progressao_regime_LEP_AOCP2.html" class="card">
+            <div class="card-titulo">📋 Progressão de Regime</div>
+            <div class="card-descricao">
+              Critérios • Requisitos • Jurisprudência
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_remicao_LEP_AOCP3.html" class="card">
+            <div class="card-titulo">📋 Remição de Pena</div>
+            <div class="card-descricao">
+              Remição • Calculamento • Dias Remidos
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TÓPICOS ESPECÍFICOS -->
+      <div class="secao">
+        <div class="secao-titulo">🎯 TÓPICOS ESPECÍFICOS (LEI 11.343)</div>
+        <div class="grid">
+          <a href="resumo_art28_usuario_AOCP.html" class="card">
+            <div class="card-titulo">💊 Art. 28 - Usuário</div>
+            <div class="card-descricao">
+              Pequena Quantidade • Penas • Diferença Tráfico
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_art33_trafico_AOCP.html" class="card">
+            <div class="card-titulo">💊 Art. 33 - Tráfico</div>
+            <div class="card-descricao">
+              Qualificadoras • Agravantes • Penas
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_art33_paragrafo4_privilegiado_AOCP.html" class="card">
+            <div class="card-titulo">💊 Art. 33 § 4º - Privilegiado</div>
+            <div class="card-descricao">
+              Tráfico Privilegiado • Redução de Pena
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_art35_associacao_AOCP.html" class="card">
+            <div class="card-titulo">💊 Art. 35 - Associação para Tráfico</div>
+            <div class="card-descricao">
+              Associação • Quadrilha • Penas Combinadas
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="resumo_art40_majorantes_AOCP.html" class="card">
+            <div class="card-titulo">💊 Art. 40 - Majorantes</div>
+            <div class="card-descricao">
+              Aumentos de Pena • Circunstâncias Agravantes
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- OUTRAS MATÉRIAS -->
+      <div class="secao">
+        <div class="secao-titulo">🧠 OUTRAS MATÉRIAS</div>
+        <div class="grid">
+          <a href="Resumoraciociniologico.html" class="card">
+            <div class="card-titulo">🔢 Raciocínio Lógico</div>
+            <div class="card-descricao">
+              Proposições • Tabelas Verdade • Argumentos
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="Resumaoinformatica.html" class="card">
+            <div class="card-titulo">💻 Informática</div>
+            <div class="card-descricao">
+              Windows • Office • Internet • Segurança
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a
+            href="resumao_completo_LEI_11404_1994_MG_PARTE_I.html"
+            class="card"
+          >
+            <div class="card-titulo">📋 Lei 11.404/1994 - Parte I</div>
+            <div class="card-descricao">
+              Legislação MG Específica • Processo Penal
+            </div>
+            <div class="card-link">Estudar →</div>
+          </a>
+          <a href="graficodepitzza.html" class="card">
+            <div class="card-titulo">📊 Gráfico de Pizza</div>
+            <div class="card-descricao">
+              Visualização de Dados • Estatísticas
+            </div>
+            <div class="card-link">Visualizar →</div>
+          </a>
+          <a href="CRONOGRAMA_PPMG2025.html" class="card">
+            <div class="card-titulo">📅 Cronograma PPMG 2025</div>
+            <div class="card-descricao">Datas • Prazos • Calendário Estudo</div>
+            <div class="card-link">Consultar →</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- INFO BOX -->
+      <div class="info-box">
+        <h3>📌 Informações Importantes</h3>
+        <ul>
+          <li>
+            <strong>Total de Questões:</strong> 160+ questões comentadas nos 4
+            simulados
+          </li>
+          <li><strong>Resumos:</strong> 25+ resumos jurídicos completos</li>
+          <li>
+            <strong>Cobertura:</strong> Português, Direito Penal,
+            Constitucional, Leis Específicas, Lógica, Informática
+          </li>
+          <li><strong>Atualização:</strong> Conforme legislação PPMG 2025</li>
+          <li>
+            <strong>Design:</strong> Otimizado para estudo com cores e
+            formatação visual clara
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="info-box"
+        style="
+          background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+          border-left-color: #b45309;
+          color: #78350f;
+        "
+      >
+        <h3 style="color: #d97706">💡 Dica de Estudo</h3>
+        <p>
+          Comece pelos simulados para identificar seus pontos fracos, depois use
+          os resumos temáticos para aprofundar conhecimento em cada matéria.
+          Máximo 4 horas de estudo por dia para melhor assimilação!
+        </p>
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 40px;
+          padding: 20px;
+          background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+          border-radius: 10px;
+        "
+      >
+        <p style="color: #7c3aed; font-weight: bold; font-size: 1.1em">
+          🚀 Boa sorte na sua preparação! Você consegue! 🎯
+        </p>
+        <p style="color: #666; margin-top: 10px; font-size: 0.95em">
+          Desenvolvido com ❤️ para candidatos do Concurso PPMG 2025
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

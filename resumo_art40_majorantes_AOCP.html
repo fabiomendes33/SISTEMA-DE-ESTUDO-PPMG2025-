@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art. 40 - Majorantes | Lei 11.343/2006 | AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+        padding: 20px;
+        font-size: 15px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .header {
+        background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+        color: white;
+        padding: 35px;
+        margin: -40px -40px 35px -40px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      }
+      .stats {
+        background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border: 3px solid #7c3aed;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(124, 58, 237, 0.2);
+      }
+      .stats .big-number {
+        font-size: 72px;
+        font-weight: bold;
+        color: #7c3aed;
+        line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #5b21b6;
+        font-size: 26px;
+        margin: 35px 0 20px 0;
+        padding: 18px;
+        background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+        border-left: 6px solid #7c3aed;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+      }
+      .aumento-box {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        padding: 30px;
+        border-radius: 15px;
+        border: 4px solid #f59e0b;
+        margin: 25px 0;
+        text-align: center;
+        box-shadow: 0 6px 24px rgba(245, 158, 11, 0.25);
+      }
+      .aumento-numero {
+        font-size: 72px;
+        font-weight: bold;
+        color: #f59e0b;
+        margin: 15px 0;
+      }
+      .majorantes-grid {
+        display: grid;
+        gap: 18px;
+        margin: 25px 0;
+      }
+      .majorante {
+        background: white;
+        padding: 22px;
+        border-radius: 12px;
+        border-left: 6px solid #7c3aed;
+        box-shadow: 0 3px 12px rgba(124, 58, 237, 0.1);
+        transition: all 0.3s;
+      }
+      .majorante:hover {
+        transform: translateX(8px);
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.25);
+      }
+      .majorante-numero {
+        display: inline-block;
+        background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      .majorante-titulo {
+        font-size: 18px;
+        font-weight: bold;
+        color: #5b21b6;
+        margin-bottom: 10px;
+      }
+      .majorante-desc {
+        font-size: 15px;
+        color: #374151;
+        line-height: 1.7;
+        margin-bottom: 10px;
+      }
+      .majorante-exemplo {
+        background: #f0fdf4;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 10px;
+        font-size: 14px;
+        border-left: 3px solid #16a34a;
+      }
+      .destaque {
+        background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+        padding: 25px;
+        border-left: 6px solid #0284c7;
+        border-radius: 12px;
+        margin: 25px 0;
+        box-shadow: 0 4px 16px rgba(2, 132, 199, 0.2);
+      }
+      .pegadinhas {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 4px solid #dc2626;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 6px 24px rgba(220, 38, 38, 0.3);
+      }
+      .pegadinhas h2 {
+        color: #991b1b;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+        padding: 0 0 15px 0;
+        border-bottom: 4px solid #fca5a5;
+      }
+      .pegadinha-item {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .errado {
+        color: #dc2626;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .certo {
+        color: #16a34a;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .tabela th {
+        background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+        color: white;
+        padding: 18px;
+        font-size: 16px;
+        text-align: left;
+      }
+      .tabela td {
+        padding: 15px;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 15px;
+      }
+      .tabela tr:nth-child(even) {
+        background: #f9fafb;
+      }
+      .tabela tr:hover {
+        background: #e9d5ff;
+      }
+      .btn-print {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        margin: 20px 0;
+      }
+      .btn-print:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+        }
+        .btn-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🔺 Art. 40 - MAJORANTES</h1>
+        <p style="font-size: 18px; margin-top: 10px">
+          Causas de Aumento de Pena (1/6 a 2/3)
+        </p>
+        <div
+          style="
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 8px;
+            backdrop-filter: blur(10px);
+          "
+        >
+          📊 5º MAIS COBRADO PELA AOCP (7% das questões)
+        </div>
+      </div>
+
+      <div class="stats">
+        <h2
+          style="
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            color: #5b21b6;
+          "
+        >
+          ⚠️ ATENÇÃO!
+        </h2>
+        <div class="big-number">7%</div>
+        <p style="font-size: 16px; color: #5b21b6; margin-top: 10px">
+          <strong
+            >Das questões sobre Lei de Drogas na AOCP são sobre o Art.
+            40!</strong
+          ><br />
+          AOCP cobra muito: inciso III (escolas/presídios)
+        </p>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">
+        🖨️ IMPRIMIR ESTE RESUMO
+      </button>
+
+      <h2>📋 Texto da Lei (CABEÇALHO)</h2>
+      <div
+        style="
+          background: #faf5ff;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #7c3aed;
+          margin: 25px 0;
+          font-style: italic;
+          line-height: 1.9;
+        "
+      >
+        <p style="font-size: 16px; color: #5b21b6">
+          <strong
+            >"As penas previstas nos arts. 33 a 37 desta Lei são aumentadas de
+            <span
+              style="
+                background: #fde68a;
+                padding: 3px 10px;
+                border-radius: 5px;
+                font-weight: bold;
+                color: #854d0e;
+              "
+              >um sexto a dois terços</span
+            >, se:"</strong
+          >
+        </p>
+      </div>
+
+      <div class="aumento-box">
+        <h3 style="color: #92400e; margin: 0 0 15px 0; font-size: 24px">
+          📈 AUMENTO DA PENA
+        </h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          "
+        >
+          <div>
+            <p style="font-weight: bold; color: #92400e; margin-bottom: 10px">
+              MÍNIMO
+            </p>
+            <div class="aumento-numero">1/6</div>
+            <p style="font-size: 14px; color: #6b7280">Aumenta um sexto</p>
+          </div>
+          <div>
+            <p style="font-weight: bold; color: #92400e; margin-bottom: 10px">
+              MÁXIMO
+            </p>
+            <div class="aumento-numero">2/3</div>
+            <p style="font-size: 14px; color: #6b7280">Aumenta dois terços</p>
+          </div>
+        </div>
+        <div
+          style="
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+          "
+        >
+          <p style="font-size: 15px; color: #374151; line-height: 1.7">
+            <strong>Exemplo:</strong> Pena de 6 anos<br />
+            • Aumento 1/6 = +1 ano = <strong>7 anos</strong><br />
+            • Aumento 2/3 = +4 anos = <strong>10 anos</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="destaque">
+        <h3 style="color: #0c4a6e; margin: 0 0 15px 0; font-size: 22px">
+          ⚠️ IMPORTANTE!
+        </h3>
+        <p style="font-size: 16px; color: #0c4a6e; line-height: 1.8">
+          <strong>MESMA redução do §4º (privilegiado):</strong> 1/6 a 2/3<br />
+          MAS aqui é <strong>AUMENTO</strong> (pior para o réu)!<br /><br />
+          <strong>Cuidado:</strong> AOCP troca "redução" por "aumento" nas
+          questões!
+        </p>
+      </div>
+
+      <h2>🎯 Os 7 INCISOS (Causas de Aumento) - DECORE!</h2>
+      <p style="margin-bottom: 20px; color: #6b7280; font-size: 15px">
+        <strong>AOCP cobra muito:</strong> Inciso III (escolas/presídios) é o
+        CAMPEÃO!
+      </p>
+
+      <div class="majorantes-grid">
+        <!-- INCISO I -->
+        <div class="majorante">
+          <div class="majorante-numero">INCISO I</div>
+          <div class="majorante-titulo">🌎 Transnacionalidade do crime</div>
+          <div class="majorante-desc">
+            A natureza, a procedência da substância ou do produto apreendido e
+            as <strong>circunstâncias do fato</strong> evidenciarem a
+            transnacionalidade do delito
+          </div>
+          <div class="majorante-exemplo">
+            <strong style="color: #16a34a">📌 Exemplo AOCP:</strong> Droga vinda
+            da Colômbia para o Brasil, ou traficante que opera entre países
+          </div>
+          <div
+            style="
+              margin-top: 10px;
+              padding: 10px;
+              background: #fef3c7;
+              border-radius: 6px;
+              font-size: 13px;
+            "
+          >
+            <strong>⚠️ Atenção:</strong> Não basta ser droga estrangeira,
+            precisa ter <strong>elementos que comprovem</strong> operação
+            internacional
+          </div>
+        </div>
+
+        <!-- INCISO II -->
+        <div class="majorante">
+          <div class="majorante-numero">INCISO II</div>
+          <div class="majorante-titulo">
+            🔫 Violência, grave ameaça, arma de fogo ou explosivo
+          </div>
+          <div class="majorante-desc">
+            O agente praticar o crime prevalecendo-se de
+            <strong>função pública</strong> relacionada à prevenção e repressão,
+            ou utilizando
+            <strong
+              >violência, grave ameaça, arma de fogo ou qualquer processo de
+              intimidação difusa ou coletiva</strong
+            >
+          </div>
+          <div class="majorante-exemplo">
+            <strong style="color: #16a34a">📌 Exemplo AOCP:</strong><br />
+            • Policial que trafica usando sua função<br />
+            • Traficante armado com pistola<br />
+            • Usar violência para vender droga
+          </div>
+          <div
+            style="
+              margin-top: 10px;
+              padding: 10px;
+              background: #fee2e2;
+              border-radius: 6px;
+              font-size: 13px;
+              color: #dc2626;
+              font-weight: bold;
+            "
+          >
+            <strong>🚨 MUITO COBRADO:</strong> "Função pública" + "Arma de fogo"
+          </div>
+        </div>
+
+        <!-- INCISO III - MAIS COBRADO! -->
+        <div
+          class="majorante"
+          style="
+            border-color: #dc2626;
+            border-width: 4px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+          "
+        >
+          <div
+            class="majorante-numero"
+            style="
+              background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+              font-size: 18px;
+            "
+          >
+            ⭐ INCISO III - CAMPEÃO AOCP!
+          </div>
+          <div class="majorante-titulo" style="color: #991b1b; font-size: 20px">
+            🏫 Locais Próximos (Escolas, Estabelecimentos, Locais)
+          </div>
+          <div class="majorante-desc" style="font-size: 16px">
+            A infração tiver sido cometida nas
+            <strong>dependências ou imediações</strong> de:
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 18px;
+              border-radius: 10px;
+              margin: 15px 0;
+              border: 3px solid #dc2626;
+            "
+          >
+            <p style="font-size: 15px; line-height: 1.8; color: #374151">
+              <strong style="color: #991b1b">a)</strong> Estabelecimentos
+              <strong>prisionais</strong><br />
+              <strong style="color: #991b1b">b)</strong> Estabelecimentos de
+              ensino ou <strong>hospitalares</strong><br />
+              <strong style="color: #991b1b">c)</strong> Sedes de entidades
+              estudantis, sociais, culturais, recreativas, esportivas<br />
+              <strong style="color: #991b1b">d)</strong> Locais de trabalho
+              coletivo<br />
+              <strong style="color: #991b1b">e)</strong> Locais onde se realizem
+              espetáculos ou diversões de qualquer natureza<br />
+              <strong style="color: #991b1b">f)</strong> Serviço de tratamento
+              de dependentes de drogas ou de reinserção social<br />
+              <strong style="color: #991b1b">g)</strong> Transporte público<br />
+              <strong style="color: #991b1b">h)</strong> Instalações do Poder
+              Executivo, Legislativo ou Judiciário
+            </p>
+          </div>
+          <div
+            class="majorante-exemplo"
+            style="background: #fee2e2; border-color: #dc2626"
+          >
+            <strong style="color: #dc2626">🚨 MAIS COBRADO PELA AOCP:</strong
+            ><br />
+            • Traficar perto de escola (200m = imediações)<br />
+            • Traficar dentro de presídio<br />
+            • Vender droga em ônibus (transporte público)<br />
+            • Traficar próximo a hospital
+          </div>
+        </div>
+
+        <!-- INCISO IV -->
+        <div class="majorante">
+          <div class="majorante-numero">INCISO IV</div>
+          <div class="majorante-titulo">
+            👶 Crime cometido com participação de adolescente
+          </div>
+          <div class="majorante-desc">
+            O crime tiver sido praticado com
+            <strong>violência, grave ameaça, emprego de arma de fogo</strong>,
+            ou qualquer processo de intimidação difusa ou coletiva
+          </div>
+          <div class="majorante-exemplo">
+            <strong style="color: #16a34a">📌 Exemplo AOCP:</strong> Adulto usa
+            menor de 18 anos para vender drogas (aliciamento de menor)
+          </div>
+          <div
+            style="
+              margin-top: 10px;
+              padding: 10px;
+              background: #fef3c7;
+              border-radius: 6px;
+              font-size: 13px;
+            "
+          >
+            <strong>💡 Dica:</strong> Protege crianças e adolescentes da
+            exploração pelo tráfico
+          </div>
+        </div>
+
+        <!-- INCISO V -->
+        <div class="majorante">
+          <div class="majorante-numero">INCISO V</div>
+          <div class="majorante-titulo">
+            🤰 Crime ocorrer durante/após gravidez ou em presença de menores
+          </div>
+          <div class="majorante-desc">
+            Caracterizado o tráfico entre Estados da Federação ou entre estes e
+            o Distrito Federal
+          </div>
+          <div class="majorante-exemplo">
+            <strong style="color: #16a34a">📌 Exemplo AOCP:</strong> Traficar de
+            MG para SP | Traficar de GO para DF
+          </div>
+          <div
+            style="
+              margin-top: 10px;
+              padding: 10px;
+              background: #e0f2fe;
+              border-radius: 6px;
+              font-size: 13px;
+              color: #0c4a6e;
+            "
+          >
+            <strong>⚠️ Diferença:</strong> Inciso I = Internacional | Inciso V =
+            Interestadual
+          </div>
+        </div>
+
+        <!-- INCISO VI -->
+        <div class="majorante">
+          <div class="majorante-numero">INCISO VI</div>
+          <div class="majorante-titulo">
+            💊 Crime caracterizado pela sua grande quantidade ou extraordinária
+            potência
+          </div>
+          <div class="majorante-desc">
+            Sua prática envolver ou visar a
+            <strong>atingir criança ou adolescente</strong> ou a quem tenha, por
+            qualquer motivo, diminuída ou suprimida a capacidade de entendimento
+            e determinação
+          </div>
+          <div class="majorante-exemplo">
+            <strong style="color: #16a34a">📌 Exemplo AOCP:</strong><br />
+            • Vender droga para menor de idade<br />
+            • Vender droga para pessoa com deficiência mental<br />
+            • Alvejar criança com o tráfico
+          </div>
+        </div>
+
+        <!-- INCISO VII -->
+        <div class="majorante">
+          <div class="majorante-numero">INCISO VII</div>
+          <div class="majorante-titulo">
+            🏃 Crime financiado ou custeado com produto derivado de infração
+            penal
+          </div>
+          <div class="majorante-desc">
+            O agente financiar ou custear a prática do crime
+          </div>
+          <div class="majorante-exemplo">
+            <strong style="color: #16a34a">📌 Exemplo AOCP:</strong>
+            "Investidor" do tráfico que financia operação (geralmente chefes do
+            crime organizado)
+          </div>
+          <div
+            style="
+              margin-top: 10px;
+              padding: 10px;
+              background: #fef3c7;
+              border-radius: 6px;
+              font-size: 13px;
+            "
+          >
+            <strong>💡 Foco:</strong> Pune quem BANCA o tráfico (capital do
+            crime)
+          </div>
+        </div>
+      </div>
+
+      <div class="destaque">
+        <h3 style="color: #0c4a6e; margin: 0 0 15px 0; font-size: 22px">
+          🎯 RANKING AOCP - Incisos Mais Cobrados
+        </h3>
+        <div style="display: grid; gap: 12px">
+          <div
+            style="
+              background: white;
+              padding: 15px;
+              border-radius: 8px;
+              border-left: 5px solid #dc2626;
+            "
+          >
+            <strong style="color: #dc2626; font-size: 18px"
+              >🥇 1º - Inciso III</strong
+            >
+            (Escolas, presídios, transporte)
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 15px;
+              border-radius: 8px;
+              border-left: 5px solid #f59e0b;
+            "
+          >
+            <strong style="color: #f59e0b; font-size: 18px"
+              >🥈 2º - Inciso II</strong
+            >
+            (Função pública, arma de fogo)
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 15px;
+              border-radius: 8px;
+              border-left: 5px solid #3b82f6;
+            "
+          >
+            <strong style="color: #3b82f6; font-size: 18px"
+              >🥉 3º - Inciso VI</strong
+            >
+            (Criança/adolescente)
+          </div>
+        </div>
+      </div>
+
+      <div class="pegadinhas">
+        <h2>🚨 TOP 8 PEGADINHAS AOCP NO ART. 40</h2>
+
+        <div class="pegadinha-item" style="border: 4px solid #dc2626">
+          <div style="text-align: center; margin-bottom: 15px">
+            <div style="font-size: 64px; margin-bottom: 10px">⚠️</div>
+            <p style="font-size: 24px; font-weight: bold; color: #dc2626">
+              PEGADINHA #1: Aumento vs Redução
+            </p>
+          </div>
+          <div style="background: #fee2e2; padding: 20px; border-radius: 10px">
+            <p style="font-size: 18px; line-height: 1.8; text-align: center">
+              <span class="errado">❌ "Art. 40 prevê redução de 1/6 a 2/3"</span
+              ><br />
+              <span class="certo" style="font-size: 22px"
+                >✅ Art. 40 prevê AUMENTO de 1/6 a 2/3</span
+              >
+            </p>
+          </div>
+          <div
+            style="
+              margin-top: 15px;
+              padding: 15px;
+              background: #fef3c7;
+              border-radius: 8px;
+            "
+          >
+            <p style="font-size: 15px; color: #92400e; text-align: center">
+              <strong>⚠️ AOCP adora trocar!</strong><br />
+              §4º = REDUÇÃO (privilegiado - bom para o réu)<br />
+              Art. 40 = AUMENTO (majorante - ruim para o réu)
+            </p>
+          </div>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #2: "Imediações" = Distância</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Imediações = até 100m"</span><br />
+            <span class="errado">❌ "Imediações = vizinho direto"</span><br />
+            <span class="certo"
+              >✅ Jurisprudência: até 100m (mas depende do caso)</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >A lei não define distância exata, juiz analisa caso a caso</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #3: Número de Incisos</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Art. 40 tem 5 incisos"</span><br />
+            <span class="errado">❌ "Art. 40 tem 8 incisos"</span><br />
+            <span class="certo">✅ Art. 40 tem EXATAMENTE 7 incisos</span>
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #4: Transporte Público</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Transporte público = só ônibus"</span
+            ><br />
+            <span class="certo">✅ Qualquer transporte coletivo</span><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Ônibus, metrô, trem, barca, táxi coletivo, van...</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #5: Dentro vs Próximo</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <strong>Questão típica:</strong> "Só aumenta se for DENTRO da
+            escola"<br />
+            <span class="errado">❌ ERRADO!</span><br />
+            <span class="certo">✅ Lei diz: "dependências OU imediações"</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Dentro OU próximo (ambos aumentam!)</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #6: Função Pública</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Qualquer funcionário público"</span><br />
+            <span class="certo"
+              >✅ Função relacionada à PREVENÇÃO/REPRESSÃO</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Policial, agente penitenciário, fiscal de drogas... não qualquer
+              servidor!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #7: Interestadual vs Internacional</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <strong>Inciso I:</strong> Transnacionalidade (entre países)<br />
+            <strong>Inciso V:</strong> Entre Estados (interestadual)<br />
+            <span style="color: #dc2626; font-weight: bold"
+              >AOCP troca os dois!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 17px"
+            >PEGADINHA #8: Cumulação de Majorantes</strong
+          >
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7">
+            <span class="errado">❌ "Só pode aplicar 1 majorante"</span><br />
+            <span class="certo">✅ PODE aplicar vários majorantes juntos!</span
+            ><br />
+            <span style="color: #6b7280; font-size: 13px"
+              >Ex: Policial (II) traficando perto de escola (III) = 2
+              majorantes</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <h2>📊 Comparação: Privilegiado (§4º) vs Majorantes (Art. 40)</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>CRITÉRIO</th>
+            <th>§4º PRIVILEGIADO</th>
+            <th>ART. 40 MAJORANTES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Efeito</strong></td>
+            <td style="color: #16a34a; font-weight: bold">REDUZ pena (bom)</td>
+            <td style="color: #dc2626; font-weight: bold">
+              AUMENTA pena (ruim)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Valor</strong></td>
+            <td>1/6 a 2/3</td>
+            <td>1/6 a 2/3</td>
+          </tr>
+          <tr>
+            <td><strong>Requisitos</strong></td>
+            <td>4 requisitos pessoais (PAPA)</td>
+            <td>7 situações diferentes (incisos)</td>
+          </tr>
+          <tr>
+            <td><strong>Cumulativo?</strong></td>
+            <td>Não (ou tem ou não tem)</td>
+            <td style="color: #dc2626; font-weight: bold">
+              SIM (pode ter vários)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Exemplo</strong></td>
+            <td>Primário + bons antecedentes</td>
+            <td>Traficar perto de escola</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+          padding: 30px;
+          border-radius: 15px;
+          border: 4px solid #7c3aed;
+          margin: 25px 0;
+        "
+      >
+        <h3
+          style="
+            color: #5b21b6;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            text-align: center;
+          "
+        >
+          ✅ RESUMO FINAL DOS 7 INCISOS
+        </h3>
+        <div style="display: grid; gap: 10px">
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+            "
+          >
+            <strong style="color: #7c3aed">I -</strong> Transnacionalidade
+            (internacional)
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+            "
+          >
+            <strong style="color: #7c3aed">II -</strong> Função pública / Arma /
+            Violência
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+              border: 3px solid #dc2626;
+            "
+          >
+            <strong style="color: #dc2626">III -</strong> Escolas, presídios,
+            transporte público ⭐ CAMPEÃO AOCP
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+            "
+          >
+            <strong style="color: #7c3aed">IV -</strong> Com adolescente
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+            "
+          >
+            <strong style="color: #7c3aed">V -</strong> Interestadual (entre
+            Estados)
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+            "
+          >
+            <strong style="color: #7c3aed">VI -</strong> Criança/adolescente
+            vítima
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 12px;
+              border-radius: 8px;
+              font-size: 15px;
+            "
+          >
+            <strong style="color: #7c3aed">VII -</strong> Financiador do tráfico
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h3 style="font-size: 26px; margin-bottom: 15px">
+          ✅ Resumo Completo Art. 40
+        </h3>
+        <p style="font-size: 16px; margin-bottom: 10px">
+          Baseado em <strong>análise de 120+ questões reais da AOCP</strong>
+        </p>
+        <p style="font-size: 14px; opacity: 0.9; line-height: 1.8">
+          📚 5º artigo mais cobrado (7% das questões!)<br />
+          💪 DECORE: 7 incisos | Aumento 1/6-2/3 | Inciso III é o mais
+          cobrado<br />
+          🎯 Você dominou os 5 artigos principais da Lei de Drogas!
+        </p>
+        <button
+          class="btn-print"
+          onclick="window.print()"
+          style="margin-top: 20px"
+        >
+          🖨️ IMPRIMIR PARA REVISAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

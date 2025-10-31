@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lei 10.826/2003 - Estatuto do Desarmamento</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        border-bottom: 4px solid #e74c3c;
+        padding-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #7f8c8d;
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      h2 {
+        color: #e74c3c;
+        font-size: 1.8em;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: linear-gradient(to right, #ffe6e6, #ffffff);
+        border-left: 6px solid #e74c3c;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #3498db;
+        font-size: 1.4em;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        border-left: 4px solid #3498db;
+        font-weight: bold;
+      }
+
+      .destaque {
+        background: #fff3cd;
+        border-left: 5px solid #ffc107;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .importante {
+        background: #f8d7da;
+        border-left: 5px solid #dc3545;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .atencao {
+        background: #d1ecf1;
+        border-left: 5px solid #17a2b8;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .artigo {
+        background: #e7f3ff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 2px solid #2196f3;
+      }
+
+      .artigo-numero {
+        color: #1565c0;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+
+      .pena {
+        background: #ffebee;
+        color: #c62828;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      .questao {
+        background: #f5f5f5;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 10px;
+        border-left: 5px solid #9c27b0;
+      }
+
+      .questao-pergunta {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+      }
+
+      .questao-resposta {
+        color: #0066cc;
+        font-size: 1em;
+        line-height: 1.8;
+        padding-left: 20px;
+        font-weight: bold;
+      }
+
+      .jurisprudencia {
+        background: #fff8e1;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 2px dashed #ff9800;
+      }
+
+      .jurisprudencia-titulo {
+        color: #e65100;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      ul,
+      ol {
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.8;
+        color: #2c3e50;
+      }
+
+      .definicao {
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border-left: 5px solid #4caf50;
+      }
+
+      .definicao-termo {
+        color: #1b5e20;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      /* NOVA TABELA COMPARATIVA MELHORADA */
+      .tabela-comparativa {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .tabela-comparativa th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-family: "Arial Black", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .tabela-comparativa td {
+        padding: 15px;
+        border-bottom: 2px solid #ddd;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        font-size: 1.05em;
+        text-align: center;
+      }
+
+      .tabela-comparativa tr:nth-child(even) {
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      }
+
+      .tabela-comparativa tr:nth-child(odd) {
+        background: linear-gradient(to right, #ffffff, #f8f9fa);
+      }
+
+      .tabela-comparativa tr:hover {
+        background: linear-gradient(to right, #fff3cd, #ffe69c);
+        transform: scale(1.01);
+        transition: all 0.3s ease;
+      }
+
+      .tabela-comparativa td:first-child {
+        color: #2c3e50;
+        font-weight: bold;
+      }
+
+      .tabela-comparativa td:nth-child(2) {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+
+      .tabela-comparativa td:nth-child(3) {
+        color: #c62828;
+        font-weight: bold;
+      }
+
+      .tabela-comparativa td:nth-child(4) {
+        color: #0066cc;
+        font-weight: bold;
+      }
+
+      /* NOVA TABELA USO PERMITIDO VS RESTRITO */
+      .tabela-versus {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .tabela-versus th {
+        padding: 20px;
+        text-align: center;
+        font-family: "Arial Black", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.3em;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .tabela-versus th:first-child {
+        background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+      }
+
+      .tabela-versus th:last-child {
+        background: linear-gradient(135deg, #f44336 0%, #c62828 100%);
+      }
+
+      .tabela-versus td {
+        padding: 18px;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        font-size: 1.1em;
+        border-bottom: 3px solid #ddd;
+        text-align: center;
+      }
+
+      .tabela-versus td:first-child {
+        background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+        color: #1b5e20;
+        border-right: 3px solid #4caf50;
+      }
+
+      .tabela-versus td:last-child {
+        background: linear-gradient(to right, #ffebee, #ffcdd2);
+        color: #b71c1c;
+      }
+
+      .tabela-versus tr:hover td {
+        transform: scale(1.02);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .exemplo {
+        background: #e3f2fd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border-left: 5px solid #2196f3;
+      }
+
+      .exemplo-titulo {
+        color: #1565c0;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .sumula {
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 3px solid #e91e63;
+        font-weight: bold;
+      }
+
+      .sumula-numero {
+        color: #880e4f;
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+
+      .crime-titulo {
+        background: linear-gradient(135deg, #b71c1c 0%, #c62828 100%);
+        color: white;
+        padding: 18px;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(183, 28, 28, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* LISTA NUMERADA COM CORES */
+      ol.lista-colorida {
+        counter-reset: item;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ol.lista-colorida li {
+        counter-increment: item;
+        margin-bottom: 15px;
+        padding: 12px;
+        background: linear-gradient(to right, #e3f2fd, #bbdefb);
+        border-left: 5px solid #2196f3;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #0d47a1;
+      }
+
+      ol.lista-colorida li::before {
+        content: counter(item) ". ";
+        font-weight: bold;
+        color: #1565c0;
+        font-size: 1.2em;
+        margin-right: 8px;
+      }
+
+      /* LISTA NÃO ORDENADA COM CORES */
+      ul.lista-colorida-ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul.lista-colorida-ul li {
+        margin-bottom: 12px;
+        padding: 12px;
+        background: linear-gradient(to right, #fff3e0, #ffe0b2);
+        border-left: 5px solid #ff9800;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #e65100;
+        position: relative;
+        padding-left: 40px;
+      }
+
+      ul.lista-colorida-ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 12px;
+        font-weight: bold;
+        color: #ff6f00;
+        font-size: 1.3em;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+        .container {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📚 Lei 10.826/2003</h1>
+      <div class="subtitle">
+        Estatuto do Desarmamento - Resumo Completo para AOCP
+      </div>
+
+      <div class="importante">
+        ⚠️ <strong>ATENÇÃO:</strong> Este resumo foi elaborado com foco nos
+        tópicos mais cobrados pela banca AOCP em concursos para carreiras
+        policiais de Minas Gerais.
+      </div>
+
+      <!-- INTRODUÇÃO E DEFINIÇÕES -->
+      <h2>🔍 1. Definições Fundamentais</h2>
+
+      <div class="definicao">
+        <div class="definicao-termo">Arma de Fogo (Decreto 10.030/2019)</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Arma que arremessa projéteis empregando a força expansiva dos gases
+          gerados pela combustão de um propelente confinado em uma câmara,
+          normalmente solidária a um cano, que tem a função de dar continuidade
+          à combustão do propelente, além de direção e estabilidade ao
+          projétil.</span
+        >
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910">⚡ Importante para AOCP:</strong>
+        <span style="color: #c0392b"
+          >Réplicas, armas de pressão e airsoft NÃO se encaixam na definição de
+          arma de fogo! Não há crime do Estatuto do Desarmamento nesses
+          casos.</span
+        >
+      </div>
+
+      <div class="definicao">
+        <div class="definicao-termo">Munição</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Cartucho <strong style="color: #e74c3c">COMPLETO</strong> ou seus
+          componentes: estojo + espoleta + carga propulsora + projétil +
+          bucha.</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #138496">💡 Pegadinha comum da AOCP:</strong>
+        <span style="color: #0c5460"
+          >Se o indivíduo for encontrado apenas com o estojo, NÃO caracteriza
+          porte de munição, pois a munição não está completa!</span
+        >
+      </div>
+
+      <div class="definicao">
+        <div class="definicao-termo">Acessório de Arma</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Artefatos que, acoplados a uma arma, possibilitam a alteração da
+          configuração normal do armamento (supressor de som, mira telescópica,
+          etc.).</span
+        >
+      </div>
+
+      <h3>🔸 Armas de Uso Permitido vs Uso Restrito</h3>
+
+      <table class="tabela-versus">
+        <tr>
+          <th>✅ Armas de Uso Permitido</th>
+          <th>🚫 Armas de Uso Restrito</th>
+        </tr>
+        <tr>
+          <td>
+            Semiautomáticas ou de repetição com calibre que não ultrapasse 1.200
+            libras-pé ou 1.620 joules
+          </td>
+          <td>
+            Automáticas ou que ultrapassem a energia cinética de 1.200 libras-pé
+            ou 1.620 joules
+          </td>
+        </tr>
+        <tr>
+          <td>Portáteis de alma lisa</td>
+          <td>Não portáteis</td>
+        </tr>
+        <tr>
+          <td>Exemplo: Revólver calibre .38</td>
+          <td>Exemplo: Fuzis automáticos</td>
+        </tr>
+      </table>
+
+      <div class="importante">
+        🚨 <strong style="color: #721c24">EQUIPARAÇÃO:</strong>
+        <span style="color: #c0392b"
+          >Armas com sinais identificadores suprimidos são EQUIPARADAS a armas
+          de uso restrito!</span
+        >
+      </div>
+
+      <h3>🔸 Armas Inaptas vs Funcionamento Imperfeito</h3>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Diferença Crucial para Prova</div>
+        <strong style="color: #0d47a1">Arma Inapta:</strong>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Não funciona (quebrada ou falta componente essencial) → </span
+        ><span style="color: green; font-weight: bold; font-size: 1.1em"
+          >CRIME IMPOSSÍVEL</span
+        ><br /><br />
+        <strong style="color: #0d47a1">Funcionamento Imperfeito:</strong>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Funciona às vezes → </span
+        ><span style="color: red; font-weight: bold; font-size: 1.1em"
+          >HÁ CRIME</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ STJ - Informativo 544</div>
+        <span style="color: #bf360c; font-weight: bold"
+          >Demonstrada por laudo pericial a INAPTIDÃO da arma de fogo para o
+          disparo, é ATÍPICA a conduta de portar ou possuir arma de fogo,
+          tratando-se de crime impossível pela ineficácia absoluta do
+          meio.</span
+        >
+      </div>
+
+      <!-- SINARM -->
+      <h2>🏛️ 2. SINARM - Sistema Nacional de Armas</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 1º</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >O Sistema Nacional de Armas – Sinarm, instituído no Ministério da
+          Justiça, no âmbito da Polícia Federal, tem circunscrição em todo o
+          território nacional.</span
+        >
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910">🎯 AOCP cobra muito:</strong>
+        <span style="color: #856404; font-weight: bold"
+          >Distinção entre SINARM e SIGMA</span
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>
+            <strong style="color: #0d47a1">SINARM (Polícia Federal):</strong>
+            Cadastra armas civis e de órgãos de segurança pública (exceto Forças
+            Armadas e PMs)
+          </li>
+          <li>
+            <strong style="color: #b71c1c">SIGMA (Exército):</strong> Cadastra
+            armas das Forças Armadas, Polícias Militares e Bombeiros Militares
+          </li>
+        </ul>
+      </div>
+
+      <h3>🔸 Competências do SINARM (Art. 2º)</h3>
+
+      <ol class="lista-colorida">
+        <li>
+          Identificar características e propriedade de armas de fogo mediante
+          cadastro
+        </li>
+        <li>Cadastrar armas produzidas, importadas e vendidas no País</li>
+        <li>Cadastrar autorizações de porte expedidas pela PF</li>
+        <li>Cadastrar transferências de propriedade, extravio, furto, roubo</li>
+        <li>Cadastrar modificações nas características da arma</li>
+        <li>Integrar acervos policiais</li>
+        <li>Cadastrar apreensões de armas</li>
+        <li>Cadastrar armeiros e conceder licença para atividade</li>
+        <li>
+          Cadastrar produtores, atacadistas, varejistas, exportadores e
+          importadores
+        </li>
+        <li>Cadastrar identificação do cano (raiamento)</li>
+      </ol>
+
+      <!-- REGISTRO -->
+      <h2>📝 3. Do Registro</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 3º</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >É <span style="color: #e74c3c; font-size: 1.2em">OBRIGATÓRIO</span> o
+          registro de arma de fogo no órgão competente.</span
+        >
+      </div>
+
+      <h3>🔸 Requisitos para Aquisição (Art. 4º)</h3>
+
+      <ul class="lista-colorida-ul">
+        <li>Declaração de efetiva necessidade</li>
+        <li>
+          Comprovação de idoneidade (certidões negativas Federal, Estadual,
+          Militar e Eleitoral)
+        </li>
+        <li>Documento de ocupação lícita e residência certa</li>
+        <li>Capacidade técnica</li>
+        <li>Aptidão psicológica</li>
+      </ul>
+
+      <div class="atencao">
+        <strong style="color: #138496"
+          >📅 Validade do CRAF (Decreto 11.615/23):</strong
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>
+            <span style="color: #9c27b0">3 anos:</span> CAC (Colecionadores,
+            Atiradores, Caçadores)
+          </li>
+          <li>
+            <span style="color: #2e7d32">5 anos:</span> Posse de arma de fogo ou
+            caça de subsistência
+          </li>
+          <li>
+            <span style="color: #d84315">Indeterminado:</span> Integrantes
+            ativos de instituições de segurança
+          </li>
+        </ul>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ STJ - Informativo 572</div>
+        <strong style="color: #bf360c; font-weight: bold"
+          >NÃO configura crime</strong
+        >
+        <span style="color: #6d4c41; font-weight: bold"
+          >a posse de arma com registro VENCIDO! É mera irregularidade
+          administrativa. Exige-se dolo no registro, e quem já registrou não tem
+          dolo de possuir ilegalmente.</span
+        >
+      </div>
+
+      <!-- CRIMES -->
+      <h2>⚖️ 4. DOS CRIMES</h2>
+
+      <div class="importante">
+        <strong style="color: #721c24"
+          >🎯 Características Gerais (AOCP adora cobrar):</strong
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>
+            Bem jurídico tutelado:
+            <strong style="color: #e74c3c; font-size: 1.1em"
+              >INCOLUMIDADE PÚBLICA</strong
+            >
+          </li>
+          <li>
+            Crimes de
+            <strong style="color: #e74c3c; font-size: 1.1em"
+              >PERIGO ABSTRATO</strong
+            >
+            (presumido)
+          </li>
+          <li>Não exige demonstração de ofensividade real</li>
+          <li>
+            Punidos a título de
+            <strong style="color: #e74c3c; font-size: 1.1em">DOLO</strong>
+            (exceto omissão de cautela)
+          </li>
+        </ul>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          ❓ O crime de porte ilegal de arma de fogo é de perigo concreto?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO! É crime de perigo ABSTRATO. Não se exige demonstração de
+          ofensividade real para consumação (Jurisprudência pacificada STF/STJ).
+        </div>
+      </div>
+
+      <!-- CRIME 1: POSSE IRREGULAR -->
+      <div class="crime-titulo">
+        🔫 Crime 1: Posse Irregular de Arma de Fogo de Uso Permitido
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 12</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Possuir ou manter sob sua guarda arma de fogo, acessório ou munição,
+          de uso permitido, em desacordo com determinação legal ou regulamentar,
+          no interior de sua residência ou dependência desta, ou, ainda no seu
+          local de trabalho, desde que seja o titular ou o responsável legal do
+          estabelecimento ou empresa.</span
+        >
+        <div class="pena">Pena: Detenção de 1 a 3 anos + multa</div>
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910; font-size: 1.2em"
+          >⚡ POSSE = INTRA MUROS</strong
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>Interior da residência</li>
+          <li>Dependências da residência</li>
+          <li>Local de trabalho (se titular/responsável)</li>
+        </ul>
+      </div>
+
+      <div class="importante">
+        🚨 <strong style="color: #721c24">PEGADINHAS COMUNS DA AOCP:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>
+            Arma na casa da namorada =
+            <strong style="color: #e74c3c">PORTE</strong> (não posse)
+          </li>
+          <li>
+            Arma no táxi/caminhão =
+            <strong style="color: #e74c3c">PORTE</strong> (não posse)
+          </li>
+          <li>
+            Boleia do caminhão =
+            <strong style="color: #e74c3c">PORTE</strong> (STJ: não é casa para
+            fins penais)
+          </li>
+        </ul>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ STJ - Múltiplas Armas</div>
+        <span style="color: #bf360c; font-weight: bold"
+          >Se as armas forem do MESMO TIPO (todas uso permitido ou todas uso
+          restrito) = <strong style="color: #4caf50">CRIME ÚNICO</strong><br />
+          Se forem de TIPOS DIFERENTES (algumas permitidas + algumas restritas)
+          = <strong style="color: #f44336">CONCURSO FORMAL</strong></span
+        >
+      </div>
+
+      <h3>🔸 Abolitio Criminis Temporária</h3>
+
+      <div class="atencao">
+        <strong style="color: #9c27b0">1ª Fase:</strong>
+        <span style="color: #0c5460; font-weight: bold"
+          >2003 até 23/10/2005 → Armas de uso permitido E restrito</span
+        ><br />
+        <strong style="color: #9c27b0">2ª Fase:</strong>
+        <span style="color: #0c5460; font-weight: bold"
+          >23/10/2005 até 31/12/2009 → Apenas armas de uso permitido</span
+        ><br />
+        <strong style="color: #e74c3c">⚠️ IMPORTANTE:</strong>
+        <span style="color: #0c5460; font-weight: bold"
+          >Abrange apenas POSSE, nunca PORTE!</span
+        >
+      </div>
+
+      <div class="sumula">
+        <div class="sumula-numero">Súmula 513-STJ</div>
+        <span style="color: #6a1b9a; font-weight: bold"
+          >A abolitio criminis temporária prevista na Lei 10.826/2003 aplica-se
+          ao crime de posse de arma de fogo de uso permitido com numeração
+          raspada, praticado SOMENTE até 23/10/2005.</span
+        >
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          ❓ Registro vencido configura crime de posse irregular?
+        </div>
+        <div class="questao-resposta">
+          ❌ NÃO! Segundo STJ (Info 572), é mera irregularidade administrativa.
+          Não há dolo, pois o agente já havia registrado a arma.
+        </div>
+      </div>
+
+      <!-- CRIME 2: OMISSÃO DE CAUTELA -->
+      <div class="crime-titulo">⚠️ Crime 2: Omissão de Cautela</div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 13</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Deixar de observar as cautelas necessárias para impedir que
+          <strong style="color: #e74c3c">menor de 18 anos</strong> ou pessoa
+          portadora de
+          <strong style="color: #e74c3c">deficiência mental</strong> se apodere
+          de arma de fogo que esteja sob sua posse ou que seja de sua
+          propriedade.</span
+        >
+        <div class="pena">Pena: Detenção de 1 a 2 anos + multa</div>
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910">🎯 Características Especiais:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>
+            <span style="color: #e74c3c; font-size: 1.1em"
+              >ÚNICO crime CULPOSO</span
+            >
+            do Estatuto
+          </li>
+          <li>
+            <span style="color: #e74c3c; font-size: 1.1em"
+              >ÚNICO crime de menor potencial ofensivo</span
+            >
+            (pena máxima 2 anos)
+          </li>
+          <li>Crime PRÓPRIO (só o dono/proprietário)</li>
+          <li>Crime MATERIAL (consuma com o apoderamento)</li>
+          <li>Aplica-se apenas à ARMA DE FOGO (não munição/acessório)</li>
+        </ul>
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 13, Parágrafo Único</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Proprietário/diretor de empresa de segurança que deixar de registrar
+          BO e comunicar à PF perda, furto, roubo ou extravio de
+          arma/acessório/munição nas primeiras 24h.</span
+        >
+        <div class="pena">Mesmas penas do caput</div>
+      </div>
+
+      <div class="atencao">
+        ⏰ <strong style="color: #138496">Crime a Prazo:</strong>
+        <span style="color: #0c5460; font-weight: bold"
+          >24h contam a partir do CONHECIMENTO do fato pelo
+          proprietário/diretor.</span
+        >
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          ❓ Particular que não comunica extravio de arma comete omissão de
+          cautela?
+        </div>
+        <div class="questao-resposta">
+          ❌ NÃO! O parágrafo único se aplica apenas a proprietários/diretores
+          de empresas de segurança (crime próprio).
+        </div>
+      </div>
+
+      <!-- CRIME 3: PORTE ILEGAL -->
+      <div class="crime-titulo">
+        🔫 Crime 3: Porte Ilegal de Arma de Fogo de Uso Permitido
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 14</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Portar, deter, adquirir, fornecer, receber, ter em depósito,
+          transportar, ceder, ainda que gratuitamente, emprestar, remeter,
+          empregar, manter sob guarda ou ocultar arma de fogo, acessório ou
+          munição, de uso permitido, sem autorização e em desacordo com
+          determinação legal ou regulamentar.</span
+        >
+        <div class="pena">Pena: Reclusão de 2 a 4 anos + multa</div>
+      </div>
+
+      <div class="importante">
+        🚨
+        <strong style="color: #721c24; font-size: 1.2em"
+          >PORTE = EXTRA MUROS</strong
+        >
+        <span style="color: #c0392b; font-weight: bold"
+          >(fora da residência/trabalho)</span
+        >
+      </div>
+
+      <h3>🔸 Questões Polêmicas - AOCP ADORA!</h3>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ Arma Desmuniciada</div>
+        <strong style="color: #bf360c; font-weight: bold">HÁ CRIME!</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >STF/STJ: Crime de perigo abstrato, basta o porte. Objeto jurídico é
+          segurança pública e paz social, não incolumidade física.</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ Arma Inapta</div>
+        <strong style="color: #bf360c; font-weight: bold">NÃO HÁ CRIME!</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >Crime impossível por ineficácia absoluta do meio (STJ Info
+          544).</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ Funcionamento Imperfeito</div>
+        <strong style="color: #bf360c; font-weight: bold">HÁ CRIME!</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >STF: Não afasta tipicidade material do crime.</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">
+          ⚖️ Legítima Defesa com Porte Ilegal
+        </div>
+        <strong style="color: #bf360c; font-weight: bold">NÃO HÁ CRIME!</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >STF (HC 111488/MG): Conduta típica, mas não ilícita.</span
+        >
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          ❓ Munição desacompanhada de arma configura porte ilegal?
+        </div>
+        <div class="questao-resposta">
+          ✅ SIM! O art. 14 prevê expressamente "arma de fogo, ACESSÓRIO OU
+          MUNIÇÃO".
+        </div>
+      </div>
+
+      <h3>🔸 Princípio da Consunção</h3>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Absorção de Crimes</div>
+        <strong style="color: #1565c0">Regra:</strong>
+        <span style="color: #0d47a1; font-weight: bold"
+          >Porte absorvido por crimes mais graves (homicídio, roubo)</span
+        ><br />
+        <strong style="color: #c62828">Exceção:</strong>
+        <span style="color: #b71c1c; font-weight: bold"
+          >Contextos fáticos distintos → Concurso de crimes</span
+        >
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #138496">💡 Dica AOCP:</strong>
+        <span style="color: #0c5460; font-weight: bold"
+          >Só responda "concurso de crimes" se a questão deixar CLARO que são
+          contextos fáticos diferentes/autônomos!</span
+        >
+      </div>
+
+      <!-- CRIME 4: DISPARO -->
+      <div class="crime-titulo">💥 Crime 4: Disparo de Arma de Fogo</div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 15</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Disparar arma de fogo ou acionar munição em:</span
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>Lugar habitado ou suas adjacências</li>
+          <li>Via pública</li>
+          <li>Em direção a via pública</li>
+        </ul>
+        <strong style="color: #e74c3c; font-weight: bold"
+          >Desde que não tenha como finalidade a prática de outro crime.</strong
+        >
+        <div class="pena">Pena: Reclusão de 2 a 4 anos + multa</div>
+      </div>
+
+      <div class="importante">
+        🚨
+        <strong style="color: #721c24; font-size: 1.1em"
+          >SUBSIDIARIEDADE EXPRESSA:</strong
+        >
+        <span style="color: #c0392b; font-weight: bold"
+          >Se o disparo for para cometer crime mais grave, não responde pelo
+          art. 15!</span
+        >
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplos Práticos</div>
+        <strong style="color: #1565c0">Disparo para matar:</strong>
+        <span style="color: #0d47a1; font-weight: bold"
+          >Homicídio (ou tentativa) absorve disparo</span
+        ><br />
+        <strong style="color: #1565c0">Disparo em assalto:</strong>
+        <span style="color: #0d47a1; font-weight: bold"
+          >Roubo absorve disparo</span
+        ><br />
+        <strong style="color: #1565c0">Disparo "para o alto":</strong>
+        <span style="color: #0d47a1; font-weight: bold">Crime do art. 15</span>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #138496">⚠️ Lei 13.060/2014:</strong>
+        <span style="color: #0c5460; font-weight: bold"
+          >NÃO é legítimo o uso de arma de fogo:</span
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>Contra pessoa em fuga desarmada</li>
+          <li>
+            Contra veículo que furou bloqueio (exceto se houver risco de morte)
+          </li>
+        </ul>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">❓ Vários disparos = vários crimes?</div>
+        <div class="questao-resposta">
+          ❌ NÃO! Crime único, mas a quantidade influencia na pena.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">❓ Disparo em local ermo é crime?</div>
+        <div class="questao-resposta">
+          ❌ REGRA: Atípico (não está nos locais do art. 15). Pode configurar
+          outro crime (ameaça, etc.).
+        </div>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ Concurso com Porte</div>
+        <strong style="color: #bf360c">Regra:</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >Disparo absorve porte</span
+        ><br />
+        <strong style="color: #bf360c">Exceção:</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >STJ admite concurso se contextos fáticos AUTÔNOMOS</span
+        >
+      </div>
+
+      <!-- CRIME 5: POSSE/PORTE USO RESTRITO -->
+      <div class="crime-titulo">
+        🚨 Crime 5: Posse ou Porte de Arma de Fogo de Uso Restrito
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 16 (Caput)</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Possuir, deter, portar, adquirir, fornecer, receber, ter em depósito,
+          transportar, ceder, ainda que gratuitamente, emprestar, remeter,
+          empregar, manter sob guarda ou ocultar arma de fogo, acessório ou
+          munição de uso restrito, sem autorização e em desacordo com
+          determinação legal ou regulamentar.</span
+        >
+        <div class="pena">Pena: Reclusão de 3 a 6 anos + multa</div>
+      </div>
+
+      <h3>🔸 Condutas Equiparadas (Art. 16, §1º)</h3>
+
+      <div class="artigo">
+        <div class="artigo-numero">Inciso I - Raspagem</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Suprimir ou alterar marca, numeração ou qualquer sinal de
+          identificação de arma de fogo ou artefato.</span
+        >
+        <div class="pena">Pena: 3 a 6 anos + multa</div>
+      </div>
+
+      <div class="importante">
+        🚨
+        <strong style="color: #721c24; font-size: 1.1em"
+          >Arma .38 raspada</strong
+        >
+        <span style="color: #c0392b; font-weight: bold"
+          >= Art. 16 (uso restrito), NÃO art. 14!</span
+        >
+      </div>
+
+      <div class="sumula">
+        <div class="sumula-numero">Súmula 668-STJ</div>
+        <span style="color: #6a1b9a; font-weight: bold"
+          >NÃO é hediondo o delito de porte/posse de arma de uso PERMITIDO,
+          ainda que com numeração raspada.</span
+        >
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Inciso II - Modificação</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Modificar características de arma para torná-la equivalente a uso
+          proibido/restrito ou dificultar identificação por autoridade policial,
+          perito ou juiz.</span
+        >
+        <div class="pena">Pena: 3 a 6 anos + multa</div>
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910">💡 Elemento Subjetivo:</strong>
+        <span style="color: #856404; font-weight: bold"
+          >Especial fim de agir (dificultar/induzir a erro)</span
+        >
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">
+          Inciso III - Artefatos Explosivos/Incendiários
+        </div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Possuir, deter, fabricar ou empregar artefato explosivo ou
+          incendiário, sem autorização.</span
+        >
+        <div class="pena">Pena: 3 a 6 anos + multa</div>
+      </div>
+
+      <div class="exemplo">
+        <div class="exemplo-titulo">📌 Exemplos</div>
+        <strong style="color: #4caf50">✅ Configura crime:</strong>
+        <span style="color: #0d47a1; font-weight: bold"
+          >Granada, coquetel molotov, dinamite</span
+        ><br />
+        <strong style="color: #f44336">❌ NÃO configura:</strong>
+        <span style="color: #0d47a1; font-weight: bold"
+          >Granada de gás lacrimogêneo/pimenta (STJ: sem capacidade
+          destrutiva)</span
+        >
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Inciso IV - Numeração Raspada</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Portar, possuir, adquirir, transportar ou fornecer arma com numeração
+          raspada, suprimida ou adulterada.</span
+        >
+        <div class="pena">Pena: 3 a 6 anos + multa</div>
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ STJ</div>
+        <span style="color: #bf360c; font-weight: bold"
+          >Descoberta de PARTE da numeração suprimida NÃO descaracteriza o
+          crime. Continua art. 16!</span
+        >
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Inciso V - Fornecimento a Menor</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Vender, entregar ou fornecer, ainda que gratuitamente, arma,
+          acessório, munição ou explosivo a criança ou adolescente.</span
+        >
+        <div class="pena">Pena: 3 a 6 anos + multa</div>
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Inciso VI - Munição</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Produzir, recarregar ou reciclar, sem autorização, ou adulterar
+          munição ou explosivo.</span
+        >
+        <div class="pena">Pena: 3 a 6 anos + multa</div>
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 16, §2º - Arma de Uso PROIBIDO</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Se as condutas envolverem arma de uso PROIBIDO.</span
+        >
+        <div class="pena">Pena: Reclusão de 4 a 12 anos + multa</div>
+      </div>
+
+      <div class="importante">
+        🚨
+        <strong style="color: #721c24; font-size: 1.2em"
+          >CRIME HEDIONDO (Lei 13.964/19):</strong
+        >
+        <span style="color: #c0392b; font-weight: bold"
+          >Art. 16 §2º (uso proibido), Art. 17 e Art. 18</span
+        >
+      </div>
+
+      <!-- CRIME 6: COMÉRCIO ILEGAL -->
+      <div class="crime-titulo">
+        💰 Crime 6: Comércio Ilegal de Arma de Fogo
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 17</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Adquirir, alugar, receber, transportar,
+          <strong style="color: #e74c3c">conduzir</strong>, ocultar, ter em
+          depósito, desmontar, montar, remontar, adulterar, vender, expor à
+          venda, ou de qualquer forma utilizar, em proveito próprio ou alheio,
+          no exercício de atividade comercial ou industrial, arma de fogo,
+          acessório ou munição, sem autorização.</span
+        >
+        <div class="pena">Pena: Reclusão de 4 a 8 anos + multa</div>
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910">🎯 Elemento Especial:</strong>
+        <span style="color: #856404; font-weight: bold; font-size: 1.1em"
+          >"No exercício de atividade comercial ou industrial"</span
+        >
+      </div>
+
+      <!-- CRIME 7: TRÁFICO -->
+      <div class="crime-titulo">
+        🌐 Crime 7: Tráfico Internacional de Arma de Fogo
+      </div>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 18</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Importar, exportar, favorecer entrada ou saída do território
+          nacional, a qualquer título, de arma de fogo, acessório ou munição,
+          sem autorização.</span
+        >
+        <div class="pena">Pena: Reclusão de 4 a 8 anos + multa</div>
+      </div>
+
+      <!-- CAUSA DE AUMENTO -->
+      <h2>⬆️ 5. Causa de Aumento de Pena</h2>
+
+      <div class="artigo">
+        <div class="artigo-numero">Art. 20</div>
+        <span style="color: #2c3e50; font-weight: bold"
+          >Nos crimes dos arts. 14, 15, 16, 17 e 18, a pena é
+          <span style="color: #e74c3c; font-size: 1.2em"
+            >AUMENTADA DA METADE</span
+          >
+          se:</span
+        >
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>
+            <strong style="color: #9c27b0">I -</strong> Praticado por integrante
+            dos órgãos/empresas dos arts. 6º, 7º e 8º (Forças Armadas, Segurança
+            Pública, empresas de segurança)
+          </li>
+          <li>
+            <strong style="color: #9c27b0">II -</strong> Reincidente específico
+            em crimes dessa natureza
+          </li>
+        </ul>
+      </div>
+
+      <!-- JURISPRUDÊNCIA IMPORTANTE -->
+      <h2>⚖️ 6. Jurisprudência Essencial para AOCP</h2>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">
+          ⚖️ Princípio da Insignificância - Munição
+        </div>
+        <strong style="color: #bf360c; font-weight: bold"
+          >STF (RHC 143.449):</strong
+        >
+        <span style="color: #6d4c41; font-weight: bold"
+          >Aplicável à posse de UMA munição desacompanhada de arma</span
+        ><br />
+        <strong style="color: #bf360c; font-weight: bold">STJ:</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >8 munições sem arma → Aplicável</span
+        ><br />
+        <strong style="color: #bf360c; font-weight: bold">MAS:</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >NÃO se aplica quando acompanhado de outros crimes (ex: tráfico de
+          drogas)</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ Guardas Municipais</div>
+        <strong style="color: #bf360c; font-weight: bold"
+          >STF (ADC 38, ADI 5538, ADI 5948):</strong
+        >
+        <span style="color: #6d4c41; font-weight: bold"
+          >TODOS os guardas municipais têm direito a porte, independentemente do
+          número de habitantes do município. Inconstitucional a restrição aos
+          municípios maiores.</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">
+          ⚖️ Fiança (DECLARADO INCONSTITUCIONAL)
+        </div>
+        <span style="color: #bf360c; font-weight: bold"
+          >STF declarou INCONSTITUCIONAIS os dispositivos que proibiam fiança
+          (art. 14 parágrafo único, art. 16 parágrafo único, art. 21).</span
+        >
+      </div>
+
+      <div class="jurisprudencia">
+        <div class="jurisprudencia-titulo">⚖️ Porte + Outro Crime</div>
+        <strong style="color: #bf360c">Regra:</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >Porte absorvido pelo crime-fim (consunção)</span
+        ><br />
+        <strong style="color: #bf360c">Exceção:</strong>
+        <span style="color: #6d4c41; font-weight: bold"
+          >Contextos fáticos autônomos → Concurso de crimes</span
+        >
+      </div>
+
+      <!-- QUESTÕES AOCP -->
+      <h2>📝 7. Questões Estilo AOCP com Respostas</h2>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          1. O SINARM é responsável pelo cadastro de todas as armas de fogo no
+          território nacional, incluindo as das Forças Armadas e Polícias
+          Militares?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. O SINARM cadastra armas civis e de órgãos de segurança
+          pública. Armas das Forças Armadas, PM e Bombeiros são cadastradas no
+          SIGMA (Exército).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          2. O crime de posse irregular de arma de fogo previsto no art. 12 é
+          considerado crime de menor potencial ofensivo?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. Pena de 1 a 3 anos (NÃO é menor potencial ofensivo, que
+          exige máximo de 2 anos). O único crime de menor potencial é a omissão
+          de cautela (art. 13).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          3. Possuir arma de fogo com registro vencido em sua residência
+          configura o crime do art. 12?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. Segundo STJ (Info 572), é mera irregularidade
+          administrativa. Não há dolo, pois o agente já procedeu ao registro.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          4. O porte de arma de fogo desmuniciada é conduta atípica?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. HÁ CRIME! É crime de perigo abstrato. Basta o porte para
+          consumação. Objeto jurídico é segurança pública e paz social
+          (STF/STJ).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          5. Arma de fogo inapta para disparo configura crime impossível?
+        </div>
+        <div class="questao-resposta">
+          ✅ CORRETO. STJ (Info 544): Demonstrada inaptidão por laudo, é atípica
+          a conduta (crime impossível por ineficácia absoluta do meio).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          6. O crime de disparo de arma de fogo (art. 15) tem natureza
+          subsidiária?
+        </div>
+        <div class="questao-resposta">
+          ✅ CORRETO. O próprio artigo prevê "desde que não tenha como
+          finalidade a prática de outro crime" (subsidiariedade expressa).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          7. Disparar várias vezes configura concurso de crimes?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. Crime único, independente do número de disparos. A
+          quantidade influencia na dosimetria da pena.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          8. Arma de uso permitido com numeração raspada equipara-se a arma de
+          uso restrito?
+        </div>
+        <div class="questao-resposta">
+          ✅ CORRETO. Responde pelo art. 16, §1º, IV (equiparação). Mas NÃO é
+          crime hediondo (Súmula 668-STJ).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          9. O crime de omissão de cautela (art. 13) é punido a título de dolo?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. É o ÚNICO crime CULPOSO do Estatuto do Desarmamento.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          10. Granada de gás lacrimogêneo configura o crime do art. 16, §1º, III
+          (artefato explosivo)?
+        </div>
+        <div class="questao-resposta">
+          ❌ ERRADO. STJ: Granada de gás lacrimogêneo e pimenta NÃO têm
+          capacidade destrutiva, logo NÃO são artefatos explosivos.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          11. Encontradas várias armas de uso permitido na residência, responde
+          por quantos crimes?
+        </div>
+        <div class="questao-resposta">
+          ✅ CRIME ÚNICO. STJ: Se do mesmo tipo (todas permitidas ou todas
+          restritas), crime único. Quantidade influencia na pena. Se tipos
+          diferentes (permitidas + restritas) → Concurso formal.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          12. É possível aplicar princípio da insignificância no porte de
+          munição?
+        </div>
+        <div class="questao-resposta">
+          ✅ POSSÍVEL. STF/STJ: Caso a caso. 1 munição sem arma → aplicável.
+          MAS: NÃO se aplica se houver outros crimes (ex: tráfico de drogas).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          13. Agir em legítima defesa portando arma ilegalmente configura crime?
+        </div>
+        <div class="questao-resposta">
+          ❌ NÃO. STF (HC 111488): Conduta típica, mas NÃO ilícita (excludente
+          de ilicitude).
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          14. Conduzir arma no exercício de atividade comercial sem autorização
+          configura qual crime?
+        </div>
+        <div class="questao-resposta">
+          ✅ Art. 17 - Comércio ilegal de arma de fogo (reclusão 4 a 8 anos). O
+          verbo "conduzir" está expressamente previsto no artigo.
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="questao-pergunta">
+          15. Os crimes dos arts. 16 (§2º - uso proibido), 17 e 18 são
+          considerados hediondos?
+        </div>
+        <div class="questao-resposta">
+          ✅ CORRETO. Incluídos no rol de crimes hediondos pela Lei 13.964/2019
+          (Pacote Anticrime).
+        </div>
+      </div>
+
+      <!-- TABELA RESUMO CRIMES -->
+      <h2>📊 8. Tabela Resumo dos Crimes</h2>
+
+      <table class="tabela-comparativa">
+        <tr>
+          <th>Crime</th>
+          <th>Artigo</th>
+          <th>Pena</th>
+          <th>Características</th>
+        </tr>
+        <tr>
+          <td>Posse Irregular (Uso Permitido)</td>
+          <td>Art. 12</td>
+          <td>Detenção 1-3 anos</td>
+          <td>Intra muros / Doloso</td>
+        </tr>
+        <tr>
+          <td>Omissão de Cautela</td>
+          <td>Art. 13</td>
+          <td>Detenção 1-2 anos</td>
+          <td>CULPOSO / Menor potencial / Próprio</td>
+        </tr>
+        <tr>
+          <td>Porte Ilegal (Uso Permitido)</td>
+          <td>Art. 14</td>
+          <td>Reclusão 2-4 anos</td>
+          <td>Extra muros / Doloso</td>
+        </tr>
+        <tr>
+          <td>Disparo de Arma</td>
+          <td>Art. 15</td>
+          <td>Reclusão 2-4 anos</td>
+          <td>Subsidiário expresso</td>
+        </tr>
+        <tr>
+          <td>Posse/Porte (Uso Restrito)</td>
+          <td>Art. 16</td>
+          <td>Reclusão 3-6 anos</td>
+          <td>Equiparações no §1º</td>
+        </tr>
+        <tr>
+          <td>Posse/Porte (Uso PROIBIDO)</td>
+          <td>Art. 16 §2º</td>
+          <td>Reclusão 4-12 anos</td>
+          <td>HEDIONDO</td>
+        </tr>
+        <tr>
+          <td>Comércio Ilegal</td>
+          <td>Art. 17</td>
+          <td>Reclusão 4-8 anos</td>
+          <td>HEDIONDO / Atividade comercial</td>
+        </tr>
+        <tr>
+          <td>Tráfico Internacional</td>
+          <td>Art. 18</td>
+          <td>Reclusão 4-8 anos</td>
+          <td>HEDIONDO / Transposição fronteira</td>
+        </tr>
+      </table>
+
+      <!-- DICAS FINAIS -->
+      <h2>💡 9. Dicas Finais para AOCP</h2>
+
+      <div class="importante">
+        <strong style="color: #721c24">🎯 Temas que a AOCP MAIS COBRA:</strong>
+        <ol class="lista-colorida" style="margin-top: 15px">
+          <li>Diferença entre POSSE e PORTE</li>
+          <li>Arma desmuniciada (HÁ CRIME)</li>
+          <li>Registro vencido (NÃO é crime na posse)</li>
+          <li>Arma inapta vs funcionamento imperfeito</li>
+          <li>SINARM vs SIGMA</li>
+          <li>Crime de perigo abstrato</li>
+          <li>Omissão de cautela (único culposo)</li>
+          <li>Subsidiariedade do disparo</li>
+          <li>Equiparação (numeração raspada)</li>
+          <li>Crimes hediondos (arts. 16 §2º, 17, 18)</li>
+        </ol>
+      </div>
+
+      <div class="destaque">
+        <strong style="color: #d68910">⚡ Pegadinhas Clássicas:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>Confundir posse com porte</li>
+          <li>Achar que arma desmuniciada não é crime</li>
+          <li>Achar que registro vencido é crime (na posse)</li>
+          <li>Confundir SINARM com SIGMA</li>
+          <li>Achar que todos os crimes são dolosos (omissão é culposa)</li>
+          <li>Esquecer que .38 raspada = uso restrito (art. 16)</li>
+        </ul>
+      </div>
+
+      <div class="atencao">
+        <strong style="color: #138496">📚 Estude com Atenção Redobrada:</strong>
+        <ul class="lista-colorida-ul" style="margin-top: 15px">
+          <li>Definições (arma de fogo, munição, acessório)</li>
+          <li>Competências do SINARM</li>
+          <li>Requisitos para aquisição (art. 4º)</li>
+          <li>Cada crime específico (arts. 12 a 18)</li>
+          <li>Jurisprudência recente (STF/STJ)</li>
+          <li>Súmulas (513-STJ e 668-STJ)</li>
+        </ul>
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 50px;
+          padding: 30px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border-radius: 15px;
+        "
+      >
+        <h2 style="color: white; border: none; margin: 0; font-weight: bold">
+          🎯 Bons Estudos!
+        </h2>
+        <p style="margin-top: 15px; font-size: 1.1em; font-weight: bold">
+          Material elaborado especialmente para concursos AOCP - Carreiras
+          Policiais de Minas Gerais
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

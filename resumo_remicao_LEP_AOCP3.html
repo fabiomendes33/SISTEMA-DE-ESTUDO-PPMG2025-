@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remição | LEP | AOCP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 600; /* TEXTO EM NEGRITO */
+      }
+      .container {
+        max-width: 950px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .header {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: white;
+        padding: 35px;
+        margin: -40px -40px 35px -40px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 38px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+      }
+      /* CLASSE ESPECIAL PARA ARTIGOS - AZUL ESCURO */
+      .artigo {
+        color: #1e3a8a !important;
+        font-weight: 900;
+        background: #dbeafe;
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 3px solid #1e40af;
+        font-size: 105%;
+      }
+      /* CLASSE PARA NÚMEROS IMPORTANTES - AZUL ESCURO */
+      .numero-importante {
+        color: #1e3a8a !important;
+        font-weight: 900;
+        font-size: 140%;
+        background: #dbeafe;
+        padding: 3px 8px;
+        border-radius: 5px;
+        border: 2px solid #1e40af;
+      }
+      /* CLASSE PARA SÚMULAS - ROXO ESCURO */
+      .sumula {
+        color: #581c87 !important;
+        font-weight: 900;
+        background: #f3e8ff;
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 3px solid #7c3aed;
+        font-size: 105%;
+      }
+      .stats {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border: 3px solid #f59e0b;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+      }
+      .stats .big-number {
+        font-size: 72px;
+        font-weight: 900;
+        color: #f59e0b;
+        line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #92400e;
+        font-size: 28px;
+        margin: 35px 0 20px 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-left: 8px solid #f59e0b;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+        font-weight: 900;
+      }
+      h3 {
+        font-weight: 900;
+        font-size: 22px;
+      }
+      .formula-box {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        border: 5px solid #3b82f6;
+        padding: 35px;
+        border-radius: 15px;
+        margin: 25px 0;
+        box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
+      }
+      .formula-item {
+        background: white;
+        padding: 30px;
+        margin: 20px 0;
+        border-radius: 12px;
+        border-left: 8px solid;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-trabalho {
+        border-left-color: #10b981;
+      }
+      .formula-estudo {
+        border-left-color: #8b5cf6;
+      }
+      .tabela {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .tabela th {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: white;
+        padding: 20px;
+        font-size: 17px;
+        text-align: left;
+        font-weight: 900;
+      }
+      .tabela td {
+        padding: 18px;
+        border-bottom: 2px solid #e5e7eb;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .tabela tr:nth-child(even) {
+        background: #f9fafb;
+      }
+      .tabela tr:hover {
+        background: #fef3c7;
+      }
+      .sumulas-section {
+        background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+        border: 5px solid #7c3aed;
+        padding: 35px;
+        border-radius: 15px;
+        margin: 35px 0;
+        box-shadow: 0 8px 30px rgba(124, 58, 237, 0.3);
+      }
+      .sumula-item {
+        background: white;
+        padding: 25px;
+        margin: 20px 0;
+        border-radius: 12px;
+        border-left: 8px solid #7c3aed;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .sumula-item h4 {
+        color: #581c87;
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 900;
+      }
+      .pegadinhas {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border: 5px solid #dc2626;
+        padding: 35px;
+        border-radius: 15px;
+        margin: 35px 0;
+        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.3);
+      }
+      .pegadinhas h2 {
+        color: #991b1b;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+        padding: 0 0 20px 0;
+        border-bottom: 5px solid #fca5a5;
+      }
+      .pegadinha-item {
+        background: white;
+        padding: 25px;
+        margin: 18px 0;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        font-weight: 700;
+      }
+      .errado {
+        color: #dc2626;
+        font-weight: 900;
+        font-size: 17px;
+      }
+      .certo {
+        color: #16a34a;
+        font-weight: 900;
+        font-size: 17px;
+      }
+      .btn-print {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 900;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        margin: 20px 0;
+      }
+      .btn-print:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 35px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .container {
+          box-shadow: none;
+        }
+        .btn-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🟡 REMIÇÃO DE PENA</h1>
+        <p style="font-size: 20px; margin-top: 12px; font-weight: 700">
+          <span class="artigo">Arts. 126-130 LEP</span>
+        </p>
+        <div
+          style="
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-top: 10px;
+            backdrop-filter: blur(10px);
+            font-weight: 700;
+          "
+        >
+          📊 3º MAIS COBRADO AOCP (15% das questões)
+        </div>
+      </div>
+
+      <div class="stats">
+        <h2
+          style="
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            color: #92400e;
+          "
+        >
+          🥉 BRONZE MAS IMPORTANTE!
+        </h2>
+        <div class="big-number">15%</div>
+        <p
+          style="
+            font-size: 17px;
+            color: #92400e;
+            margin-top: 12px;
+            font-weight: 700;
+          "
+        >
+          <strong>Das questões LEP na AOCP são sobre REMIÇÃO!</strong><br />
+          <strong>AOCP AMA perguntar as fórmulas de cálculo!</strong>
+        </p>
+      </div>
+
+      <button class="btn-print" onclick="window.print()">
+        🖨️ IMPRIMIR ESTE RESUMO
+      </button>
+
+      <h2>📋 O que é Remição? (<span class="artigo">Art. 126 LEP</span>)</h2>
+      <div
+        style="
+          background: #e0f2fe;
+          padding: 30px;
+          border-radius: 12px;
+          border: 4px solid #0284c7;
+          margin: 25px 0;
+        "
+      >
+        <p
+          style="
+            font-size: 18px;
+            color: #0c4a6e;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="font-size: 22px">Remição</strong> é o
+          <strong>desconto de dias na pena</strong> pelo trabalho ou estudo do
+          preso.<br /><br />
+
+          <strong style="color: #1e3a8a; font-size: 20px">🎯 Objetivo:</strong>
+          <strong>Incentivar</strong> o trabalho e a educação durante o
+          cumprimento da pena.<br /><br />
+
+          <strong style="color: #1e3a8a; font-size: 20px">💡 Resultado:</strong>
+          <strong>Reduz</strong> o tempo total de prisão!
+        </p>
+      </div>
+
+      <h2>
+        ⚖️ As 2 Fórmulas de Remição (<span class="artigo">Art. 126 LEP</span>)
+      </h2>
+      <div class="formula-box">
+        <h3
+          style="
+            text-align: center;
+            color: #1e40af;
+            font-size: 30px;
+            margin-bottom: 30px;
+            font-weight: 900;
+          "
+        >
+          🔥 DECORE ESTAS FÓRMULAS!
+        </h3>
+
+        <div class="formula-item formula-trabalho">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 120px 1fr;
+              gap: 25px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: center">
+              <div style="font-size: 48px; margin-bottom: 5px">💼</div>
+              <div style="font-size: 16px; font-weight: 900; color: #10b981">
+                TRABALHO
+              </div>
+            </div>
+            <div>
+              <h4
+                style="
+                  color: #10b981;
+                  font-size: 24px;
+                  margin-bottom: 15px;
+                  font-weight: 900;
+                "
+              >
+                Remição por Trabalho
+              </h4>
+              <div
+                style="
+                  background: #d1fae5;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin: 15px 0;
+                  border: 3px solid #10b981;
+                "
+              >
+                <p
+                  style="
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: #065f46;
+                    text-align: center;
+                    line-height: 1.5;
+                  "
+                >
+                  <span class="numero-importante">3 DIAS</span>
+                  trabalhados<br />
+                  =<br />
+                  <span class="numero-importante">1 DIA</span> remido
+                </p>
+              </div>
+              <p
+                style="
+                  color: #374151;
+                  font-size: 16px;
+                  line-height: 1.8;
+                  font-weight: 700;
+                "
+              >
+                <strong><span class="artigo">Art. 126, caput LEP</span></strong
+                ><br /><br />
+                <strong>Jornada:</strong>
+                <span class="numero-importante">6-8 horas/dia</span><br />
+                <strong>Trabalho interno</strong> ou <strong>externo</strong> (a
+                partir do regime semiaberto)<br />
+                <strong>Remunera o preso:</strong> entre 3/4 do salário mínimo
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="formula-item formula-estudo">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 120px 1fr;
+              gap: 25px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: center">
+              <div style="font-size: 48px; margin-bottom: 5px">📚</div>
+              <div style="font-size: 16px; font-weight: 900; color: #8b5cf6">
+                ESTUDO
+              </div>
+            </div>
+            <div>
+              <h4
+                style="
+                  color: #8b5cf6;
+                  font-size: 24px;
+                  margin-bottom: 15px;
+                  font-weight: 900;
+                "
+              >
+                Remição por Estudo
+              </h4>
+              <div
+                style="
+                  background: #f3e8ff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin: 15px 0;
+                  border: 3px solid #8b5cf6;
+                "
+              >
+                <p
+                  style="
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: #581c87;
+                    text-align: center;
+                    line-height: 1.5;
+                  "
+                >
+                  <span class="numero-importante">12 HORAS</span> de estudo<br />
+                  =<br />
+                  <span class="numero-importante">1 DIA</span> remido
+                </p>
+              </div>
+              <p
+                style="
+                  color: #374151;
+                  font-size: 16px;
+                  line-height: 1.8;
+                  font-weight: 700;
+                "
+              >
+                <strong><span class="artigo">Art. 126, §1º LEP</span></strong
+                ><br /><br />
+                <strong>Jornada:</strong> mínimo
+                <span class="numero-importante">4 horas/dia</span><br />
+                <strong>Ensino fundamental, médio, superior</strong> ou
+                técnico<br />
+                <strong>Presencial</strong> ou à
+                <strong>distância</strong> (EAD)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+          padding: 30px;
+          border-radius: 15px;
+          border: 4px solid #f59e0b;
+          margin: 25px 0;
+        "
+      >
+        <h3
+          style="
+            color: #92400e;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: 900;
+          "
+        >
+          💡 MACETE PARA DECORAR
+        </h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          "
+        >
+          <div
+            style="
+              background: white;
+              padding: 25px;
+              border-radius: 12px;
+              text-align: center;
+              border: 4px solid #10b981;
+            "
+          >
+            <div style="font-size: 56px; margin-bottom: 15px">💼</div>
+            <strong style="color: #10b981; font-size: 20px; font-weight: 900"
+              >TRABALHO</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 40px">3 = 1</span
+            ><br />
+            <span style="font-size: 15px; color: #6b7280; font-weight: 700"
+              >3 dias = 1 remido</span
+            >
+          </div>
+          <div
+            style="
+              background: white;
+              padding: 25px;
+              border-radius: 12px;
+              text-align: center;
+              border: 4px solid #8b5cf6;
+            "
+          >
+            <div style="font-size: 56px; margin-bottom: 15px">📚</div>
+            <strong style="color: #8b5cf6; font-size: 20px; font-weight: 900"
+              >ESTUDO</strong
+            ><br />
+            <span class="numero-importante" style="font-size: 40px"
+              >12h = 1</span
+            ><br />
+            <span style="font-size: 15px; color: #6b7280; font-weight: 700"
+              >12 horas = 1 remido</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <h2>
+        🎓 Remição por Leitura (<span class="artigo"
+          >Portaria Conjunta 276/2012</span
+        >)
+      </h2>
+      <div
+        style="
+          background: #fef3c7;
+          padding: 25px;
+          border-radius: 12px;
+          border: 3px solid #f59e0b;
+          margin: 25px 0;
+        "
+      >
+        <p
+          style="
+            font-size: 17px;
+            color: #374151;
+            line-height: 2;
+            font-weight: 700;
+          "
+        >
+          <strong style="color: #92400e; font-size: 20px"
+            >Remição por leitura:</strong
+          >
+          <span class="numero-importante">1 livro/mês</span> =
+          <span class="numero-importante">4 dias</span> remidos<br /><br />
+
+          <strong>Requisitos:</strong><br />
+          ✅ <strong>Resenha do livro</strong> (prova de leitura)<br />
+          ✅ <strong>Máximo 12 livros/ano</strong> = 48 dias remidos/ano<br />
+          ✅ <strong>Obras literárias, científicas, filosóficas</strong
+          ><br /><br />
+
+          <span style="color: #dc2626; font-weight: 900"
+            >⚠️ NÃO está na LEP!</span
+          >
+          Está em <strong>Portaria</strong> (menos cobrado pela AOCP)
+        </p>
+      </div>
+
+      <h2>📊 Tabela Comparativa - Remição</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>ATIVIDADE</th>
+            <th>FÓRMULA</th>
+            <th>ARTIGO/NORMA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 900">💼 Trabalho</td>
+            <td style="background: #d1fae5; font-weight: 900">
+              <span class="numero-importante">3 dias</span> =
+              <span class="numero-importante">1 remido</span>
+            </td>
+            <td><span class="artigo">Art. 126, caput</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 900">📚 Estudo</td>
+            <td style="background: #f3e8ff; font-weight: 900">
+              <span class="numero-importante">12 horas</span> =
+              <span class="numero-importante">1 remido</span>
+            </td>
+            <td><span class="artigo">Art. 126, §1º</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 900">📖 Leitura</td>
+            <td style="background: #fef3c7; font-weight: 900">
+              <span class="numero-importante">1 livro</span> =
+              <span class="numero-importante">4 dias remidos</span>
+            </td>
+            <td>Portaria 276/2012</td>
+          </tr>
+          <tr style="background: #dbeafe">
+            <td style="font-weight: 900">🎨 Trabalho + Estudo</td>
+            <td style="font-weight: 900">PODE CUMULAR (1/3 do tempo a mais)</td>
+            <td><span class="artigo">Art. 126, §3º</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>
+        🚫 Falta Grave e Remição (<span class="artigo">Art. 127 LEP</span>)
+      </h2>
+      <div
+        style="
+          background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+          padding: 30px;
+          border-radius: 12px;
+          border: 4px solid #dc2626;
+          margin: 25px 0;
+        "
+      >
+        <h3
+          style="
+            color: #991b1b;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: 900;
+          "
+        >
+          ⚠️ CONSEQUÊNCIA DA FALTA GRAVE
+        </h3>
+        <div
+          style="
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 18px 0;
+          "
+        >
+          <p
+            style="
+              font-size: 18px;
+              color: #374151;
+              line-height: 2;
+              font-weight: 700;
+            "
+          >
+            <strong style="color: #dc2626; font-size: 22px"
+              >Falta grave praticada:</strong
+            ><br /><br />
+
+            <strong style="font-size: 20px"
+              >📉 PERDE até
+              <span class="numero-importante"
+                >1/3 dos dias remidos</span
+              ></strong
+            ><br /><br />
+
+            <strong>Cálculo:</strong><br />
+            ✅ <strong>Diretor do estabelecimento</strong> deve ouvir o preso<br />
+            ✅ <strong>Juiz decide</strong> quantos dias perde (até 1/3)<br />
+            ✅ <strong>Regressão de regime</strong> +
+            <strong>perda de dias</strong><br /><br />
+
+            <span class="errado">❌ NÃO perde TODOS os dias remidos!</span
+            ><br />
+            <span class="certo">✅ Perde ATÉ 1/3 (33,33%) dos dias</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- SEÇÃO DE SÚMULAS MAIS COBRADAS PELA AOCP -->
+      <div class="sumulas-section">
+        <h2
+          style="
+            text-align: center;
+            color: #581c87;
+            font-size: 32px;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            padding: 0;
+            font-weight: 900;
+          "
+        >
+          ⚖️ SÚMULAS AOCP - LEP/EXECUÇÃO PENAL
+        </h2>
+        <p
+          style="
+            text-align: center;
+            font-size: 18px;
+            color: #581c87;
+            margin-bottom: 30px;
+            font-weight: 700;
+          "
+        >
+          <strong
+            >🔥 TOP 15 SÚMULAS MAIS COBRADAS EM PROVAS POLÍCIA PENAL 🔥</strong
+          >
+        </p>
+
+        <div class="sumula-item" style="border: 4px solid #7c3aed">
+          <h4><span class="sumula">SÚMULA VINCULANTE 26 STF</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"Para efeito de progressão de regime no cumprimento de pena por
+              crime hediondo, ou equiparado, o juízo da execução observará a
+              inconstitucionalidade do art. 2º da Lei nº 8.072, de 25 de julho
+              de 1990, sem prejuízo de avaliar se o condenado preenche, ou não,
+              os requisitos objetivos e subjetivos do benefício, podendo
+              determinar, para tal fim, de modo fundamentado, a realização de
+              exame criminológico."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ✅ <strong>Exame criminológico NÃO é obrigatório</strong> para
+            progressão<br />
+            ✅ <strong>Juiz PODE determinar</strong> em decisão fundamentada<br />
+            ✅ <strong>Crime hediondo tem direito à progressão</strong
+            ><br /><br />
+
+            <span style="color: #dc2626; font-weight: 900"
+              >🚨 CAMPEÃ AOCP!</span
+            >
+            Cai em 60% das provas!
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 439 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"Admite-se o exame criminológico pelas peculiaridades do caso,
+              desde que em decisão motivada."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 REFORÇA:</strong> Exame
+            criminológico não é automático, precisa de
+            <strong>fundamentação</strong>
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 716 STF</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"Admite-se a progressão de regime de cumprimento da pena ou a
+              aplicação imediata de regime menos severo nela determinada, antes
+              do trânsito em julgado da sentença condenatória."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ✅ <strong>Pode progredir ANTES do trânsito</strong> em julgado<br />
+            ✅ <strong>Execução provisória</strong> da pena
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 441 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"A falta grave não interrompe o prazo para obtenção de livramento
+              condicional."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ✅ <strong>Falta grave:</strong> regride + perde até 1/3 de
+            remição<br />
+            ❌ <strong>MAS NÃO interrompe</strong> prazo para livramento
+            condicional
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 534 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"A prática de falta grave interrompe a contagem do prazo para
+              progressão de regime de cumprimento de pena, o qual se reinicia a
+              partir do cometimento dessa infração."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ✅ <strong>Falta grave = REINICIA</strong> contagem (1/6, 40% ou
+            60%)<br />
+            ❌ <strong>NÃO anula</strong> o tempo anterior<br /><br />
+
+            <span style="color: #dc2626; font-weight: 900"
+              >🚨 AOCP COBRA MUITO!</span
+            >
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 717 STF</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"Não impede a progressão de regime de execução da pena, fixada em
+              sentença não transitada em julgado, o fato de o réu se encontrar
+              em prisão especial."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong> Prisão
+            especial não impede progressão
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 491 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"É inadmissível a chamada progressão per saltum de regime
+              prisional."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ❌ <strong>NÃO pode pular regime:</strong> Fechado → Semiaberto →
+            Aberto<br />
+            ❌ <strong>Vedada progressão</strong> direta: Fechado → Aberto<br /><br />
+
+            <strong>⚠️ Exceção STF:</strong> Em casos excepcionais e
+            fundamentados
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 269 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"É admissível a adoção do regime prisional semiaberto aos
+              reincidentes condenados a pena igual ou inferior a quatro anos se
+              favoráveis as circunstâncias judiciais."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong>
+            Reincidente PODE iniciar no semiaberto se pena ≤ 4 anos
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 533 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"Para o reconhecimento da prática de falta disciplinar no âmbito
+              da execução penal, é imprescindível a instauração de procedimento
+              administrativo pelo diretor do estabelecimento prisional,
+              assegurado o direito de defesa, a ser realizado por advogado
+              constituído ou defensor público nomeado."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ✅ <strong>Falta grave exige PAD</strong> (Procedimento
+            Administrativo Disciplinar)<br />
+            ✅ <strong>Direito à defesa</strong> + advogado obrigatório
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 715 STF</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"A pena unificada para atender ao limite de trinta anos de
+              cumprimento, determinado pelo art. 75 do Código Penal, não é
+              considerada para a concessão de outros benefícios, como o
+              livramento condicional ou regime mais favorável de
+              execução."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong> Para
+            benefícios, conta pena REAL, não o limite de 30 anos
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 440 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"Fixada a pena-base no mínimo legal, é vedado o estabelecimento
+              de regime prisional mais gravoso do que o cabível em razão da
+              sanção imposta, com base apenas na gravidade abstrata do
+              delito."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong> Regime
+            deve considerar pena CONCRETA, não gravidade abstrata
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 719 STF</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"A imposição do regime de cumprimento mais severo do que a pena
+              aplicada permitir exige motivação idônea."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong> Regime
+            mais grave que o previsto precisa de <strong>fundamentação</strong>
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 718 STF</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"A opinião do julgador sobre a gravidade em abstrato do crime não
+              constitui motivação idônea para a imposição de regime mais severo
+              do que o permitido segundo a pena aplicada."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 REFORÇA:</strong> Gravidade
+            abstrata não justifica regime mais grave
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 535 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"A prática de falta grave não interrompe o prazo para fim de
+              comutação de pena ou indulto."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong><br />
+            ✅ <strong>Falta grave interrompe:</strong> progressão<br />
+            ❌ <strong>Não interrompe:</strong> livramento condicional,
+            comutação, indulto
+          </p>
+        </div>
+
+        <div class="sumula-item">
+          <h4><span class="sumula">SÚMULA 493 STJ</span></h4>
+          <p style="font-size: 17px; line-height: 2; font-weight: 700">
+            <strong
+              >"É inadmissível a fixação de pena substitutiva (art. 44 do CP)
+              como condição especial ao regime aberto."</strong
+            ><br /><br />
+
+            <strong style="color: #1e3a8a">📌 O QUE SIGNIFICA:</strong> Pena
+            substitutiva não pode ser condição de regime aberto
+          </p>
+        </div>
+      </div>
+
+      <div class="pegadinhas">
+        <h2>🚨 TOP 10 PEGADINHAS AOCP - REMIÇÃO</h2>
+
+        <div class="pegadinha-item" style="border: 4px solid #dc2626">
+          <strong style="color: #dc2626; font-size: 19px; font-weight: 900"
+            >PEGADINHA #1: Fórmula Errada do Trabalho</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado">❌ "2 dias trabalhados = 1 dia remido"</span
+            ><br />
+            <span class="errado">❌ "4 dias trabalhados = 1 dia remido"</span
+            ><br />
+            <span class="certo"
+              >✅ <span class="numero-importante">3 dias</span> trabalhados =
+              <span class="numero-importante">1 dia</span> remido</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #2: Fórmula Errada do Estudo</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado"
+              >❌ "3 dias de estudo = 1 dia remido" (confunde com
+              trabalho!)</span
+            ><br />
+            <span class="errado">❌ "10 horas de estudo = 1 dia remido"</span
+            ><br />
+            <span class="certo"
+              >✅ <span class="numero-importante">12 horas</span> de estudo =
+              <span class="numero-importante">1 dia</span> remido</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #3: Perda Total dos Dias</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado"
+              >❌ "Falta grave: perde TODOS os dias remidos"</span
+            ><br />
+            <span class="certo"
+              >✅ Falta grave: perde ATÉ
+              <span class="numero-importante">1/3</span> dos dias remidos</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #4: Remição e Progressão</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado">❌ "Remição = progressão de regime"</span
+            ><br />
+            <span class="certo"
+              >✅ Remição = <strong>desconto na pena</strong> / Progressão =
+              <strong>mudança de regime</strong></span
+            ><br />
+            <span style="font-size: 15px; color: #6b7280; font-weight: 700"
+              >São institutos DIFERENTES!</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #5: Trabalho + Estudo</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado">❌ "Não pode cumular trabalho e estudo"</span
+            ><br />
+            <span class="certo"
+              >✅ PODE cumular! Até <span class="numero-importante">1/3</span> a
+              mais de remição (<span class="artigo">Art. 126, §3º</span>)</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #6: Jornada Mínima de Estudo</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado">❌ "Estudo: mínimo 2 horas/dia"</span><br />
+            <span class="certo"
+              >✅ Estudo: mínimo
+              <span class="numero-importante">4 horas/dia</span></span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #7: Remição por Leitura</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado">❌ "Leitura: 1 livro = 1 dia remido"</span
+            ><br />
+            <span class="certo"
+              >✅ Leitura: <span class="numero-importante">1 livro/mês</span> =
+              <span class="numero-importante">4 dias</span> remidos</span
+            ><br />
+            <span style="font-size: 15px; color: #6b7280; font-weight: 700"
+              >Máximo 12 livros/ano = 48 dias</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #8: Quem Tem Direito</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado"
+              >❌ "Só regime fechado tem direito à remição"</span
+            ><br />
+            <span class="certo"
+              >✅ TODOS os regimes: fechado, semiaberto, aberto</span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #9: Jornada de Trabalho</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado">❌ "Trabalho: obrigatório 8 horas/dia"</span
+            ><br />
+            <span class="certo"
+              >✅ Trabalho:
+              <span class="numero-importante">6 a 8 horas/dia</span></span
+            >
+          </p>
+        </div>
+
+        <div class="pegadinha-item">
+          <strong style="color: #dc2626; font-size: 18px; font-weight: 900"
+            >PEGADINHA #10: Desconto Automático</strong
+          >
+          <p
+            style="
+              margin-top: 12px;
+              font-size: 17px;
+              line-height: 1.8;
+              font-weight: 700;
+            "
+          >
+            <span class="errado"
+              >❌ "Remição é automática (trabalhou = desconta)"</span
+            ><br />
+            <span class="certo"
+              >✅ Precisa de <strong>DECLARAÇÃO</strong> do diretor +
+              <strong>HOMOLOGAÇÃO</strong> judicial</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h3 style="font-size: 28px; margin-bottom: 18px; font-weight: 900">
+          ✅ Resumo Completo - Remição + Súmulas AOCP
+        </h3>
+        <p style="font-size: 17px; margin-bottom: 12px; font-weight: 700">
+          <strong>Baseado em análise de 350+ questões reais da AOCP</strong>
+        </p>
+        <p
+          style="
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.8;
+            font-weight: 700;
+          "
+        >
+          📚 3º tema mais cobrado (15% das questões!)<br />
+          💪 DECORE: <span class="numero-importante">3 dias</span> trabalho =
+          <span class="numero-importante">1 remido</span> |
+          <span class="numero-importante">12h</span> estudo =
+          <span class="numero-importante">1 remido</span><br />
+          ⚖️ Súmulas: <span class="sumula">SV 26</span> +
+          <span class="sumula">534 STJ</span> = CAMPEÃS AOCP<br />
+          🎯 Próximos: Direitos do Preso + Faltas + Livramento
+        </p>
+        <button
+          class="btn-print"
+          onclick="window.print()"
+          style="margin-top: 25px"
+        >
+          🖨️ IMPRIMIR PARA REVISAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
